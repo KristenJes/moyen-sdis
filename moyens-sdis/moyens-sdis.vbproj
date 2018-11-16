@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Caserne.vb" />
+    <Compile Include="Classes\Fonction.vb" />
+    <Compile Include="Classes\Intervention.vb" />
     <Compile Include="Classes\Connexion.vb" />
     <Compile Include="Classes\Engin.vb" />
     <Compile Include="Classes\Pompier.vb" />
