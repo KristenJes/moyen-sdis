@@ -9,4 +9,7 @@
 
     End Sub
 
+    Private Sub SocGrid_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles SocGrid.CellContentClick
+
+    End Sub
 End Class
