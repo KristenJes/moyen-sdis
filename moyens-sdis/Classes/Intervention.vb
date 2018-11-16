@@ -1,18 +1,11 @@
 ﻿Public Class Intervention
 
     Private _intervid As Integer
-    Private _date As String
+    Private _date As Date
     Private _commentaire As String
     Private _sin As Sinistre
 
-    Public Property commentaire As Integer
-        Get
-            Return _commentaire
-        End Get
-        Set(ByVal value As Integer)
 
-        End Set
-    End Property
 
     Public Property interid As Integer
         Get
@@ -23,6 +16,26 @@
             _intervid = value
         End Set
     End Property
+
+    Public Property dateInter As Date
+        Get
+            Return _date
+
+        End Get
+        Set(ByVal value As Date)
+            _date = value
+        End Set
+    End Property
+
+    Public Property commentaire As String
+        Get
+            Return _commentaire
+        End Get
+        Set(ByVal value As String)
+
+        End Set
+    End Property
+
 
     Public Property sin As Sinistre
         Get

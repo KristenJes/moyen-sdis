@@ -11,11 +11,11 @@
         End Set
     End Property
 
-    Public Property libelle As Integer
+    Public Property libelle As String
         Get
             Return _libelle
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _libelle = value
         End Set
     End Property
