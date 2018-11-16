@@ -72,7 +72,13 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connexion.vb" />
+    <Compile Include="Classes\Caserne.vb" />
+    <Compile Include="Classes\Connexion.vb" />
+    <Compile Include="Classes\Engin.vb" />
+    <Compile Include="Classes\Pompier.vb" />
+    <Compile Include="Classes\TypeEngin.vb" />
+    <Compile Include="Enum\Etat.vb" />
+    <Compile Include="Enum\Statut.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
