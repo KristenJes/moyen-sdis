@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<<<<<<< HEAD
   <PropertyGroup>
 <<<<<<< HEAD
     <ProjectView>ShowAllFiles</ProjectView>
@@ -7,4 +8,6 @@
     <ProjectView>ProjectFiles</ProjectView>
 >>>>>>> b24e34f30d3662386f8d9535b854efc25770f8ae
   </PropertyGroup>
+=======
+>>>>>>> parent of d8866e7... creation classes et enum
 </Project>
