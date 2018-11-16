@@ -74,9 +74,14 @@
   <ItemGroup>
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 107cd6c6f425f5e4a37e2da74f385ef4f21f166b
     <Compile Include="Classes\Connexion.vb" />
     <Compile Include="Classes\Engin.vb" />
     <Compile Include="Classes\Pompier.vb" />
+=======
+<<<<<<< HEAD
 =======
     <Compile Include="Classes\Caserne.vb" />
     <Compile Include="Classes\Connexion.vb" />
@@ -87,6 +92,7 @@
     <Compile Include="Enum\Statut.vb" />
 >>>>>>> b24e34f30d3662386f8d9535b854efc25770f8ae
 =======
+>>>>>>> 107cd6c6f425f5e4a37e2da74f385ef4f21f166b
     <Compile Include="Connexion.vb" />
 >>>>>>> parent of d8866e7... creation classes et enum
     <Compile Include="Form1.vb">
