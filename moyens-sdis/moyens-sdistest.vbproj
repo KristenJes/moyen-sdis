@@ -73,11 +73,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Caserne.vb" />
-    <Compile Include="Classes\Fonction.vb" />
-    <Compile Include="Classes\Intervention.vb" />
     <Compile Include="Classes\Connexion.vb" />
+    <Compile Include="Classes\Depart.vb" />
+    <Compile Include="Classes\Disponibilite.vb" />
     <Compile Include="Classes\Engin.vb" />
     <Compile Include="Classes\Pompier.vb" />
+    <Compile Include="Classes\Service.vb" />
     <Compile Include="Classes\TypeEngin.vb" />
     <Compile Include="Enum\Etat.vb" />
     <Compile Include="Enum\Statut.vb" />
