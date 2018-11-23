@@ -1,5 +1,7 @@
 ﻿Public Class Connexion
 
+    Public Shared ORA As New Connexion("cnx_oraD22", "SDIS29", "Iroise29")
+
     Private myConnection As New Odbc.OdbcConnection
     Private myCommand As New Odbc.OdbcCommand
 
