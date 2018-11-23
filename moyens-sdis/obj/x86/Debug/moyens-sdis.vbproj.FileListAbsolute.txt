@@ -51,3 +51,6 @@ C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\mo
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
