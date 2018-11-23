@@ -23,11 +23,9 @@ Partial Class PF1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblEngins1 = New System.Windows.Forms.Label()
-        Me.lblEngins3 = New System.Windows.Forms.Label()
         Me.lblEngins2 = New System.Windows.Forms.Label()
         Me.lblCIS1 = New System.Windows.Forms.Label()
         Me.lblCIS2 = New System.Windows.Forms.Label()
-        Me.lblCIS3 = New System.Windows.Forms.Label()
         Me.lblCentreSecours = New System.Windows.Forms.Label()
         Me.lblEngins = New System.Windows.Forms.Label()
         Me.btnConsulter1 = New System.Windows.Forms.Button()
@@ -36,12 +34,10 @@ Partial Class PF1
         Me.btnValider = New System.Windows.Forms.Button()
         Me.lblStatut = New System.Windows.Forms.Label()
         Me.lblStatut2 = New System.Windows.Forms.Label()
-        Me.lblStatut3 = New System.Windows.Forms.Label()
         Me.lblStatut1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ContainerDepart = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblEngins1
@@ -56,19 +52,6 @@ Partial Class PF1
         Me.lblEngins1.TabIndex = 3
         Me.lblEngins1.Text = "VSAV 02"
         Me.lblEngins1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblEngins3
-        '
-        Me.lblEngins3.AutoSize = True
-        Me.lblEngins3.BackColor = System.Drawing.SystemColors.Window
-        Me.lblEngins3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblEngins3.Location = New System.Drawing.Point(233, 147)
-        Me.lblEngins3.MinimumSize = New System.Drawing.Size(165, 22)
-        Me.lblEngins3.Name = "lblEngins3"
-        Me.lblEngins3.Size = New System.Drawing.Size(165, 22)
-        Me.lblEngins3.TabIndex = 4
-        Me.lblEngins3.Text = "VLHR"
-        Me.lblEngins3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblEngins2
         '
@@ -106,19 +89,6 @@ Partial Class PF1
         Me.lblCIS2.TabIndex = 1
         Me.lblCIS2.Text = "SAINT-RENAN"
         Me.lblCIS2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblCIS3
-        '
-        Me.lblCIS3.AutoSize = True
-        Me.lblCIS3.BackColor = System.Drawing.SystemColors.Window
-        Me.lblCIS3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCIS3.Location = New System.Drawing.Point(43, 147)
-        Me.lblCIS3.MinimumSize = New System.Drawing.Size(165, 22)
-        Me.lblCIS3.Name = "lblCIS3"
-        Me.lblCIS3.Size = New System.Drawing.Size(165, 22)
-        Me.lblCIS3.TabIndex = 2
-        Me.lblCIS3.Text = "BREST"
-        Me.lblCIS3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lblCentreSecours
         '
@@ -198,19 +168,6 @@ Partial Class PF1
         Me.lblStatut2.Text = "RENFORTS"
         Me.lblStatut2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lblStatut3
-        '
-        Me.lblStatut3.AutoSize = True
-        Me.lblStatut3.BackColor = System.Drawing.SystemColors.Window
-        Me.lblStatut3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblStatut3.Location = New System.Drawing.Point(398, 14)
-        Me.lblStatut3.MinimumSize = New System.Drawing.Size(165, 22)
-        Me.lblStatut3.Name = "lblStatut3"
-        Me.lblStatut3.Size = New System.Drawing.Size(165, 22)
-        Me.lblStatut3.TabIndex = 15
-        Me.lblStatut3.Text = "ASSIGNÉ"
-        Me.lblStatut3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
         'lblStatut1
         '
         Me.lblStatut1.AutoSize = True
@@ -234,14 +191,13 @@ Partial Class PF1
         Me.GroupBox1.TabIndex = 18
         Me.GroupBox1.TabStop = False
         '
-        'GroupBox2
+        'ContainerDepart
         '
-        Me.GroupBox2.Controls.Add(Me.lblStatut3)
-        Me.GroupBox2.Location = New System.Drawing.Point(24, 132)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(577, 50)
-        Me.GroupBox2.TabIndex = 19
-        Me.GroupBox2.TabStop = False
+        Me.ContainerDepart.Location = New System.Drawing.Point(24, 132)
+        Me.ContainerDepart.Name = "ContainerDepart"
+        Me.ContainerDepart.Size = New System.Drawing.Size(577, 88)
+        Me.ContainerDepart.TabIndex = 19
+        Me.ContainerDepart.TabStop = False
         '
         'PF1
         '
@@ -258,28 +214,22 @@ Partial Class PF1
         Me.Controls.Add(Me.lblEngins)
         Me.Controls.Add(Me.lblCentreSecours)
         Me.Controls.Add(Me.lblEngins2)
-        Me.Controls.Add(Me.lblCIS3)
-        Me.Controls.Add(Me.lblEngins3)
         Me.Controls.Add(Me.lblCIS2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.ContainerDepart)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "PF1"
         Me.Text = "Form3"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents lblEngins1 As System.Windows.Forms.Label
-    Friend WithEvents lblEngins3 As System.Windows.Forms.Label
     Friend WithEvents lblEngins2 As System.Windows.Forms.Label
     Friend WithEvents lblCIS1 As System.Windows.Forms.Label
     Friend WithEvents lblCIS2 As System.Windows.Forms.Label
-    Friend WithEvents lblCIS3 As System.Windows.Forms.Label
     Friend WithEvents lblCentreSecours As System.Windows.Forms.Label
     Friend WithEvents lblEngins As System.Windows.Forms.Label
     Friend WithEvents btnConsulter1 As System.Windows.Forms.Button
@@ -288,8 +238,7 @@ Partial Class PF1
     Friend WithEvents btnValider As System.Windows.Forms.Button
     Friend WithEvents lblStatut As System.Windows.Forms.Label
     Friend WithEvents lblStatut2 As System.Windows.Forms.Label
-    Friend WithEvents lblStatut3 As System.Windows.Forms.Label
     Friend WithEvents lblStatut1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents ContainerDepart As System.Windows.Forms.GroupBox
 End Class

@@ -6,7 +6,7 @@
     Private _type As TypeEngin
     Private _cis As Caserne
 
-    Public Property id As Integer
+    Public Property ID As Integer
         Get
             Return _id
         End Get
@@ -16,7 +16,7 @@
     End Property
 
 
-    Public Property etat As Etat
+    Public Property Etat As Etat
         Get
             Return _etat
 
@@ -26,7 +26,7 @@
         End Set
     End Property
 
-    Public Property nom As String
+    Public Property Nom As String
         Get
             Return _nom
         End Get
@@ -35,7 +35,7 @@
         End Set
     End Property
 
-    Public Property type As TypeEngin
+    Public Property Type As TypeEngin
         Get
             Return _type
         End Get
@@ -44,7 +44,7 @@
         End Set
     End Property
 
-    Public Property cis As Caserne
+    Public Property Caserne As Caserne
         Get
             Return _cis
         End Get

@@ -1,7 +1,7 @@
 ﻿Public Class Depart
-    Private _depID As Integer
-    Private _engID As Engin
-    Private _intervID As Intervention
+    Private _ID As Integer
+    Private _engin As Engin
+    Private _intervention As Intervention
     Private _dteDepart As Date
     Private _dteRetour As Date
     Private _kilometrage As Integer
@@ -17,13 +17,13 @@
         End Set
     End Property
 
-    Public Property DepID As Integer
+    Public Property ID As Integer
         Get
-            Return _depID
+            Return _ID
         End Get
         Set(ByVal value As Integer)
 
-            _depID = value
+            _ID = value
         End Set
     End Property
 
@@ -47,22 +47,22 @@
         End Set
     End Property
 
-    Public Property EngID As Engin
+    Public Property Engin As Engin
         Get
-            Return _engID
+            Return _engin
         End Get
         Set(ByVal value As Engin)
-            _engID = value
+            _engin = value
         End Set
     End Property
 
-    Public Property IntervID As Intervention
+    Public Property Intervention As Intervention
         Get
-            Return _intervID
+            Return _intervention
         End Get
         Set(ByVal value As Intervention)
 
-            _intervID = value
+            _intervention = value
         End Set
     End Property
 

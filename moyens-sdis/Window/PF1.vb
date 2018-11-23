@@ -5,8 +5,16 @@
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        For Each depart As Depart In departs
+        ContainerDepart.Controls.Clear()
 
+        For Each depart As Depart In departs
+            Dim group As New GroupBox
+            Dim text As New TextBox()
+
+            text.Text = depart.Engin.Nom
+            group.Controls.Add(text)
+
+            ContainerDepart.Controls.Add(group)
         Next
 
     End Sub

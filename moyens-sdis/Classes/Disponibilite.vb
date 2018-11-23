@@ -1,4 +1,5 @@
 ﻿Public Class Disponibilite
+
     Private _dispoId As Integer
     Private _dispoLib As String
 
