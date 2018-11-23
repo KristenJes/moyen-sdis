@@ -113,6 +113,31 @@
     <Compile Include="Window\PF1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Window\PF5\gest_engins_delete.designer.vb">
+      <DependentUpon>gest_engins_delete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF5\gest_engins_delete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PF5\gest_engins_modif.designer.vb">
+      <DependentUpon>gest_engins_modif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF5\gest_engins_modif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PF5\CRUDENGINS.vb" />
+    <Compile Include="Window\PF5\gestion_engins.Designer.vb">
+      <DependentUpon>gestion_engins.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF5\gestion_engins.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PF5\gest_engins_ajout.designer.vb">
+      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF5\gest_engins_ajout.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
@@ -126,6 +151,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Window\PF1.resx">
       <DependentUpon>PF1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF5\gest_engins_delete.resx">
+      <DependentUpon>gest_engins_delete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF5\gest_engins_modif.resx">
+      <DependentUpon>gest_engins_modif.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
+      <DependentUpon>gestion_engins.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF5\gest_engins_ajout.resx">
+      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
