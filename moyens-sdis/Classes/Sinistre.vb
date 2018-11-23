@@ -13,20 +13,20 @@
         End Set
     End Property
 
-    Public Property nature As Integer
+    Public Property nature As String
         Get
             Return _nature
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _nature = value
         End Set
     End Property
 
-    Public Property observation As Integer
+    Public Property observation As String
         Get
             Return _observation
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _observation = value
         End Set
     End Property
