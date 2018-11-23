@@ -26,19 +26,6 @@ Public Class gestion_engins
         ListBoxCaserne.Items.Add("OUESSANT")
         ListBoxCaserne.Items.Add("SAINT RENAN")
 
-
-
-        ''Dim con As IDbConnection = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=D:\Database1.accdb;")
-        ''Dim cmd As OleDbCommand = New OleDbCommand("SELECT SUM(facture.totale) as Total FROM facture WHERE facture.n_facture LIKE '%" + TextBox10.Text + "%' ", con)
-        ''Try
-        ''    con.Open()
-        ''    Dim TotalFacture As Decimal = cmd.ExecuteScalar()
-        ''    TextBox_totalFacture.Text = TotalFacture
-        ''Catch ex As Exception
-        ''    MessageBox.Show(ex.Message)
-        ''Finally
-        ''    con.Close()
-        ''End Try
     End Sub
 
     Private Sub ListBoxCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBoxCaserne.SelectedIndexChanged
