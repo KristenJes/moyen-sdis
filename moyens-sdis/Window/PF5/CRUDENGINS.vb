@@ -24,32 +24,17 @@ Class CRUDENGINS
 
 
 
-        Dim engin_id As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID FROM ENGIN")
+        Dim engin_id As DataTable = Connexion.ORA.Table("SELECT * FROM ENGIN")
         For Each nom As DataRow In engin_id.Rows
             info(0) = nom("ENGIN_ID").ToString
-        Next
-
-
-
-        Dim engin_nom As DataTable = Connexion.ORA.Table("SELECT ENGIN_NOM FROM ENGIN")
-        For Each nom As DataRow In engin_nom.Rows
             info(1) = nom("ENGIN_NOM").ToString
-        Next
-
-
-        Dim engin_immat As DataTable = Connexion.ORA.Table("SELECT ENGIN_IMMAT FROM ENGIN")
-        For Each nom As DataRow In engin_immat.Rows
             info(2) = nom("ENGIN_IMMAT").ToString
-        Next
-
-
-        Dim engin_etat As DataTable = Connexion.ORA.Table("SELECT ENGIN_ETAT FROM ENGIN")
-        For Each nom As DataRow In engin_etat.Rows
             info(3) = nom("ENGIN_ETAT").ToString
+
+            itm = New ListViewItem(info)
+            uneListView.Items.Add(itm)
         Next
 
-        itm = New ListViewItem(info)
-        uneListView.Items.Add(itm)
 
 
 
