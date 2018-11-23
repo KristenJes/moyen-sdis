@@ -7,7 +7,7 @@
             Return _dispoId
         End Get
         Set(ByVal value As Integer)
-            _dispoIdd = value
+            _dispoId = value
         End Set
     End Property
 
