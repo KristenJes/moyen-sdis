@@ -37,6 +37,7 @@ Partial Class PF1
         Me.lblStatut1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ContainerDepart = New System.Windows.Forms.GroupBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -137,9 +138,8 @@ Partial Class PF1
         '
         'btnValider
         '
-        Me.btnValider.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnValider.Location = New System.Drawing.Point(323, 226)
+        Me.btnValider.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnValider.Location = New System.Drawing.Point(323, 494)
         Me.btnValider.Name = "btnValider"
         Me.btnValider.Size = New System.Drawing.Size(75, 23)
         Me.btnValider.TabIndex = 13
@@ -199,11 +199,23 @@ Partial Class PF1
         Me.ContainerDepart.TabIndex = 19
         Me.ContainerDepart.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.AutoScroll = True
+        Me.Panel1.Location = New System.Drawing.Point(25, 246)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(677, 186)
+        Me.Panel1.TabIndex = 21
+        '
         'PF1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(734, 261)
+        Me.ClientSize = New System.Drawing.Size(734, 529)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblStatut)
         Me.Controls.Add(Me.lblStatut2)
         Me.Controls.Add(Me.lblStatut1)
@@ -241,4 +253,5 @@ Partial Class PF1
     Friend WithEvents lblStatut1 As System.Windows.Forms.Label
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents ContainerDepart As System.Windows.Forms.GroupBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 End Class

@@ -1,22 +1,19 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Dim conn As New Connexion("cnx_oraD22", "SDIS29", "Iroise29")
-        Dim table As DataTable = conn.Table("SELECT * FROM POMPIER")
+        'Connexion.ORA.Execute("INSERT INTO PREVU VALUES(1, 3)")
 
-
+        Dim table As DataTable = Connexion.ORA.Table("SELECT * FROM PREVU")
         SocGrid.DataSource = table
 
-        For Each row As DataRow In table.Rows
-            ' Write value of first Integer.
-            Label1.Text = row("SP_NOM")
-            GoTo end_of_for
-        Next
+        'Label1.Text = ""
+        'For Each row As DataRow In table.Rows
+        '    ' Write value of first Integer.
+        '    Label1.Text += row("SIN_NATURE") + ", "
+        'Next
 
-end_of_for:
-
-        Dim s As String = table.Rows(1)("SP_NOM").ToString()
-        'Label1.Text = ss
+        'Dim s As String = table.Rows(1)("SP_NOM").ToString()
+        'Label1.Text = s
 
     End Sub
 
@@ -27,4 +24,5 @@ end_of_for:
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
+
 End Class
