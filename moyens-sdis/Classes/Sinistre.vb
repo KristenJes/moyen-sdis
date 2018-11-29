@@ -1,15 +1,20 @@
 ﻿Public Class Sinistre
 
-    Private _sinid As Integer
+    Private _id As Integer
     Private _nature As String
-    Private _observation As String
 
-    Public Property sinid As Integer
+
+    Public Sub New(ByVal id, ByVal nature)
+        _id = id
+        _nature = nature
+    End Sub
+
+    Public Property ID As Integer
         Get
-            Return _sinid
+            Return _id
         End Get
         Set(ByVal value As Integer)
-            _sinid = value
+            _id = value
         End Set
     End Property
 
@@ -21,16 +26,6 @@
             _nature = value
         End Set
     End Property
-
-    Public Property observation As String
-        Get
-            Return _observation
-        End Get
-        Set(ByVal value As String)
-            _observation = value
-        End Set
-    End Property
-
 
 
 End Class

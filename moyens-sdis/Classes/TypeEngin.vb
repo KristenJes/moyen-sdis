@@ -1,20 +1,24 @@
 ﻿Public Class TypeEngin
 
-    Private _typeEngId As Integer
+    Private _id As Integer
     Private _nom As String
     Private _nbPlace As Integer
 
 
+    Public Sub New(ByVal id, ByVal nom, ByVal nbPlace)
+        _id = id
+        _nom = nom
+        _nbPlace = nbPlace
+    End Sub
 
-    Public Property typeEngId As Integer
+    Public Property ID As Integer
         Get
-            Return _typeEngId
+            Return _id
         End Get
         Set(ByVal value As Integer)
-            _typeEngId = value
+            _id = value
         End Set
     End Property
-
 
     Public Property nom As String
         Get
@@ -24,6 +28,7 @@
             _nom = value
         End Set
     End Property
+
     Public Property nbPlace As Integer
         Get
             Return _nbPlace

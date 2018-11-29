@@ -1,23 +1,29 @@
 ﻿Public Class Intervention
 
-    Private _intervid As Integer
+    Private _id As Integer
     Private _date As Date
     Private _commentaire As String
-    Private _sin As Sinistre
+    Private _sinistre As Sinistre
 
 
+    Public Sub New(ByVal id, ByVal cur_date, ByVal commentaire, ByVal sinistre)
+        _id = id
+        _date = cur_date
+        _commentaire = commentaire
+        _sinistre = sinistre
+    End Sub
 
-    Public Property interid As Integer
+    Public Property ID As Integer
         Get
-            Return _intervid
+            Return _id
 
         End Get
         Set(ByVal value As Integer)
-            _intervid = value
+            _id = value
         End Set
     End Property
 
-    Public Property dateInter As Date
+    Public Property Cur_Date As Date
         Get
             Return _date
 
@@ -27,7 +33,7 @@
         End Set
     End Property
 
-    Public Property commentaire As String
+    Public Property Commentaire As String
         Get
             Return _commentaire
         End Get
@@ -37,12 +43,12 @@
     End Property
 
 
-    Public Property sin As Sinistre
+    Public Property Sinistre As Sinistre
         Get
-            Return _sin
+            Return _sinistre
         End Get
         Set(ByVal value As Sinistre)
-            _sin = value
+            _sinistre = value
         End Set
     End Property
 

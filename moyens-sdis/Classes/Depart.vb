@@ -1,11 +1,25 @@
 ﻿Public Class Depart
-    Private _ID As Integer
+    Private _id As Integer
     Private _engin As Engin
     Private _intervention As Intervention
     Private _dteDepart As Date
     Private _dteRetour As Date
     Private _kilometrage As Integer
     Private _commentaire As String
+
+
+    Public Sub New(ByVal id, ByVal engin, ByVal intervention, ByVal dteDepart, ByVal dteRetour, ByVal kilometrage, ByVal commentaire)
+        _id = id
+        _engin = engin
+        _intervention = intervention
+        _dteDepart = dteDepart
+        _dteRetour = dteRetour
+        _kilometrage = kilometrage
+        _commentaire = commentaire
+    End Sub
+
+
+
 
     Public Property Commentaire As Integer
         Get
@@ -27,7 +41,7 @@
         End Set
     End Property
 
-    Public Property DteDepart As Date
+    Public Property DateDepart As Date
         Get
             Return _dteDepart
         End Get
@@ -37,7 +51,7 @@
         End Set
     End Property
 
-    Public Property DteRetour As Date
+    Public Property DateRetour As Date
         Get
             Return _dteRetour
 

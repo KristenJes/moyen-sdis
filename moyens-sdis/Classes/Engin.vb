@@ -6,6 +6,15 @@
     Private _type As TypeEngin
     Private _cis As Caserne
 
+
+    Public Sub New(ByVal id, ByVal nom, ByVal etat, ByVal type, ByVal cis)
+        _id = id
+        _nom = nom
+        _etat = etat
+        _type = type
+        _cis = cis
+    End Sub
+
     Public Property ID As Integer
         Get
             Return _id

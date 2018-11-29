@@ -30,6 +30,13 @@
     End Sub
 
 
+    Public Sub Execute(ByVal query As String)
+        Dim MyCmd As Odbc.OdbcCommand
+
+        MyCmd = New Odbc.OdbcCommand(query, myConnection)
+        MyCmd.ExecuteNonQuery()
+    End Sub
+
     Public Function Table(ByVal query As String)
         Dim myAdapter As Odbc.OdbcDataAdapter
         Dim myBuilder As Odbc.OdbcCommandBuilder

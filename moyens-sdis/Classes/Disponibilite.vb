@@ -1,23 +1,29 @@
 ﻿Public Class Disponibilite
 
-    Private _dispoId As Integer
-    Private _dispoLib As String
+    Private _id As Integer
+    Private _libelle As String
 
-    Public Property DispoID As Integer
+
+    Public Sub New(ByVal id, ByVal libelle)
+        _id = id
+        _libelle = libelle
+    End Sub
+
+    Public Property ID As Integer
         Get
-            Return _dispoId
+            Return _id
         End Get
         Set(ByVal value As Integer)
-            _dispoId = value
+            _id = value
         End Set
     End Property
 
     Public Property DispoLib As String
         Get
-            Return _dispoLib
+            Return _libelle
         End Get
         Set(ByVal value As String)
-            _dispoLib = value
+            _libelle = value
         End Set
     End Property
 End Class
