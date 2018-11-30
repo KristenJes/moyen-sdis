@@ -1,17 +1,24 @@
 ﻿Public Class Fonction
-    Private _fctid As Integer
+
+    Private _id As Integer
     Private _libelle As String
 
-    Public Property fctid As Integer
+
+    Public Sub New(ByVal id, ByVal libelle)
+        _id = id
+        _libelle = libelle
+    End Sub
+
+    Public Property ID As Integer
         Get
-            Return _fctid
+            Return _id
         End Get
         Set(ByVal value As Integer)
-            _fctid = value
+            _id = value
         End Set
     End Property
 
-    Public Property libelle As String
+    Public Property Libelle As String
         Get
             Return _libelle
         End Get

@@ -13,59 +13,19 @@
     Private _dateAffectation As Date
     Private _casernes As List(Of Caserne)
 
-    Public Property Bip As Integer
-        Get
-            Return _bip
-        End Get
-        Set(ByVal value As Integer)
-            _bip = value
-        End Set
-    End Property
 
-    Public Property Casernes As List(Of Caserne)
-        Get
-            Return _casernes
-        End Get
-        Set(ByVal value As List(Of Caserne))
-            _casernes = value
-        End Set
-    End Property
-
-    Public Property DateAffectation As Date
-        Get
-            Return _dateAffectation
-        End Get
-        Set(ByVal value As Date)
-            _dateAffectation = value
-        End Set
-    End Property
-
-    Public Property DateMaj As Date
-        Get
-            Return _dateMaj
-        End Get
-        Set(ByVal value As Date)
-            _dateMaj = value
-        End Set
-    End Property
-
-    Public Property DateNaissance As Date
-        Get
-            Return _dateNaissance
-        End Get
-        Set(ByVal value As Date)
-            _dateNaissance = value
-        End Set
-    End Property
-
-    Public Property DatePromotion As Date
-        Get
-            Return _datePromotion
-        End Get
-        Set(ByVal value As Date)
-            _datePromotion = value
-        End Set
-    End Property
+    Public Sub New(ByVal matricule, ByVal nom, ByVal prenom, ByVal dateNaissance, ByVal telFixe, ByVal telPortable, ByVal bip, ByVal statut, ByVal dateMaj, ByVal datePromotion, ByVal dateAffectation)
+        _matricule = matricule
+        _nom = nom
+        _dateNaissance = dateNaissance
+        _telFixe = telFixe
+        _telPortable = telPortable
+        _bip = bip
+        _statut = statut
+        _dateMaj = dateMaj
+        _datePromotion = datePromotion
+        _dateAffectation = dateAffectation
+    End Sub
 
     Public Property Matricule As Integer
         Get
@@ -120,5 +80,67 @@
             _telPortable = value
         End Set
     End Property
+
+    Public Property Bip As Integer
+        Get
+            Return _bip
+        End Get
+        Set(ByVal value As Integer)
+            _bip = value
+        End Set
+    End Property
+
+    Public Property Casernes As List(Of Caserne)
+        Get
+            Return _casernes
+        End Get
+        Set(ByVal value As List(Of Caserne))
+            _casernes = value
+        End Set
+    End Property
+
+    Public Property DateAffectation As Date
+        Get
+            Return _dateAffectation
+        End Get
+        Set(ByVal value As Date)
+            _dateAffectation = value
+        End Set
+    End Property
+
+    Public Property DateMaj As Date
+        Get
+            Return _dateMaj
+        End Get
+        Set(ByVal value As Date)
+            _dateMaj = value
+        End Set
+    End Property
+
+    Public Property DateNaissance As Date
+        Get
+            Return _dateNaissance
+        End Get
+        Set(ByVal value As Date)
+            _dateNaissance = value
+        End Set
+    End Property
+
+    Public Property DatePromotion As Date
+        Get
+            Return _datePromotion
+        End Get
+        Set(ByVal value As Date)
+            _datePromotion = value
+        End Set
+    End Property
+
+
+    ' Functions
+    Public Sub addCaserne(ByVal caserne As Caserne)
+        If (Casernes.Contains(caserne) = False) Then
+            Casernes.Add(caserne)
+        End If
+    End Sub
 
 End Class

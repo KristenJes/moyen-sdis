@@ -1,32 +1,40 @@
 ﻿Public Class Service
-    Private _serviceid As Integer
-    Private _DispoID As Disponibilite
-    Private _spMatricule As Pompier
 
-    Public Property DispoID As Disponibilite
-        Get
-            Return _DispoID
-        End Get
-        Set(ByVal value As Disponibilite)
-            _DispoID = value
-        End Set
-    End Property
+    Private _id As Integer
+    Private _disponibilite As Disponibilite
+    Private _pompier As Pompier
 
-    Public Property ServiceID As Integer
+
+    Public Sub New(ByVal id, ByVal disponibilite, ByVal pompier)
+        _id = id
+        _disponibilite = disponibilite
+        _pompier = pompier
+    End Sub
+
+    Public Property ID As Integer
         Get
-            Return _serviceid
+            Return _id
         End Get
         Set(ByVal value As Integer)
-            _serviceid = value
+            _id = value
         End Set
     End Property
 
-    Public Property SpMatricule As Pompier
+    Public Property Disponibilite As Disponibilite
         Get
-            Return _spMatricule
+            Return _disponibilite
+        End Get
+        Set(ByVal value As Disponibilite)
+            _disponibilite = value
+        End Set
+    End Property
+
+    Public Property Pompier As Pompier
+        Get
+            Return _pompier
         End Get
         Set(ByVal value As Pompier)
-            _spMatricule = value
+            _pompier = value
         End Set
     End Property
 End Class
