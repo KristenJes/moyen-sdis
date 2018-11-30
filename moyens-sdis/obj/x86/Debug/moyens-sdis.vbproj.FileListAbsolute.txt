@@ -1,0 +1,3 @@
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
