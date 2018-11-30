@@ -70,3 +70,6 @@ C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Moyens.sdis\moyens.sdis\
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
+C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\ppe\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\ppe\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\ppe\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
