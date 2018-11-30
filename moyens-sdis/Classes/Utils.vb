@@ -2,7 +2,7 @@
 
     Const PI = 3.1415926535897931
 
-    Public Shared Function getDistance(ByVal lat1, ByVal lon1, ByVal lat2, ByVal lon2, ByVal unit)
+    Public Shared Function getDistance(ByVal lat1, ByVal lon1, ByVal lat2, ByVal lon2, Optional ByVal unit = "K")
         Dim theta, dist
         theta = lon1 - lon2
         dist = Math.Sin(deg2rad(lat1)) * Math.Sin(deg2rad(lat2)) + Math.Cos(deg2rad(lat1)) * Math.Cos(deg2rad(lat2)) * Math.Cos(deg2rad(theta))
@@ -11,9 +11,9 @@
         getDistance = dist * 60 * 1.1515
         Select Case UCase(unit)
             Case "K"
-                getDistance = getDistance * 1.609344
+                Return getDistance = getDistance * 1.609344
             Case "N"
-                getDistance = getDistance * 0.8684
+                Return getDistance = getDistance * 0.8684
         End Select
     End Function
 
