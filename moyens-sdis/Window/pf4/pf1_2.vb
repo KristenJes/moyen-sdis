@@ -4,9 +4,9 @@
 
     Private Sub pf1_2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        'ListBox1.Items.Add("BREST")
-        'ListBox1.Items.Add("OUESSANT")
-        'ListBox1.Items.Add("SAINT RENAN")
+        ListBox1.Items.Add("BREST")
+        ListBox1.Items.Add("OUESSANT")
+        ListBox1.Items.Add("SAINT RENAN")
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
