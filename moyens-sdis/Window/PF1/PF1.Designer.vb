@@ -231,7 +231,7 @@ Partial Class PF1
         Me.Controls.Add(Me.ContainerDepart)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Name = "PF1"
-        Me.Text = "Form3"
+        Me.Text = "l"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)

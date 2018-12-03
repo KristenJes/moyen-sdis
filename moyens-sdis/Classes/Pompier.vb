@@ -17,6 +17,7 @@
     Public Sub New(ByVal matricule, ByVal nom, ByVal prenom, ByVal dateNaissance, ByVal telFixe, ByVal telPortable, ByVal bip, ByVal statut, ByVal dateMaj, ByVal datePromotion, ByVal dateAffectation)
         _matricule = matricule
         _nom = nom
+        _prenom = prenom
         _dateNaissance = dateNaissance
         _telFixe = telFixe
         _telPortable = telPortable
@@ -25,6 +26,20 @@
         _dateMaj = dateMaj
         _datePromotion = datePromotion
         _dateAffectation = dateAffectation
+    End Sub
+
+    Public Sub New(ByVal str)
+        _matricule = str("SP_MATRICULE")
+        _nom = str("SP_PRENOM")
+        _nom = str("SP_NOM")
+        _dateNaissance = str("SP_DTE_NAISSANCE")
+        _telFixe = str("SP_TEL_FIXE")
+        _telPortable = str("SP_TEL_PORTABLE")
+        _bip = str("SP_BIP")
+        _statut = str("SP_STATUT")
+        _dateMaj = str("SP_DTE_MAJ")
+        _datePromotion = str("DATE_PROMOTION")
+        _dateAffectation = str("SP_DATE_AFFECTATION")
     End Sub
 
     Public Property Matricule As Integer

@@ -11,6 +11,14 @@
         _nbPlace = nbPlace
     End Sub
 
+    Public Sub New(ByVal id)
+        Dim Str As DataRow = Connexion.ORA.Champ("SELECT * FROM TYPE_ENGIN WHERE TYPE_ENG_ID = " & id)
+
+        _id = Str("TYPE_ENG_ID")
+        _nom = Str("TYPE_ENG_NOM")
+        _nbPlace = Str("TYPE_ENG_NB_PLACES")
+    End Sub
+
     Public Property ID As Integer
         Get
             Return _id

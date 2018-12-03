@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Classes\Caserne.vb" />
     <Compile Include="Classes\Connexion.vb" />
+    <Compile Include="Classes\Commune.vb" />
     <Compile Include="Classes\Depart.vb" />
     <Compile Include="Classes\Disponibilite.vb" />
     <Compile Include="Classes\Engin.vb" />
@@ -83,6 +84,7 @@
     <Compile Include="Classes\Service.vb" />
     <Compile Include="Classes\Sinistre.vb" />
     <Compile Include="Classes\TypeEngin.vb" />
+    <Compile Include="Classes\Utils.vb" />
     <Compile Include="Enum\Etat.vb" />
     <Compile Include="Enum\Statut.vb" />
     <Compile Include="Form1.vb">
@@ -175,4 +177,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-</Project> 
+</Project>

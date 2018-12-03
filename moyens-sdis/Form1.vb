@@ -3,8 +3,8 @@
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Connexion.ORA.Execute("INSERT INTO PREVU VALUES(1, 3)")
 
-        Dim table As DataTable = Connexion.ORA.Table("SELECT * FROM PREVU")
-        SocGrid.DataSource = table
+        'Dim table As DataTable = Connexion.ORA.Table("SELECT * FROM PREVU")
+        'SocGrid.DataSource = table
 
         'Label1.Text = ""
         'For Each row As DataRow In table.Rows
@@ -13,7 +13,10 @@
         'Next
 
         'Dim s As String = table.Rows(1)("SP_NOM").ToString()
-        'Label1.Text = s
+        Label1.Text = " kjdlkjsqlhsqkjh lkqsjhf skqjfh skqjfhqskjfh "
+        Label1.Width = 125
+
+        Dim caserne As New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne"))
 
     End Sub
 

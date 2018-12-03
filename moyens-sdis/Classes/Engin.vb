@@ -4,15 +4,20 @@
     Private _etat As Etat
     Private _nom As String
     Private _type As TypeEngin
-    Private _cis As Caserne
 
 
-    Public Sub New(ByVal id, ByVal nom, ByVal etat, ByVal type, ByVal cis)
+    Public Sub New(ByVal id, ByVal nom, ByVal etat, ByVal type)
         _id = id
         _nom = nom
         _etat = etat
         _type = type
-        _cis = cis
+    End Sub
+
+    Public Sub New(ByVal str)
+        _id = str("ENG_ID")
+        _nom = str("ENG_NOM")
+        _etat = str("ENG_ETAT")
+        _type = New TypeEngin(str("ENG_TYPE_ID"))
     End Sub
 
     Public Property ID As Integer
@@ -50,15 +55,6 @@
         End Get
         Set(ByVal value As TypeEngin)
             _type = value
-        End Set
-    End Property
-
-    Public Property Caserne As Caserne
-        Get
-            Return _cis
-        End Get
-        Set(ByVal value As Caserne)
-            _cis = value
         End Set
     End Property
 

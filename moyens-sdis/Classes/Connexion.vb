@@ -26,7 +26,6 @@
             MessageBox.Show("Erreur de connexion a la base")
         End Try
 
-
     End Sub
 
 
@@ -47,6 +46,10 @@
         myAdapter.Fill(donnee)
 
         Return donnee
+    End Function
+
+    Public Function Champ(ByVal query As String)
+        Return Table(query).Rows(0)
     End Function
 
 End Class
