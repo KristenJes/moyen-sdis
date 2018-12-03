@@ -22,13 +22,10 @@ Public Class gestion_engins
 
     Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         IHM()
-        ListBoxCaserne.Items.Add("BREST")
-        ListBoxCaserne.Items.Add("OUESSANT")
-        ListBoxCaserne.Items.Add("SAINT RENAN")
-
-    End Sub
-
-    Private Sub ListBoxCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBoxCaserne.SelectedIndexChanged
+        unEngins.AfficheCaserne(ListAffichCaserne)
+        ListAffichCaserne.Items.Add("BREST")
+        ListAffichCaserne.Items.Add("OUESSANT")
+        ListAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
 

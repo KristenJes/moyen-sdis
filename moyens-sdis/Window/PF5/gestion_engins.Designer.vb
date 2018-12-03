@@ -26,7 +26,7 @@ Partial Class gestion_engins
         Me.btnAjouter = New System.Windows.Forms.Button()
         Me.btnModifier = New System.Windows.Forms.Button()
         Me.btnSupprimer = New System.Windows.Forms.Button()
-        Me.ListBoxCaserne = New System.Windows.Forms.ListBox()
+        Me.ListAffichCaserne = New System.Windows.Forms.ListBox()
         Me.lblCaserne = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -66,14 +66,14 @@ Partial Class gestion_engins
         Me.btnSupprimer.Text = "Supprimer"
         Me.btnSupprimer.UseVisualStyleBackColor = True
         '
-        'ListBoxCaserne
+        'ListAffichCaserne
         '
-        Me.ListBoxCaserne.FormattingEnabled = True
-        Me.ListBoxCaserne.HorizontalScrollbar = True
-        Me.ListBoxCaserne.Location = New System.Drawing.Point(546, 201)
-        Me.ListBoxCaserne.Name = "ListBoxCaserne"
-        Me.ListBoxCaserne.Size = New System.Drawing.Size(104, 30)
-        Me.ListBoxCaserne.TabIndex = 4
+        Me.ListAffichCaserne.FormattingEnabled = True
+        Me.ListAffichCaserne.HorizontalScrollbar = True
+        Me.ListAffichCaserne.Location = New System.Drawing.Point(546, 201)
+        Me.ListAffichCaserne.Name = "ListAffichCaserne"
+        Me.ListAffichCaserne.Size = New System.Drawing.Size(104, 30)
+        Me.ListAffichCaserne.TabIndex = 4
         '
         'lblCaserne
         '
@@ -90,7 +90,7 @@ Partial Class gestion_engins
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(676, 335)
         Me.Controls.Add(Me.lblCaserne)
-        Me.Controls.Add(Me.ListBoxCaserne)
+        Me.Controls.Add(Me.ListAffichCaserne)
         Me.Controls.Add(Me.btnSupprimer)
         Me.Controls.Add(Me.btnModifier)
         Me.Controls.Add(Me.btnAjouter)
@@ -105,6 +105,6 @@ Partial Class gestion_engins
     Friend WithEvents btnAjouter As System.Windows.Forms.Button
     Friend WithEvents btnModifier As System.Windows.Forms.Button
     Friend WithEvents btnSupprimer As System.Windows.Forms.Button
-    Friend WithEvents ListBoxCaserne As System.Windows.Forms.ListBox
+    Friend WithEvents ListAffichCaserne As System.Windows.Forms.ListBox
     Friend WithEvents lblCaserne As System.Windows.Forms.Label
 End Class
