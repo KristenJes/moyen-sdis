@@ -21,11 +21,14 @@ Public Class gestion_engins
     End Sub
 
     Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         IHM()
-        unEngins.AfficheCaserne(ListAffichCaserne)
-        ListAffichCaserne.Items.Add("BREST")
-        ListAffichCaserne.Items.Add("OUESSANT")
-        ListAffichCaserne.Items.Add("SAINT RENAN")
+        unEngins.AfficheCaserne(lstAffichCaserne)
+
+
+        lstAffichCaserne.Items.Add("BREST")
+        lstAffichCaserne.Items.Add("OUESSANT")
+        lstAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
 

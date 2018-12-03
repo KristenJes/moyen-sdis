@@ -26,8 +26,8 @@ Partial Class gestion_engins
         Me.btnAjouter = New System.Windows.Forms.Button()
         Me.btnModifier = New System.Windows.Forms.Button()
         Me.btnSupprimer = New System.Windows.Forms.Button()
-        Me.ListAffichCaserne = New System.Windows.Forms.ListBox()
         Me.lblCaserne = New System.Windows.Forms.Label()
+        Me.lstAffichCaserne = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'lstAffichEngins
@@ -66,15 +66,6 @@ Partial Class gestion_engins
         Me.btnSupprimer.Text = "Supprimer"
         Me.btnSupprimer.UseVisualStyleBackColor = True
         '
-        'ListAffichCaserne
-        '
-        Me.ListAffichCaserne.FormattingEnabled = True
-        Me.ListAffichCaserne.HorizontalScrollbar = True
-        Me.ListAffichCaserne.Location = New System.Drawing.Point(546, 201)
-        Me.ListAffichCaserne.Name = "ListAffichCaserne"
-        Me.ListAffichCaserne.Size = New System.Drawing.Size(104, 30)
-        Me.ListAffichCaserne.TabIndex = 4
-        '
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
@@ -84,13 +75,21 @@ Partial Class gestion_engins
         Me.lblCaserne.TabIndex = 5
         Me.lblCaserne.Text = "Caserne"
         '
+        'lstAffichCaserne
+        '
+        Me.lstAffichCaserne.Location = New System.Drawing.Point(534, 201)
+        Me.lstAffichCaserne.Name = "lstAffichCaserne"
+        Me.lstAffichCaserne.Size = New System.Drawing.Size(113, 60)
+        Me.lstAffichCaserne.TabIndex = 6
+        Me.lstAffichCaserne.UseCompatibleStateImageBehavior = False
+        '
         'gestion_engins
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(676, 335)
+        Me.Controls.Add(Me.lstAffichCaserne)
         Me.Controls.Add(Me.lblCaserne)
-        Me.Controls.Add(Me.ListAffichCaserne)
         Me.Controls.Add(Me.btnSupprimer)
         Me.Controls.Add(Me.btnModifier)
         Me.Controls.Add(Me.btnAjouter)
@@ -105,6 +104,6 @@ Partial Class gestion_engins
     Friend WithEvents btnAjouter As System.Windows.Forms.Button
     Friend WithEvents btnModifier As System.Windows.Forms.Button
     Friend WithEvents btnSupprimer As System.Windows.Forms.Button
-    Friend WithEvents ListAffichCaserne As System.Windows.Forms.ListBox
     Friend WithEvents lblCaserne As System.Windows.Forms.Label
+    Friend WithEvents lstAffichCaserne As System.Windows.Forms.ListView
 End Class

@@ -19,7 +19,7 @@ Class CRUDENGINS
         'info(2) = "XXX-123-YYY"
         'info(3) = "OK"
 
-        Dim engin As DataTable = Connexion.ORA.Table("SELECT * FROM ENGIN")
+        Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN")
         For Each nom As DataRow In engin.Rows
             info(0) = nom("ENGIN_ID").ToString
             info(1) = nom("ENGIN_NOM").ToString
