@@ -19,13 +19,8 @@ Class CRUDENGINS
         'info(2) = "XXX-123-YYY"
         'info(3) = "OK"
 
-
-
-
-
-
-        Dim engin_id As DataTable = Connexion.ORA.Table("SELECT * FROM ENGIN")
-        For Each nom As DataRow In engin_id.Rows
+        Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN")
+        For Each nom As DataRow In engin.Rows
             info(0) = nom("ENGIN_ID").ToString
             info(1) = nom("ENGIN_NOM").ToString
             info(2) = nom("ENGIN_IMMAT").ToString
@@ -37,12 +32,41 @@ Class CRUDENGINS
 
 
 
+        ''Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
+        ''For Each nom As DataRow In caserne.Rows
+        ''    info(0) = nom("CIS_NOM").ToString
+
+        ''    itm = New ListViewItem(info)
+        ''    uneListView.Items.Add(itm)
+        ''Next
+
+
+
+
 
     End Sub
-        Public Sub ConfirmDelete()
 
-            MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
-                  MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+    Public Sub AfficheCaserne(ByVal uneListView As ListView)
 
-        End Sub
-    End Class
+
+        Dim info(2) As String
+        Dim itm As ListViewItem
+
+
+        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
+        For Each nom As DataRow In caserne.Rows
+            info(0) = nom("CIS_NOM").ToString
+
+            itm = New ListViewItem(info)
+            uneListView.Items.Add(itm)
+
+        Next
+    End Sub
+
+    Public Sub ConfirmDelete()
+
+        MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+    End Sub
+End Class
