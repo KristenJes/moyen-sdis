@@ -32,6 +32,9 @@ Partial Class gestion_engins
         '
         'lstAffichEngins
         '
+        Me.lstAffichEngins.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid
+        Me.lstAffichEngins.CheckBoxes = True
+        Me.lstAffichEngins.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!)
         Me.lstAffichEngins.Location = New System.Drawing.Point(12, 12)
         Me.lstAffichEngins.Name = "lstAffichEngins"
         Me.lstAffichEngins.Size = New System.Drawing.Size(504, 289)
@@ -69,6 +72,7 @@ Partial Class gestion_engins
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
+        Me.lblCaserne.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!)
         Me.lblCaserne.Location = New System.Drawing.Point(543, 180)
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
@@ -77,9 +81,10 @@ Partial Class gestion_engins
         '
         'lstAffichCaserne
         '
-        Me.lstAffichCaserne.Location = New System.Drawing.Point(534, 201)
+        Me.lstAffichCaserne.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        Me.lstAffichCaserne.Location = New System.Drawing.Point(522, 201)
         Me.lstAffichCaserne.Name = "lstAffichCaserne"
-        Me.lstAffichCaserne.Size = New System.Drawing.Size(113, 60)
+        Me.lstAffichCaserne.Size = New System.Drawing.Size(142, 100)
         Me.lstAffichCaserne.TabIndex = 6
         Me.lstAffichCaserne.UseCompatibleStateImageBehavior = False
         '
@@ -94,6 +99,7 @@ Partial Class gestion_engins
         Me.Controls.Add(Me.btnModifier)
         Me.Controls.Add(Me.btnAjouter)
         Me.Controls.Add(Me.lstAffichEngins)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.25!)
         Me.Name = "gestion_engins"
         Me.Text = "ENGINS"
         Me.ResumeLayout(False)

@@ -1,10 +1,11 @@
 ﻿
 Class CRUDENGINS
-        'LIAISON AVEC IHM
-        Public Sub afficheIHM(ByVal uneFeuille As Form, ByVal uneListView As ListView)
-            uneFeuille.Text = "ENGINS"
 
-            uneListView.Clear()
+    'LIAISON AVEC IHM
+    Public Sub afficheIHM(ByVal uneFeuille As Form, ByVal uneListView As ListView)
+        uneFeuille.Text = "ENGINS"
+
+        uneListView.Clear()
 
         uneListView.Columns.Add("Caserne", 80, HorizontalAlignment.Left)
         uneListView.Columns.Add("Nom engin", 70, HorizontalAlignment.Left)
@@ -30,20 +31,6 @@ Class CRUDENGINS
             uneListView.Items.Add(itm)
         Next
 
-
-
-        ''Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
-        ''For Each nom As DataRow In caserne.Rows
-        ''    info(0) = nom("CIS_NOM").ToString
-
-        ''    itm = New ListViewItem(info)
-        ''    uneListView.Items.Add(itm)
-        ''Next
-
-
-
-
-
     End Sub
 
     Public Sub AfficheCaserne(ByVal uneListView As ListView)
@@ -53,7 +40,7 @@ Class CRUDENGINS
         Dim itm As ListViewItem
 
 
-        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
+        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE ORDER BY CIS_NOM ASC")
         For Each nom As DataRow In caserne.Rows
             info(0) = nom("CIS_NOM").ToString
 
@@ -67,6 +54,20 @@ Class CRUDENGINS
 
         MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+    End Sub
+
+    Public Sub Delete(ByVal uneListView As ListView)
+        Dim info(2) As String
+        Dim itm As ListViewItem
+
+        Dim dltCaserne As DataTable = Connexion.ORA.Table("DELETE FROM ENGIN WHERE ENGIN.CIS_ID = " & .Text & ";")
+        For Each nom As DataRow In dltCaserne.Rows
+            info(0) = nom("CIS_NOM").ToString
+
+            itm = New ListViewItem(info)
+            uneListView.Items.Remove(itm)
+        Next
 
     End Sub
 End Class

@@ -9,7 +9,8 @@ Public Class gestion_engins
     End Sub
 
     Private Sub btnSupprimer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupprimer.Click
-        unEngins.ConfirmDelete()
+        unEngins.ConfirmDelete(
+            unEngins.
 
     End Sub
     Private Sub btnAjouter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAjouter.Click
@@ -26,9 +27,9 @@ Public Class gestion_engins
         unEngins.AfficheCaserne(lstAffichCaserne)
 
 
-        lstAffichCaserne.Items.Add("BREST")
-        lstAffichCaserne.Items.Add("OUESSANT")
-        lstAffichCaserne.Items.Add("SAINT RENAN")
+        'lstAffichCaserne.Items.Add("BREST")
+        'lstAffichCaserne.Items.Add("OUESSANT")
+        'lstAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
 
