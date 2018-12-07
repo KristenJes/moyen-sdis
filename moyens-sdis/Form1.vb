@@ -16,7 +16,7 @@
         Label1.Text = " kjdlkjsqlhsqkjh lkqsjhf skqjfh skqjfhqskjfh "
         Label1.Width = 125
 
-        Dim caserne As New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne"))
+        Dim caserne As New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne"), True)
 
     End Sub
 

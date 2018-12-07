@@ -2,15 +2,22 @@
 
     Private sinistre As New Sinistre(1, "Malaise")
     Private communeSelected As New Commune(1, "Brest")
+    Private neededVehicles As New List(Of TypeEngin)
 
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         ContainerDepart.Controls.Clear()
-        Dim departType As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, TYPE_ENG_PLACES, TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
+        Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
+        For Each type_camion As DataRow In departTypes.Rows
+            neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
+        Next
 
 
-        For Each type_camion As DataRow In departType.Rows
+        Dim caserne As Caserne = getNearCaserne(communeSelected)
+
+
+        For Each type_camion As DataRow In departTypes.Rows
             Panel1.Controls.Add(Engin_Display(type_camion))
         Next
     End Sub
@@ -22,7 +29,7 @@
         Dim dist As Integer = 0
 
         For Each caserneStr As DataRow In casernes.Rows
-            Dim caserne As New Caserne(caserneStr)
+            Dim caserne As New Caserne(caserneStr, False)
             If ((bestCaserne Is Nothing Or Utils.getDistance(commune.Latitude, commune.Longitude, caserne.Latitude, caserne.Longitude) < dist) And casernesChecked.Contains(caserne) = False) Then
                 bestCaserne = caserne
             End If

@@ -15,17 +15,14 @@
         _pompiers = getPompiers()
     End Sub
 
-    Public Sub New(ByVal id, ByVal nom)
-        _id = id
-        _nom = nom
-    End Sub
-
-    Public Sub New(ByVal str)
+    Public Sub New(ByVal str As DataRow, ByVal loadPompier As Boolean)
         _id = str("CIS_ID")
         _nom = str("CIS_NOM")
         _latitude = str("CIS_LAT")
         _longitude = str("CIS_LONG")
-        _pompiers = getPompiers()
+        If (loadPompier) Then
+            _pompiers = getPompiers()
+        End If
     End Sub
 
     Public Property ID As Integer
