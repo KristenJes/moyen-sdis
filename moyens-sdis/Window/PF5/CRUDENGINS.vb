@@ -20,9 +20,9 @@ Class CRUDENGINS
         'info(2) = "XXX-123-YYY"
         'info(3) = "OK"
 
-        Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN")
+        Dim engin As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN WHERE CASERNE.CIS_ID=ENGIN.CIS_ID")
         For Each nom As DataRow In engin.Rows
-            info(0) = nom("ENGIN_ID").ToString
+            info(0) = nom("CIS_NOM").ToString
             info(1) = nom("ENGIN_NOM").ToString
             info(2) = nom("ENGIN_IMMAT").ToString
             info(3) = nom("ENGIN_ETAT").ToString
@@ -54,6 +54,11 @@ Class CRUDENGINS
 
         MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+        'If MessageBoxButtons = vbYes Then
+
+
+        'End If
+
 
     End Sub
 
@@ -61,7 +66,20 @@ Class CRUDENGINS
         Dim info(2) As String
         Dim itm As ListViewItem
 
-        Dim dltCaserne As DataTable = Connexion.ORA.Table("DELETE FROM ENGIN WHERE ENGIN.CIS_ID = " & .Text & ";")
+        Dim dltCaserne As DataTable = Connexion.ORA.Table("DELETE FROM ENGIN WHERE ENGIN.CIS_ID =     ")
+        For Each nom As DataRow In dltCaserne.Rows
+            info(0) = nom("CIS_NOM").ToString
+
+            itm = New ListViewItem(info)
+            uneListView.Items.Remove(itm)
+        Next
+    End Sub
+
+    Public Sub Update(ByVal uneListView As ListView)
+        Dim info(2) As String
+        Dim itm As ListViewItem
+
+        Dim dltCaserne As DataTable = Connexion.ORA.Table("UPDATE ENGIN SET WHERE ENGIN.CIS_ID = ")
         For Each nom As DataRow In dltCaserne.Rows
             info(0) = nom("CIS_NOM").ToString
 

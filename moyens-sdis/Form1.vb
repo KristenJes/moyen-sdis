@@ -30,7 +30,6 @@
 
     Private Sub SetLatLong()
         Dim casernes As DataTable = Connexion.ORA.Table("SELECT * FROM Caserne")
-        Dim villes As DataTable = Connexion.MySQL.Table("SELECT * FROM villes_fr")
 
         For Each caserne As DataRow In casernes.Rows
             For Each ville As DataRow In villes.Rows
