@@ -1,7 +1,6 @@
 ﻿Public Class Connexion
 
     Public Shared ORA As New Connexion("cnx_oraD22", "SDIS29", "Iroise29")
-    Public Shared MySQL As New Connexion("mysql_db", "root", "")
 
     Private myConnection As New Odbc.OdbcConnection
     Private myCommand As New Odbc.OdbcCommand

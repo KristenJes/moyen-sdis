@@ -81,8 +81,11 @@ Partial Class gestion_engins
         '
         'lstAffichCaserne
         '
+        Me.lstAffichCaserne.Alignment = System.Windows.Forms.ListViewAlignment.SnapToGrid
         Me.lstAffichCaserne.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!)
+        Me.lstAffichCaserne.LabelWrap = False
         Me.lstAffichCaserne.Location = New System.Drawing.Point(522, 201)
+        Me.lstAffichCaserne.Margin = New System.Windows.Forms.Padding(0)
         Me.lstAffichCaserne.Name = "lstAffichCaserne"
         Me.lstAffichCaserne.Size = New System.Drawing.Size(142, 100)
         Me.lstAffichCaserne.TabIndex = 6

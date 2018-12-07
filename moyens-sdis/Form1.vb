@@ -28,19 +28,6 @@
 
     End Sub
 
-    Private Sub SetLatLong()
-        Dim casernes As DataTable = Connexion.ORA.Table("SELECT * FROM Caserne")
-
-        For Each caserne As DataRow In casernes.Rows
-            For Each ville As DataRow In villes.Rows
-                If ville("ville_nom_reel") = caserne("CIS_NOM") Then
-                    Connexion.ORA.Execute("UPDATE Caserne SET CIS_LAT = '" & ville("ville_latitude_deg") & "', CIS_LONG = '" & ville("ville_longitude_deg") & "' WHERE CIS_ID = '" & caserne("CIS_ID") & "'")
-                    GoTo end_of_for
-                End If
-            Next
-end_of_for:
-        Next
-    End Sub
 
     '    Private Sub SetLatLongCommune()
     '         A FAIIRE
