@@ -11,11 +11,6 @@ Public Class gestion_engins
     Private Sub btnSupprimer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupprimer.Click
         unEngins.ConfirmDelete()
 
-
-    End Sub
-
-    Private Sub supprimer()
-
     End Sub
     Private Sub btnAjouter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAjouter.Click
         gest_engins_ajout.ShowDialog()
@@ -31,23 +26,10 @@ Public Class gestion_engins
         unEngins.AfficheCaserne(lstAffichCaserne)
 
 
-        'lstAffichCaserne.Items.Add("BREST")
-        'lstAffichCaserne.Items.Add("OUESSANT")
-        'lstAffichCaserne.Items.Add("SAINT RENAN")
+        lstAffichCaserne.Items.Add("BREST")
+        lstAffichCaserne.Items.Add("OUESSANT")
+        lstAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
 
-    Private Sub lstAffichEngins_Invalidated(ByVal sender As Object, ByVal e As System.Windows.Forms.InvalidateEventArgs) Handles lstAffichEngins.Invalidated
-
-    End Sub
-
-    Private Sub lstAffichEngins_ItemCheck(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemCheckEventArgs) Handles lstAffichEngins.ItemCheck
-        unEngins.Delete(lstAffichEngins)
-    End Sub
-
-
-
-    Private Sub lstAffichEngins_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstAffichEngins.SelectedIndexChanged
-
-    End Sub
 End Class

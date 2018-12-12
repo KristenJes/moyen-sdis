@@ -1,9 +1,9 @@
 ﻿Public Class PF1
 
-    Private sinistre As New Sinistre(1, "Malaise")
-    Private communeSelected As New Commune(1, "Brest")
-    Private neededVehicles As New List(Of TypeEngin)
-
+    Dim sinistre As New Sinistre(1, "Malaise")
+    Dim communeSelected As Commune
+    Dim neededVehicles As New List(Of TypeEngin)
+    Dim communeNom As String = "Brest"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -13,29 +13,27 @@
             neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
         Next
 
+        communeSelected = New Commune(Connexion.ORA.Champ("SELECT * FROM Commune WHERE "))
 
-        Dim caserne As Caserne = getNearCaserne(communeSelected)
-
+        Dim orderedCasernes As List(Of Caserne) = OrderCaserne(communeSelected)
+        For Each caserne As Caserne In orderedCasernes
+            caserne.loadPompiers()
+        Next
 
         For Each type_camion As DataRow In departTypes.Rows
             Panel1.Controls.Add(Engin_Display(type_camion))
         Next
     End Sub
 
+    Public Function OrderCaserne(ByVal commune As Commune)
+        Dim orderedCasernes As New List(Of Caserne)()
+        Dim casernes As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM, CIS_LAT, CIS_LONG FROM CASERNE WHERE CIS_LAT IS NOT NULL AND CIS_LONG IS NOT NULL ORDER BY DISTANCE_LOC(" & commune.Latitude & ", " & commune.Longitude & ", CIS_LAT, CIS_LONG)")
 
-    Public Function getNearCaserne(ByVal commune As Commune, Optional ByVal casernesChecked As List(Of Caserne) = Nothing)
-        Dim casernes As DataTable = Connexion.ORA.Table("SELECT * FROM Caserne")
-        Dim bestCaserne As Caserne = Nothing
-        Dim dist As Integer = 0
-
-        For Each caserneStr As DataRow In casernes.Rows
-            Dim caserne As New Caserne(caserneStr, False)
-            If ((bestCaserne Is Nothing Or Utils.getDistance(commune.Latitude, commune.Longitude, caserne.Latitude, caserne.Longitude) < dist) And casernesChecked.Contains(caserne) = False) Then
-                bestCaserne = caserne
-            End If
+        For Each caserne As DataRow In casernes.Rows
+            orderedCasernes.Add(New Caserne(caserne, False))
         Next
 
-        Return bestCaserne
+        Return orderedCasernes
     End Function
 
     Public Function Engin_Display(ByVal camion)
@@ -67,20 +65,4 @@
         Return group
     End Function
 
-
-    Private Sub ContainerDepart_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ContainerDepart.Enter
-
-    End Sub
-
-    Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
-
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 End Class

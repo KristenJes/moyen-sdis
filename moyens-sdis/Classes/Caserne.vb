@@ -2,8 +2,8 @@
 
     Private _id As Integer
     Private _nom As String
-    Private _latitude As String
-    Private _longitude As String
+    Private _latitude As Double
+    Private _longitude As Double
     Private _engins As List(Of Engin)
     Private _pompiers As List(Of Pompier)
 
@@ -12,7 +12,7 @@
         _nom = nom
         _latitude = latitude
         _longitude = longitude
-        _pompiers = getPompiers()
+        _pompiers = loadPompiers()
     End Sub
 
     Public Sub New(ByVal str As DataRow, ByVal loadPompier As Boolean)
@@ -21,7 +21,7 @@
         _latitude = str("CIS_LAT")
         _longitude = str("CIS_LONG")
         If (loadPompier) Then
-            _pompiers = getPompiers()
+            _pompiers = loadPompiers()
         End If
     End Sub
 
@@ -90,7 +90,7 @@
         Engins.Add(engin)
     End Sub
 
-    Public Function getPompiers()
+    Public Function loadPompiers()
         Dim pompiers As New List(Of Pompier)
         Dim pompiersStr As DataTable = Connexion.ORA.Table("SELECT * FROM Pompier WHERE ")
         For Each pompierStr As DataRow In pompiersStr.Rows

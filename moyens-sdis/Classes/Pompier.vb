@@ -28,7 +28,7 @@
         _dateAffectation = dateAffectation
     End Sub
 
-    Public Sub New(ByVal str)
+    Public Sub New(ByVal str As DataRow)
         _matricule = str("SP_MATRICULE")
         _nom = str("SP_PRENOM")
         _nom = str("SP_NOM")

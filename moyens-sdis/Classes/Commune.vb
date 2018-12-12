@@ -2,8 +2,8 @@
 
     Private _id As Integer
     Private _nom As String
-    Private _latitude As String
-    Private _longitude As String
+    Private _latitude As Double
+    Private _longitude As Double
 
     Public Sub New(ByVal id, ByVal nom, ByVal latitude, ByVal longitude)
         _id = id
@@ -12,8 +12,8 @@
         _longitude = longitude
     End Sub
 
-    Public Sub New(ByVal id, ByVal nom)
-        _id = id
+    Public Sub New(ByVal str As DataRow)
+        _id = str("")
         _nom = nom
     End Sub
 
