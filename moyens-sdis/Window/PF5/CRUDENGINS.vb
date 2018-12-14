@@ -19,7 +19,8 @@ Class CRUDENGINS
         'info(2) = "XXX-123-YYY"
         'info(3) = "OK"
 
-        Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN")
+        Dim caserne = 2
+        Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN WHERE CIS_ID= " & caserne & ";")
         For Each nom As DataRow In engin.Rows
             info(0) = nom("ENGIN_ID").ToString
             info(1) = nom("ENGIN_NOM").ToString
@@ -49,6 +50,22 @@ Class CRUDENGINS
         Next
     End Sub
 
+    'Public Sub AfficheCaserne(ByVal uneListBox As ListBox)
+
+
+    '    Dim info(2) As String
+    '    Dim itm As ListBox.
+
+
+    '    Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE ORDER BY CIS_NOM;")
+    '    For Each nom As DataRow In caserne.Rows
+    '        info(0) = nom("CIS_NOM").ToString
+
+    '        itm = New ListBox(info)
+    '        uneListBox.Items.Add(itm)
+
+    '    Next
+    'End Sub
     Public Sub ConfirmDelete()
 
         MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
@@ -72,4 +89,25 @@ Class CRUDENGINS
 
 
     'End Sub
+
+    'Public Sub ajout()
+    '    Dim caserne As DataTable = Connexion.ORA.Table("INSERT INTO ENGIN () VALUES ();")
+    'End Sub
+
+    Public Sub AffichTypeEngin(ByVal uneListView As ListView)
+        Dim info(2) As String
+        Dim itm As ListViewItem
+
+
+        Dim typeEngin As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN ORDER BY TYPE_ENG_NOM;")
+        For Each nom As DataRow In typeEngin.Rows
+            info(0) = nom("TYPE_ENG_NOM").ToString
+
+            itm = New ListViewItem(info)
+            uneListView.Items.Add(itm)
+
+        Next
+    End Sub
+
+
 End Class

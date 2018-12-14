@@ -32,6 +32,7 @@ Partial Class gestion_engins
         '
         'lstAffichEngins
         '
+        Me.lstAffichEngins.CheckBoxes = True
         Me.lstAffichEngins.Location = New System.Drawing.Point(12, 12)
         Me.lstAffichEngins.Name = "lstAffichEngins"
         Me.lstAffichEngins.Size = New System.Drawing.Size(504, 289)
@@ -68,6 +69,7 @@ Partial Class gestion_engins
         '
         'lstAffichCaserne
         '
+        Me.lstAffichCaserne.CheckBoxes = True
         Me.lstAffichCaserne.Location = New System.Drawing.Point(534, 201)
         Me.lstAffichCaserne.Name = "lstAffichCaserne"
         Me.lstAffichCaserne.Size = New System.Drawing.Size(130, 100)
