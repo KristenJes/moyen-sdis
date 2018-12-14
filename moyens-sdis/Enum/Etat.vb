@@ -1,6 +1,6 @@
 ﻿Public Enum Etat
 
     Inervention
-    Caserne
+    Disponnible
 
 End Enum

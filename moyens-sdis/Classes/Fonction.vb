@@ -9,6 +9,11 @@
         _libelle = libelle
     End Sub
 
+    Public Sub New(ByVal str As DataRow)
+        _id = str("FCT_ID")
+        _libelle = str("FCT_LIBELLE")
+    End Sub
+
     Public Property ID As Integer
         Get
             Return _id

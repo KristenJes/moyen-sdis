@@ -92,7 +92,7 @@
 
     Public Function loadPompiers()
         Dim pompiers As New List(Of Pompier)
-        Dim pompiersStr As DataTable = Connexion.ORA.Table("SELECT * FROM Pompier WHERE ")
+        Dim pompiersStr As DataTable = Connexion.ORA.Table("SELECT * FROM Pompier WHERE CIS_ID = " & ID)
         For Each pompierStr As DataRow In pompiersStr.Rows
             Dim pompier As Pompier = New Pompier(pompierStr)
             pompiers.Add(pompier)
@@ -101,15 +101,31 @@
         Return pompiers
     End Function
 
-    Public Function getEngins()
+    Public Function loadEngins()
         Dim engins As New List(Of Engin)
-        Dim enginsStr As DataTable = Connexion.ORA.Table("SELECT ")
+        Dim enginsStr As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_NOM, ENGIN_ETAT, TYPE_ENG_ID FROM Engin WHERE CIS_ID = " & ID)
         For Each enginStr As DataRow In enginsStr.Rows
             Dim engin As Engin = New Engin(enginStr)
             engins.Add(engin)
         Next
 
         Return engins
+    End Function
+
+    Public Function getEnginsFromType(ByVal type As TypeEngin)
+        If (Engins.Count = 0) Then
+            Return Nothing
+        End If
+
+        Dim enginsWithType As New List(Of Engin)
+
+        For Each engin As Engin In Engins
+            If (engin.Type.Equals(type)) Then
+                enginsWithType.Add(engin)
+            End If
+        Next
+
+        Return enginsWithType
     End Function
 
 End Class

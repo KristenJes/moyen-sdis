@@ -1,7 +1,7 @@
 ﻿Public Class Engin
 
     Private _id As Integer
-    Private _etat As Etat
+    Private _etat As String
     Private _nom As String
     Private _type As TypeEngin
 
@@ -14,10 +14,10 @@
     End Sub
 
     Public Sub New(ByVal str)
-        _id = str("ENG_ID")
-        _nom = str("ENG_NOM")
-        _etat = str("ENG_ETAT")
-        _type = New TypeEngin(str("ENG_TYPE_ID"))
+        _id = str("ENGIN_ID")
+        _nom = str("ENGIN_NOM")
+        _etat = str("ENGIN_ETAT")
+        _type = New TypeEngin(str("TYPE_ENG_ID"))
     End Sub
 
     Public Property ID As Integer
@@ -30,12 +30,12 @@
     End Property
 
 
-    Public Property Etat As Etat
+    Public Property Etat As String
         Get
             Return _etat
 
         End Get
-        Set(ByVal value As Etat)
+        Set(ByVal value As String)
             _etat = value
         End Set
     End Property

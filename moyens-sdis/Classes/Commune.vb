@@ -13,8 +13,10 @@
     End Sub
 
     Public Sub New(ByVal str As DataRow)
-        _id = str("")
-        _nom = nom
+        _id = str("CODE_COMMUNE")
+        _nom = str("NOM_COMMUNE")
+        _latitude = str("LAT_COMMUNE")
+        _longitude = str("LONG_COMMUNE")
     End Sub
 
 

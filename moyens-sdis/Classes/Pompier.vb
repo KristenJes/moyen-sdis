@@ -36,10 +36,10 @@
         _telFixe = str("SP_TEL_FIXE")
         _telPortable = str("SP_TEL_PORTABLE")
         _bip = str("SP_BIP")
-        _statut = str("SP_STATUT")
+        _statut = 1
         _dateMaj = str("SP_DTE_MAJ")
         _datePromotion = str("DATE_PROMOTION")
-        _dateAffectation = str("SP_DATE_AFFECTATION")
+        _dateAffectation = str("DATE_AFFECTATION")
     End Sub
 
     Public Property Matricule As Integer
