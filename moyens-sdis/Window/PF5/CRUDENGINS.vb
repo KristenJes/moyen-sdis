@@ -30,20 +30,6 @@ Class CRUDENGINS
             uneListView.Items.Add(itm)
         Next
 
-
-
-        ''Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
-        ''For Each nom As DataRow In caserne.Rows
-        ''    info(0) = nom("CIS_NOM").ToString
-
-        ''    itm = New ListViewItem(info)
-        ''    uneListView.Items.Add(itm)
-        ''Next
-
-
-
-
-
     End Sub
 
     Public Sub AfficheCaserne(ByVal uneListView As ListView)
@@ -53,7 +39,7 @@ Class CRUDENGINS
         Dim itm As ListViewItem
 
 
-        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
+        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE ORDER BY CIS_NOM;")
         For Each nom As DataRow In caserne.Rows
             info(0) = nom("CIS_NOM").ToString
 
@@ -69,4 +55,21 @@ Class CRUDENGINS
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
     End Sub
+
+    'Public Sub AfficheModif()
+    '    Dim info(2) As String
+    '    Dim itm As ListViewItem
+
+
+    '    Dim infoModif As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ID, ENGIN_IMMAT FROM CASERNE, ENGIN, TYPE_ENGIN ORDER BY CIS_NOM WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND ENGIN.TYPE_ENG_ID=TYPE_ENGIN.TYPE_ENG_ID;")
+    '    For Each nom As DataRow In infoModif.Rows
+    '        info(0) = nom("CIS_NOM").ToString
+
+    '        itm = New ListViewItem(info)
+    '        'uneListView.Items.Add(itm)
+
+    '    Next
+
+
+    'End Sub
 End Class
