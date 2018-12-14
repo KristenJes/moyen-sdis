@@ -26,13 +26,12 @@ Partial Class gestion_engins
         Me.btnAjouter = New System.Windows.Forms.Button()
         Me.btnModifier = New System.Windows.Forms.Button()
         Me.btnSupprimer = New System.Windows.Forms.Button()
+        Me.lblCaserne = New System.Windows.Forms.Label()
         Me.lstAffichCaserne = New System.Windows.Forms.ListView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'lstAffichEngins
         '
-        Me.lstAffichEngins.CheckBoxes = True
         Me.lstAffichEngins.Location = New System.Drawing.Point(12, 12)
         Me.lstAffichEngins.Name = "lstAffichEngins"
         Me.lstAffichEngins.Size = New System.Drawing.Size(504, 289)
@@ -67,24 +66,22 @@ Partial Class gestion_engins
         Me.btnSupprimer.Text = "Supprimer"
         Me.btnSupprimer.UseVisualStyleBackColor = True
         '
+        'lblCaserne
+        '
+        Me.lblCaserne.AutoSize = True
+        Me.lblCaserne.Location = New System.Drawing.Point(543, 180)
+        Me.lblCaserne.Name = "lblCaserne"
+        Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
+        Me.lblCaserne.TabIndex = 5
+        Me.lblCaserne.Text = "Caserne"
+        '
         'lstAffichCaserne
         '
-        Me.lstAffichCaserne.CheckBoxes = True
         Me.lstAffichCaserne.Location = New System.Drawing.Point(534, 201)
         Me.lstAffichCaserne.Name = "lstAffichCaserne"
-        Me.lstAffichCaserne.Size = New System.Drawing.Size(130, 100)
+        Me.lstAffichCaserne.Size = New System.Drawing.Size(113, 60)
         Me.lstAffichCaserne.TabIndex = 6
         Me.lstAffichCaserne.UseCompatibleStateImageBehavior = False
-        Me.lstAffichCaserne.View = System.Windows.Forms.View.SmallIcon
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(531, 180)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
-        Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Caserne"
         '
         'gestion_engins
         '
@@ -92,7 +89,7 @@ Partial Class gestion_engins
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(676, 335)
         Me.Controls.Add(Me.lstAffichCaserne)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblCaserne)
         Me.Controls.Add(Me.btnSupprimer)
         Me.Controls.Add(Me.btnModifier)
         Me.Controls.Add(Me.btnAjouter)
@@ -107,6 +104,6 @@ Partial Class gestion_engins
     Friend WithEvents btnAjouter As System.Windows.Forms.Button
     Friend WithEvents btnModifier As System.Windows.Forms.Button
     Friend WithEvents btnSupprimer As System.Windows.Forms.Button
+    Friend WithEvents lblCaserne As System.Windows.Forms.Label
     Friend WithEvents lstAffichCaserne As System.Windows.Forms.ListView
-    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class

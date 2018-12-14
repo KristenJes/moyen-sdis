@@ -18,7 +18,6 @@ Public Class gestion_engins
 
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModifier.Click
         gest_engins_ajout.ShowDialog()
-
     End Sub
 
     Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -26,6 +25,10 @@ Public Class gestion_engins
         IHM()
         unEngins.AfficheCaserne(lstAffichCaserne)
 
+
+        lstAffichCaserne.Items.Add("BREST")
+        lstAffichCaserne.Items.Add("OUESSANT")
+        lstAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
 

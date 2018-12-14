@@ -1,21 +1,23 @@
 ﻿Public Class gest_engins_ajout
-    Dim unEngins As New CRUDENGINS
+
 
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
 
     End Sub
 
-    Private Sub listBoxCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub listBoxCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles listBoxCaserne.SelectedIndexChanged
 
     End Sub
 
     Private Sub gest_engins_ajout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'unEngins.AfficheCaserne(listBoxCaserne)
-        unEngins.AffichTypeEngin(lstAffichTypeEngin)
+        listBoxCaserne.Items.Add("BREST")
+        listBoxCaserne.Items.Add("OUESSANT")
+        listBoxCaserne.Items.Add("SAINT RENAN")
 
-    End Sub
-
-    Private Sub txtBoxIdentifiant_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBoxIdentifiant.TextChanged
-
+        ListBoxType.Items.Add("VSAV")
+        ListBoxType.Items.Add("VTU")
+        ListBoxType.Items.Add("VL")
+        ListBoxType.Items.Add("FPT")
+        ListBoxType.Items.Add("VL")
     End Sub
 End Class

@@ -3,22 +3,39 @@
     Dim sinistre As New Sinistre(1, "Malaise")
     Dim communeSelected As Commune
     Dim neededVehicles As New List(Of TypeEngin)
-    Dim communeNom As String = "Brest"
+    Dim selectedEngin As New List(Of Engin)
+    Dim communeNom As String = "BREST"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         ContainerDepart.Controls.Clear()
-        Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
+
+        Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
         For Each type_camion As DataRow In departTypes.Rows
             neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
         Next
 
-        communeSelected = New Commune(Connexion.ORA.Champ("SELECT * FROM Commune WHERE "))
+        communeSelected = New Commune(Connexion.ORA.Champ("SELECT * FROM Commune WHERE NOM_COMMUNE = '" & communeNom & "'"))
 
         Dim orderedCasernes As List(Of Caserne) = OrderCaserne(communeSelected)
-        For Each caserne As Caserne In orderedCasernes
-            caserne.loadPompiers()
-        Next
+        Try
+            For Each caserne As Caserne In orderedCasernes
+                caserne.loadPompiers()
+                caserne.loadEngins()
+
+
+                If (neededVehicles.Count <> selectedEngin.Count) Then
+                    For Each neededVehicule As TypeEngin In neededVehicles
+                        For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
+                            ' VOIR AVEC MAEL
+                        Next
+                    Next
+                Else
+                    Exit Try
+                End If
+            Next
+        Finally
+        End Try
 
         For Each type_camion As DataRow In departTypes.Rows
             Panel1.Controls.Add(Engin_Display(type_camion))
@@ -42,7 +59,7 @@
         Dim text2 As New Label
         Dim button As New Button
 
-        typeEnginText.Text = camion("TYPE_ENG_PLACES")
+        typeEnginText.Text = "test"
         typeEnginText.Dock = DockStyle.Left
         typeEnginText.Width = 125
         typeEnginText.AutoSize = False
@@ -65,4 +82,7 @@
         Return group
     End Function
 
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class

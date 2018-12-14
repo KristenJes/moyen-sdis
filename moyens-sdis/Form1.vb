@@ -13,20 +13,14 @@
         'Next
 
         'Dim s As String = table.Rows(1)("SP_NOM").ToString()
-        Label1.Text = " kjdlkjsqlhsqkjh lkqsjhf skqjfh skqjfhqskjfh "
-        Label1.Width = 125
 
-        'Dim caserne As New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne"), True)
+        'Panel1.Controls.Add(Engin_Display(New Engin(14, "VSAV01", "Assigné", New TypeEngin(15, "VSAV", 4))))
+
+        'MessageBox.Show(oui(3, 3))
 
 
 
-    End Sub
 
-    Private Sub SocGrid_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles SocGrid.CellContentClick
-
-    End Sub
-
-    Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
 
@@ -36,6 +30,92 @@
 
 
 
+    Public Sub generateEngin()
+        Dim casernes As DataTable = Connexion.ORA.Table("Select * from caserne")
+        Dim types As DataTable = Connexion.ORA.Table("Select * from type_engin")
+
+        Dim num As Integer = 158
+
+        For Each row As DataRow In casernes.Rows
+            Dim random As New Random()
+            Dim rndnbr As Integer = random.Next(1, types.Rows.Count)
+
+
+            For index = 1 To rndnbr
+                Dim type_engin As DataRow = Connexion.ORA.Champ("Select * from type_engin WHERE TYPE_ENG_ID = " & index)
+                Dim immat As String = oui(3, 3)
+                Connexion.ORA.Execute("INSERT INTO Engin (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES(" & num & ", 'OK', '" & type_engin("TYPE_ENG_NOM") & "', " & row("CIS_ID") & ", " & type_engin("TYPE_ENG_ID") & ", '" & immat & "')")
+
+                num += 1
+            Next
+
+        Next
+    End Sub
+
+
+
+    Public Function oui(ByVal taille, ByVal nb)
+        Dim validchars As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+        Dim sb As String = ""
+        Dim rand As New Random()
+
+        For index = 1 To nb
+            For i As Integer = 1 To taille
+                Dim idx As Integer = rand.Next(0, validchars.Length)
+                Dim randomChar As Char = validchars(idx)
+                sb &= (randomChar)
+            Next i
+
+            If (nb <> index) Then
+                sb &= "-"
+            End If
+        Next
+
+
+        Return sb
+    End Function
+
+
+
+
+    Public Function Engin_Display(ByVal camion As Engin)
+        Dim group As New GroupBox
+        Dim typeEnginText As New Label
+        Dim text2 As New Label
+        Dim text3 As New Label
+        Dim button As New Button
+
+        typeEnginText.Text = camion.Type.nom
+        typeEnginText.Dock = DockStyle.Left
+        typeEnginText.Width = 125
+        typeEnginText.AutoSize = False
+
+        text2.Text = camion.Nom
+        text2.Dock = DockStyle.Left
+        text2.Width = 125
+        text2.AutoSize = False
+
+        text3.Text = camion.Etat
+        text3.Dock = DockStyle.Left
+        text3.Width = 125
+        text3.AutoSize = False
+
+        button.Text = "Consulter"
+        button.Dock = DockStyle.Right
+        button.Height = 15
+        button.Width = 50
+
+        group.Controls.Add(typeEnginText)
+        group.Controls.Add(text2)
+        group.Controls.Add(text3)
+        group.Controls.Add(button)
+        group.Dock = DockStyle.Top
+        group.Height = 50
+        button.Width = 100%
+
+        Return group
+    End Function
 
 
 
