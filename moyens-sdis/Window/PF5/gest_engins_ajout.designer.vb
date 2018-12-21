@@ -37,7 +37,11 @@ Partial Class gest_engins_ajout
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
+<<<<<<< HEAD
+        Me.lblCaserne.Location = New System.Drawing.Point(37, 45)
+=======
         Me.lblCaserne.Location = New System.Drawing.Point(35, 40)
+>>>>>>> 8957753d90831ecc04b9dad3e17e8512267e1f41
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
         Me.lblCaserne.TabIndex = 0
@@ -55,7 +59,11 @@ Partial Class gest_engins_ajout
         'lblType
         '
         Me.lblType.AutoSize = True
+<<<<<<< HEAD
+        Me.lblType.Location = New System.Drawing.Point(35, 114)
+=======
         Me.lblType.Location = New System.Drawing.Point(37, 80)
+>>>>>>> 8957753d90831ecc04b9dad3e17e8512267e1f41
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(31, 13)
         Me.lblType.TabIndex = 2

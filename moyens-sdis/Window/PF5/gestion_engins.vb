@@ -4,11 +4,12 @@ Public Class gestion_engins
     Dim unEngins As New CRUDENGINS
 
     Private Sub IHM()
-        unEngins.afficheIHM(Me, lstAffichEngins)
+        unEngins.afficheIHMEngins(Me, lstAffichEngins)
 
     End Sub
 
     Private Sub btnSupprimer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupprimer.Click
+
         unEngins.ConfirmDelete()
 
     End Sub
