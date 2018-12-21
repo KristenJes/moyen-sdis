@@ -30,17 +30,10 @@ Class CRUDENGINS
         Dim info(5) As String
         Dim itm As ListViewItem
 
-        'info(0) = "Ouessant"
-        'info(1) = "VSAV02"
-        'info(2) = "XXX-123-YYY"
-        'info(3) = "OK"
-
-<<<<<<< HEAD
         Dim caserne = "BREST"
         Dim engin As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM CASERNE, ENGIN WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND CIS_NOM='" & caserne & "';")
-=======
-        Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN")
->>>>>>> 8957753d90831ecc04b9dad3e17e8512267e1f41
+
+        'Dim engin As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM ENGIN")
         For Each nom As DataRow In engin.Rows
             info(0) = nom("CIS_NOM").ToString
             info(1) = nom("ENGIN_NOM").ToString
@@ -51,26 +44,24 @@ Class CRUDENGINS
             uneListView.Items.Add(itm)
         Next
 
-<<<<<<< HEAD
     End Sub
 
 
-
-Public Sub AfficheCaserne(ByVal uneListView As ListView)
-
-
-    Dim info(2) As String
-    Dim itm As ListViewItem
+    Public Sub AfficheCaserne(ByVal uneListView As ListView)
 
 
-    Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE ORDER BY CIS_NOM;")
-    For Each nom As DataRow In caserne.Rows
-        info(0) = nom("CIS_NOM").ToString
+        Dim info(2) As String
+        Dim itm As ListViewItem
 
-        itm = New ListViewItem(info)
-        uneListView.Items.Add(itm)
 
-    Next
+        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE ORDER BY CIS_NOM;")
+        For Each nom As DataRow In caserne.Rows
+            info(0) = nom("CIS_NOM").ToString
+
+            itm = New ListViewItem(info)
+            uneListView.Items.Add(itm)
+
+        Next
     End Sub
 
     Public Sub ConfirmDelete()
@@ -109,7 +100,6 @@ Public Sub AfficheCaserne(ByVal uneListView As ListView)
         uneListView.Clear()
 
         Dim info(5) As String
-=======
 
 
         ''Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
@@ -126,56 +116,20 @@ Public Sub AfficheCaserne(ByVal uneListView As ListView)
 
     End Sub
 
-    Public Sub AfficheCaserne(ByVal uneListView As ListView)
+    Public Sub AffichTypeEngin(ByVal uneListView As ListView)
+        '    Dim info(2) As String
+        '    Dim itm As ListViewItem
 
 
-        Dim info(2) As String
->>>>>>> 8957753d90831ecc04b9dad3e17e8512267e1f41
-        Dim itm As ListViewItem
+        '    Dim typeEngin As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN ORDER BY TYPE_ENG_NOM;")
+        '    For Each nom As DataRow In typeEngin.Rows
+        '        info(0) = nom("TYPE_ENG_NOM").ToString
 
-        Dim caserne = "BREST"
-        Dim engin As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM CASERNE, ENGIN WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND CIS_NOM='" & caserne & "';")
-        For Each nom As DataRow In engin.Rows
-            info(0) = nom("CIS_NOM").ToString
-            info(1) = nom("ENGIN_NOM").ToString
-            info(2) = nom("ENGIN_IMMAT").ToString
-            info(3) = nom("ENGIN_ETAT").ToString
+        '        itm = New ListViewItem(info)
+        '        uneListView.Items.Add(itm)
 
-            itm = New ListViewItem(info)
-            uneListView.Items.Add(itm)
-        Next
-
-        Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
-        For Each nom As DataRow In caserne.Rows
-            info(0) = nom("CIS_NOM").ToString
-
-            itm = New ListViewItem(info)
-            uneListView.Items.Add(itm)
-
-        Next
+        '    Next
+        'End Sub
 
     End Sub
-    'Public Sub AffichTypeEngin(ByVal uneListView As ListView)
-    '    Dim info(2) As String
-    '    Dim itm As ListViewItem
-
-    Public Sub ConfirmDelete()
-
-        MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
-              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-<<<<<<< HEAD
-    '    Dim typeEngin As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN ORDER BY TYPE_ENG_NOM;")
-    '    For Each nom As DataRow In typeEngin.Rows
-    '        info(0) = nom("TYPE_ENG_NOM").ToString
-
-    '        itm = New ListViewItem(info)
-    '        uneListView.Items.Add(itm)
-
-    '    Next
-    'End Sub
-
-=======
-    End Sub
->>>>>>> 8957753d90831ecc04b9dad3e17e8512267e1f41
 End Class
