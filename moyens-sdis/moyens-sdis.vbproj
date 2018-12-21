@@ -98,13 +98,6 @@
     <Compile Include="Classes\Utils.vb" />
     <Compile Include="Enum\Etat.vb" />
     <Compile Include="Enum\Statut.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -132,24 +125,8 @@
     <Compile Include="Window\PF4\pf1_2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\CRUDENGINS.vb" />
-    <Compile Include="Window\PF5\gestion_engins.Designer.vb">
-      <DependentUpon>gestion_engins.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Window\PF5\gestion_engins.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.designer.vb">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -161,12 +138,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Window\PF4\pf1_2.resx">
       <DependentUpon>pf1_2.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
-      <DependentUpon>gestion_engins.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gest_engins_ajout.resx">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

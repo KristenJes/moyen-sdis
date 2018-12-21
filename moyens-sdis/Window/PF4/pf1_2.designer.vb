@@ -28,16 +28,16 @@ Partial Class pf1_2
         Me.Grade1 = New System.Windows.Forms.Label()
         Me.Pompier1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Grade2 = New System.Windows.Forms.Label()
-        Me.Grade5 = New System.Windows.Forms.Label()
-        Me.Grade4 = New System.Windows.Forms.Label()
-        Me.Grade3 = New System.Windows.Forms.Label()
-        Me.Grade6 = New System.Windows.Forms.Label()
-        Me.Pompier2 = New System.Windows.Forms.Label()
-        Me.Pompier3 = New System.Windows.Forms.Label()
-        Me.Pompier4 = New System.Windows.Forms.Label()
-        Me.Pompier5 = New System.Windows.Forms.Label()
         Me.Pompier6 = New System.Windows.Forms.Label()
+        Me.Pompier5 = New System.Windows.Forms.Label()
+        Me.Pompier4 = New System.Windows.Forms.Label()
+        Me.Pompier3 = New System.Windows.Forms.Label()
+        Me.Pompier2 = New System.Windows.Forms.Label()
+        Me.Grade6 = New System.Windows.Forms.Label()
+        Me.Grade3 = New System.Windows.Forms.Label()
+        Me.Grade4 = New System.Windows.Forms.Label()
+        Me.Grade5 = New System.Windows.Forms.Label()
+        Me.Grade2 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -55,7 +55,7 @@ Partial Class pf1_2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(32, 259)
+        Me.Button1.Location = New System.Drawing.Point(27, 137)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 13
@@ -64,7 +64,7 @@ Partial Class pf1_2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(184, 259)
+        Me.Button2.Location = New System.Drawing.Point(185, 244)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 14
@@ -112,61 +112,69 @@ Partial Class pf1_2
         Me.GroupBox1.Controls.Add(Me.Grade1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 59)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(297, 194)
+        Me.GroupBox1.Size = New System.Drawing.Size(297, 71)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         '
-        'Grade2
+        'Pompier6
         '
-        Me.Grade2.BackColor = System.Drawing.SystemColors.Window
-        Me.Grade2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade2.Location = New System.Drawing.Point(15, 44)
-        Me.Grade2.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade2.MinimumSize = New System.Drawing.Size(80, 18)
-        Me.Grade2.Name = "Grade2"
-        Me.Grade2.Size = New System.Drawing.Size(80, 18)
-        Me.Grade2.TabIndex = 8
-        Me.Grade2.Text = " "
-        Me.Grade2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Pompier6.BackColor = System.Drawing.SystemColors.Window
+        Me.Pompier6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Pompier6.Location = New System.Drawing.Point(141, 164)
+        Me.Pompier6.MinimumSize = New System.Drawing.Size(149, 18)
+        Me.Pompier6.Name = "Pompier6"
+        Me.Pompier6.Size = New System.Drawing.Size(149, 18)
+        Me.Pompier6.TabIndex = 17
+        Me.Pompier6.Text = "BUFFFERTRILLE MICHEL"
+        Me.Pompier6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Grade5
+        'Pompier5
         '
-        Me.Grade5.BackColor = System.Drawing.SystemColors.Window
-        Me.Grade5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade5.Location = New System.Drawing.Point(15, 135)
-        Me.Grade5.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade5.MinimumSize = New System.Drawing.Size(80, 18)
-        Me.Grade5.Name = "Grade5"
-        Me.Grade5.Size = New System.Drawing.Size(80, 18)
-        Me.Grade5.TabIndex = 9
-        Me.Grade5.Text = " "
-        Me.Grade5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Pompier5.BackColor = System.Drawing.SystemColors.Window
+        Me.Pompier5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Pompier5.Location = New System.Drawing.Point(141, 135)
+        Me.Pompier5.MinimumSize = New System.Drawing.Size(149, 18)
+        Me.Pompier5.Name = "Pompier5"
+        Me.Pompier5.Size = New System.Drawing.Size(149, 18)
+        Me.Pompier5.TabIndex = 16
+        Me.Pompier5.Text = "BUFFFERTRILLE MICHEL"
+        Me.Pompier5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Grade4
+        'Pompier4
         '
-        Me.Grade4.BackColor = System.Drawing.SystemColors.Window
-        Me.Grade4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade4.Location = New System.Drawing.Point(15, 104)
-        Me.Grade4.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade4.MinimumSize = New System.Drawing.Size(80, 18)
-        Me.Grade4.Name = "Grade4"
-        Me.Grade4.Size = New System.Drawing.Size(80, 18)
-        Me.Grade4.TabIndex = 10
-        Me.Grade4.Text = " "
-        Me.Grade4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Pompier4.BackColor = System.Drawing.SystemColors.Window
+        Me.Pompier4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Pompier4.Location = New System.Drawing.Point(141, 104)
+        Me.Pompier4.MinimumSize = New System.Drawing.Size(149, 18)
+        Me.Pompier4.Name = "Pompier4"
+        Me.Pompier4.Size = New System.Drawing.Size(149, 18)
+        Me.Pompier4.TabIndex = 15
+        Me.Pompier4.Text = "BUFFFERTRILLE MICHEL"
+        Me.Pompier4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Grade3
+        'Pompier3
         '
-        Me.Grade3.BackColor = System.Drawing.SystemColors.Window
-        Me.Grade3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade3.Location = New System.Drawing.Point(15, 74)
-        Me.Grade3.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade3.MinimumSize = New System.Drawing.Size(80, 18)
-        Me.Grade3.Name = "Grade3"
-        Me.Grade3.Size = New System.Drawing.Size(80, 18)
-        Me.Grade3.TabIndex = 11
-        Me.Grade3.Text = " "
-        Me.Grade3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Pompier3.BackColor = System.Drawing.SystemColors.Window
+        Me.Pompier3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Pompier3.Location = New System.Drawing.Point(141, 74)
+        Me.Pompier3.MinimumSize = New System.Drawing.Size(149, 18)
+        Me.Pompier3.Name = "Pompier3"
+        Me.Pompier3.Size = New System.Drawing.Size(149, 18)
+        Me.Pompier3.TabIndex = 14
+        Me.Pompier3.Text = "BUFFFERTRILLE MICHEL"
+        Me.Pompier3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Pompier2
+        '
+        Me.Pompier2.BackColor = System.Drawing.SystemColors.Window
+        Me.Pompier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Pompier2.Location = New System.Drawing.Point(141, 44)
+        Me.Pompier2.MinimumSize = New System.Drawing.Size(149, 18)
+        Me.Pompier2.Name = "Pompier2"
+        Me.Pompier2.Size = New System.Drawing.Size(149, 18)
+        Me.Pompier2.TabIndex = 13
+        Me.Pompier2.Text = "BUFFFERTRILLE MICHEL"
+        Me.Pompier2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Grade6
         '
@@ -181,65 +189,57 @@ Partial Class pf1_2
         Me.Grade6.Text = " "
         Me.Grade6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Pompier2
+        'Grade3
         '
-        Me.Pompier2.BackColor = System.Drawing.SystemColors.Window
-        Me.Pompier2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Pompier2.Location = New System.Drawing.Point(141, 44)
-        Me.Pompier2.MinimumSize = New System.Drawing.Size(149, 18)
-        Me.Pompier2.Name = "Pompier2"
-        Me.Pompier2.Size = New System.Drawing.Size(149, 18)
-        Me.Pompier2.TabIndex = 13
-        Me.Pompier2.Text = "BUFFFERTRILLE MICHEL"
-        Me.Pompier2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Grade3.BackColor = System.Drawing.SystemColors.Window
+        Me.Grade3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Grade3.Location = New System.Drawing.Point(15, 74)
+        Me.Grade3.MaximumSize = New System.Drawing.Size(80, 18)
+        Me.Grade3.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade3.Name = "Grade3"
+        Me.Grade3.Size = New System.Drawing.Size(80, 18)
+        Me.Grade3.TabIndex = 11
+        Me.Grade3.Text = " "
+        Me.Grade3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Pompier3
+        'Grade4
         '
-        Me.Pompier3.BackColor = System.Drawing.SystemColors.Window
-        Me.Pompier3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Pompier3.Location = New System.Drawing.Point(141, 74)
-        Me.Pompier3.MinimumSize = New System.Drawing.Size(149, 18)
-        Me.Pompier3.Name = "Pompier3"
-        Me.Pompier3.Size = New System.Drawing.Size(149, 18)
-        Me.Pompier3.TabIndex = 14
-        Me.Pompier3.Text = "BUFFFERTRILLE MICHEL"
-        Me.Pompier3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Grade4.BackColor = System.Drawing.SystemColors.Window
+        Me.Grade4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Grade4.Location = New System.Drawing.Point(15, 104)
+        Me.Grade4.MaximumSize = New System.Drawing.Size(80, 18)
+        Me.Grade4.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade4.Name = "Grade4"
+        Me.Grade4.Size = New System.Drawing.Size(80, 18)
+        Me.Grade4.TabIndex = 10
+        Me.Grade4.Text = " "
+        Me.Grade4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Pompier4
+        'Grade5
         '
-        Me.Pompier4.BackColor = System.Drawing.SystemColors.Window
-        Me.Pompier4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Pompier4.Location = New System.Drawing.Point(141, 104)
-        Me.Pompier4.MinimumSize = New System.Drawing.Size(149, 18)
-        Me.Pompier4.Name = "Pompier4"
-        Me.Pompier4.Size = New System.Drawing.Size(149, 18)
-        Me.Pompier4.TabIndex = 15
-        Me.Pompier4.Text = "BUFFFERTRILLE MICHEL"
-        Me.Pompier4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Grade5.BackColor = System.Drawing.SystemColors.Window
+        Me.Grade5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Grade5.Location = New System.Drawing.Point(15, 135)
+        Me.Grade5.MaximumSize = New System.Drawing.Size(80, 18)
+        Me.Grade5.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade5.Name = "Grade5"
+        Me.Grade5.Size = New System.Drawing.Size(80, 18)
+        Me.Grade5.TabIndex = 9
+        Me.Grade5.Text = " "
+        Me.Grade5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Pompier5
+        'Grade2
         '
-        Me.Pompier5.BackColor = System.Drawing.SystemColors.Window
-        Me.Pompier5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Pompier5.Location = New System.Drawing.Point(141, 135)
-        Me.Pompier5.MinimumSize = New System.Drawing.Size(149, 18)
-        Me.Pompier5.Name = "Pompier5"
-        Me.Pompier5.Size = New System.Drawing.Size(149, 18)
-        Me.Pompier5.TabIndex = 16
-        Me.Pompier5.Text = "BUFFFERTRILLE MICHEL"
-        Me.Pompier5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Pompier6
-        '
-        Me.Pompier6.BackColor = System.Drawing.SystemColors.Window
-        Me.Pompier6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Pompier6.Location = New System.Drawing.Point(141, 164)
-        Me.Pompier6.MinimumSize = New System.Drawing.Size(149, 18)
-        Me.Pompier6.Name = "Pompier6"
-        Me.Pompier6.Size = New System.Drawing.Size(149, 18)
-        Me.Pompier6.TabIndex = 17
-        Me.Pompier6.Text = "BUFFFERTRILLE MICHEL"
-        Me.Pompier6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Grade2.BackColor = System.Drawing.SystemColors.Window
+        Me.Grade2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Grade2.Location = New System.Drawing.Point(15, 44)
+        Me.Grade2.MaximumSize = New System.Drawing.Size(80, 18)
+        Me.Grade2.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade2.Name = "Grade2"
+        Me.Grade2.Size = New System.Drawing.Size(80, 18)
+        Me.Grade2.TabIndex = 8
+        Me.Grade2.Text = " "
+        Me.Grade2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pf1_2
         '
