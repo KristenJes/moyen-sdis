@@ -84,4 +84,16 @@ retour:
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         Me.Close()
     End Sub
+
+    Private Sub LineShape2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LineShape2.Click, LineShape6.Click, LineShape5.Click, LineShape4.Click, LineShape3.Click, LineShape1.Click
+
+    End Sub
+
+    Private Sub ListBox5_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Pompier5.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Pompier1.SelectedIndexChanged
+
+    End Sub
 End Class
