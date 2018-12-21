@@ -171,6 +171,7 @@ Class CRUDENGINS
         unId = ID
         unEtat = Etat
         unNom = Nom
+        'uneImmat = 
 
         Dim typeEngin As DataTable = Connexion.ORA.Table("INSERT INTO ENGIN (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES ();")
 
