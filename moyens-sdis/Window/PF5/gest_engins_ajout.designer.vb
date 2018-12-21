@@ -28,10 +28,10 @@ Partial Class gest_engins_ajout
         Me.lblImmatriculation = New System.Windows.Forms.Label()
         Me.txtBoxIdentifiant = New System.Windows.Forms.TextBox()
         Me.txtBoxImmatriculation = New System.Windows.Forms.TextBox()
-        Me.listBoxCaserne = New System.Windows.Forms.ListBox()
-        Me.ListBoxType = New System.Windows.Forms.ListBox()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnAnnuler = New System.Windows.Forms.Button()
+        Me.lstAffichCaserne = New System.Windows.Forms.ListView()
+        Me.lstAffichTypeEngin = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'lblCaserne
@@ -46,7 +46,7 @@ Partial Class gest_engins_ajout
         'lbIdentifiant
         '
         Me.lbIdentifiant.AutoSize = True
-        Me.lbIdentifiant.Location = New System.Drawing.Point(34, 120)
+        Me.lbIdentifiant.Location = New System.Drawing.Point(35, 168)
         Me.lbIdentifiant.Name = "lbIdentifiant"
         Me.lbIdentifiant.Size = New System.Drawing.Size(53, 13)
         Me.lbIdentifiant.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class gest_engins_ajout
         'lblType
         '
         Me.lblType.AutoSize = True
-        Me.lblType.Location = New System.Drawing.Point(37, 80)
+        Me.lblType.Location = New System.Drawing.Point(35, 113)
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(31, 13)
         Me.lblType.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class gest_engins_ajout
         'lblImmatriculation
         '
         Me.lblImmatriculation.AutoSize = True
-        Me.lblImmatriculation.Location = New System.Drawing.Point(35, 157)
+        Me.lblImmatriculation.Location = New System.Drawing.Point(37, 205)
         Me.lblImmatriculation.Name = "lblImmatriculation"
         Me.lblImmatriculation.Size = New System.Drawing.Size(77, 13)
         Me.lblImmatriculation.TabIndex = 3
@@ -72,39 +72,25 @@ Partial Class gest_engins_ajout
         '
         'txtBoxIdentifiant
         '
-        Me.txtBoxIdentifiant.Location = New System.Drawing.Point(130, 116)
+        Me.txtBoxIdentifiant.Location = New System.Drawing.Point(130, 161)
         Me.txtBoxIdentifiant.Name = "txtBoxIdentifiant"
-        Me.txtBoxIdentifiant.Size = New System.Drawing.Size(119, 20)
+        Me.txtBoxIdentifiant.Size = New System.Drawing.Size(153, 20)
         Me.txtBoxIdentifiant.TabIndex = 4
         Me.txtBoxIdentifiant.Text = "01"
+        Me.txtBoxIdentifiant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtBoxImmatriculation
         '
-        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(130, 151)
+        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(130, 202)
         Me.txtBoxImmatriculation.Name = "txtBoxImmatriculation"
-        Me.txtBoxImmatriculation.Size = New System.Drawing.Size(120, 20)
+        Me.txtBoxImmatriculation.Size = New System.Drawing.Size(153, 20)
         Me.txtBoxImmatriculation.TabIndex = 5
         Me.txtBoxImmatriculation.Text = "YHG - 536 - HUK"
-        '
-        'listBoxCaserne
-        '
-        Me.listBoxCaserne.FormattingEnabled = True
-        Me.listBoxCaserne.Location = New System.Drawing.Point(132, 30)
-        Me.listBoxCaserne.Name = "listBoxCaserne"
-        Me.listBoxCaserne.Size = New System.Drawing.Size(120, 30)
-        Me.listBoxCaserne.TabIndex = 6
-        '
-        'ListBoxType
-        '
-        Me.ListBoxType.FormattingEnabled = True
-        Me.ListBoxType.Location = New System.Drawing.Point(132, 72)
-        Me.ListBoxType.Name = "ListBoxType"
-        Me.ListBoxType.Size = New System.Drawing.Size(120, 30)
-        Me.ListBoxType.TabIndex = 7
+        Me.txtBoxImmatriculation.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btnOk
         '
-        Me.btnOk.Location = New System.Drawing.Point(58, 204)
+        Me.btnOk.Location = New System.Drawing.Point(40, 258)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(75, 23)
         Me.btnOk.TabIndex = 8
@@ -113,22 +99,42 @@ Partial Class gest_engins_ajout
         '
         'btnAnnuler
         '
-        Me.btnAnnuler.Location = New System.Drawing.Point(177, 204)
+        Me.btnAnnuler.Location = New System.Drawing.Point(175, 258)
         Me.btnAnnuler.Name = "btnAnnuler"
         Me.btnAnnuler.Size = New System.Drawing.Size(75, 23)
         Me.btnAnnuler.TabIndex = 9
         Me.btnAnnuler.Text = "Annuler"
         Me.btnAnnuler.UseVisualStyleBackColor = True
         '
+        'lstAffichCaserne
+        '
+        Me.lstAffichCaserne.CheckBoxes = True
+        Me.lstAffichCaserne.Location = New System.Drawing.Point(129, 15)
+        Me.lstAffichCaserne.Name = "lstAffichCaserne"
+        Me.lstAffichCaserne.Size = New System.Drawing.Size(154, 67)
+        Me.lstAffichCaserne.TabIndex = 10
+        Me.lstAffichCaserne.UseCompatibleStateImageBehavior = False
+        Me.lstAffichCaserne.View = System.Windows.Forms.View.SmallIcon
+        '
+        'lstAffichTypeEngin
+        '
+        Me.lstAffichTypeEngin.CheckBoxes = True
+        Me.lstAffichTypeEngin.Location = New System.Drawing.Point(128, 88)
+        Me.lstAffichTypeEngin.Name = "lstAffichTypeEngin"
+        Me.lstAffichTypeEngin.Size = New System.Drawing.Size(155, 60)
+        Me.lstAffichTypeEngin.TabIndex = 11
+        Me.lstAffichTypeEngin.UseCompatibleStateImageBehavior = False
+        Me.lstAffichTypeEngin.View = System.Windows.Forms.View.SmallIcon
+        '
         'gest_engins_ajout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(322, 261)
+        Me.ClientSize = New System.Drawing.Size(322, 322)
+        Me.Controls.Add(Me.lstAffichTypeEngin)
+        Me.Controls.Add(Me.lstAffichCaserne)
         Me.Controls.Add(Me.btnAnnuler)
         Me.Controls.Add(Me.btnOk)
-        Me.Controls.Add(Me.ListBoxType)
-        Me.Controls.Add(Me.listBoxCaserne)
         Me.Controls.Add(Me.txtBoxImmatriculation)
         Me.Controls.Add(Me.txtBoxIdentifiant)
         Me.Controls.Add(Me.lblImmatriculation)
@@ -147,8 +153,8 @@ Partial Class gest_engins_ajout
     Friend WithEvents lblImmatriculation As System.Windows.Forms.Label
     Friend WithEvents txtBoxIdentifiant As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxImmatriculation As System.Windows.Forms.TextBox
-    Friend WithEvents listBoxCaserne As System.Windows.Forms.ListBox
-    Friend WithEvents ListBoxType As System.Windows.Forms.ListBox
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnAnnuler As System.Windows.Forms.Button
+    Friend WithEvents lstAffichCaserne As System.Windows.Forms.ListView
+    Friend WithEvents lstAffichTypeEngin As System.Windows.Forms.ListView
 End Class

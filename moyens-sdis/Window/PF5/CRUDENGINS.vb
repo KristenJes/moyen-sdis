@@ -22,7 +22,7 @@ Class CRUDENGINS
 
         uneListView.Clear()
 
-        uneListView.Columns.Add("Caserne", 80, HorizontalAlignment.Left)
+        uneListView.Columns.Add("Caserne", 150, HorizontalAlignment.Left)
         uneListView.Columns.Add("Nom engin", 70, HorizontalAlignment.Left)
         uneListView.Columns.Add("Imatriculation", 90, HorizontalAlignment.Left)
         uneListView.Columns.Add("Etat", 120, HorizontalAlignment.Left)
@@ -64,9 +64,24 @@ Class CRUDENGINS
         Next
     End Sub
 
+    '' Confirmation
     Public Sub ConfirmDelete()
 
         MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+    End Sub
+
+    Public Sub ConfirmInsert()
+
+        MessageBox.Show("Êtes-vous sur de vouloir ajouter cet engins ?", "Confirmation d'ajout", _
+              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+    End Sub
+
+    Public Sub ConfirmUpdate()
+
+        MessageBox.Show("Êtes-vous sur de vouloir modifier cet engins ?", "Confirmation de modification", _
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
     End Sub
@@ -117,19 +132,18 @@ Class CRUDENGINS
     End Sub
 
     Public Sub AffichTypeEngin(ByVal uneListView As ListView)
-        '    Dim info(2) As String
-        '    Dim itm As ListViewItem
+        Dim info(2) As String
+        Dim itm As ListViewItem
 
 
-        '    Dim typeEngin As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN ORDER BY TYPE_ENG_NOM;")
-        '    For Each nom As DataRow In typeEngin.Rows
-        '        info(0) = nom("TYPE_ENG_NOM").ToString
+        Dim typeEngin As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN ORDER BY TYPE_ENG_NOM;")
+        For Each nom As DataRow In typeEngin.Rows
+            info(0) = nom("TYPE_ENG_NOM").ToString
 
-        '        itm = New ListViewItem(info)
-        '        uneListView.Items.Add(itm)
+            itm = New ListViewItem(info)
+            uneListView.Items.Add(itm)
 
-        '    Next
-        'End Sub
-
+        Next
     End Sub
+
 End Class
