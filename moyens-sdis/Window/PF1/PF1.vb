@@ -28,6 +28,14 @@
                     For Each neededVehicule As TypeEngin In neededVehicles
                         For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
                             ' VOIR AVEC MAEL
+                            ' MERCI
+
+
+                            'Select TRANCHEID
+                            'from tranche
+                            'where trancheid = 1
+                            'and TO_DSINTERVAL(CONCAT('0 ', TO_CHAR(systimestamp,'hh24:mi:ss')))
+                            '    BETWEEN HOR_DEBUT AND HOR_FIN;
                         Next
                     Next
                 Else
