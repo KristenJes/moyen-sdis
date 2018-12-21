@@ -3,6 +3,10 @@ Class CRUDENGINS
     'Getteur et Setteur
 
     Private _caserne As Integer
+    Private _id As Integer
+    Private _etat As String
+    Private _nom As String
+    Private _type As TypeEngin
 
     Public Property caserne() As Integer
         Get
@@ -14,9 +18,48 @@ Class CRUDENGINS
     End Property
 
 
+    Public Property ID As Integer
+        Get
+            Return _id
+        End Get
+        Set(ByVal value As Integer)
+            _id = value
+        End Set
+    End Property
 
 
-'LIAISON AVEC IHM
+    Public Property Etat As String
+        Get
+            Return _etat
+
+        End Get
+        Set(ByVal value As String)
+            _etat = value
+        End Set
+    End Property
+
+    Public Property Nom As String
+        Get
+            Return _nom
+        End Get
+        Set(ByVal value As String)
+            _nom = value
+        End Set
+    End Property
+
+    Public Property Type As TypeEngin
+        Get
+            Return _type
+        End Get
+        Set(ByVal value As TypeEngin)
+            _type = value
+        End Set
+    End Property
+
+
+
+
+    'LIAISON AVEC IHM
     Public Sub afficheIHMEngins(ByVal uneFeuille As Form, ByVal uneListView As ListView)
         uneFeuille.Text = "ENGINS"
 
@@ -86,50 +129,27 @@ Class CRUDENGINS
 
     End Sub
 
-'Public Sub AfficheModif()
-'    Dim info(2) As String
-'    Dim itm As ListViewItem
+    'Public Sub AfficheModif()
+    '    Dim info(2) As String
+    '    Dim itm As ListViewItem
 
 
-'    Dim infoModif As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ID, ENGIN_IMMAT FROM CASERNE, ENGIN, TYPE_ENGIN ORDER BY CIS_NOM WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND ENGIN.TYPE_ENG_ID=TYPE_ENGIN.TYPE_ENG_ID;")
-'    For Each nom As DataRow In infoModif.Rows
-'        info(0) = nom("CIS_NOM").ToString
+    '    Dim infoModif As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ID, ENGIN_IMMAT FROM CASERNE, ENGIN, TYPE_ENGIN ORDER BY CIS_NOM WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND ENGIN.TYPE_ENG_ID=TYPE_ENGIN.TYPE_ENG_ID;")
+    '    For Each nom As DataRow In infoModif.Rows
+    '        info(0) = nom("CIS_NOM").ToString
 
-'        itm = New ListViewItem(info)
-'        'uneListView.Items.Add(itm)
+    '        itm = New ListViewItem(info)
+    '        'uneListView.Items.Add(itm)
 
-'    Next
-
-
-'End Sub
-
-'Public Sub ajout()
-'    Dim caserne As DataTable = Connexion.ORA.Table("INSERT INTO ENGIN () VALUES ();")
-'End Sub
+    '    Next
 
 
+    'End Sub
 
-    Public Sub afficheIHMAjout(ByVal uneFeuille As Form, ByVal uneListView As ListView)
-        uneFeuille.Text = "AJOUR D'ENGINS"
+    'Public Sub ajout()
+    '    Dim caserne As DataTable = Connexion.ORA.Table("INSERT INTO ENGIN () VALUES ();")
+    'End Sub
 
-        uneListView.Clear()
-
-        Dim info(5) As String
-
-
-        ''Dim caserne As DataTable = Connexion.ORA.Table("SELECT CIS_NOM FROM CASERNE")
-        ''For Each nom As DataRow In caserne.Rows
-        ''    info(0) = nom("CIS_NOM").ToString
-
-        ''    itm = New ListViewItem(info)
-        ''    uneListView.Items.Add(itm)
-        ''Next
-
-
-
-
-
-    End Sub
 
     Public Sub AffichTypeEngin(ByVal uneListView As ListView)
         Dim info(2) As String
@@ -146,4 +166,13 @@ Class CRUDENGINS
         Next
     End Sub
 
+
+    Public Sub AjoutEngin(ByVal uneListView As ListView, ByVal unId As Integer, ByVal unEtat As String, ByVal unNom As String, ByVal unIdCis As Integer, ByVal unIdType As Integer, ByVal uneImmat As String)
+        unId = ID
+        unEtat = Etat
+        unNom = Nom
+
+        Dim typeEngin As DataTable = Connexion.ORA.Table("INSERT INTO ENGIN (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES ();")
+
+    End Sub
 End Class
