@@ -27,24 +27,24 @@ Partial Class pf1_2
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Grade1 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Pompier6 = New System.Windows.Forms.ListBox()
+        Me.Pompier5 = New System.Windows.Forms.ListBox()
+        Me.Pompier4 = New System.Windows.Forms.ListBox()
+        Me.Pompier3 = New System.Windows.Forms.ListBox()
+        Me.Pompier2 = New System.Windows.Forms.ListBox()
+        Me.Pompier1 = New System.Windows.Forms.ListBox()
         Me.Grade6 = New System.Windows.Forms.Label()
         Me.Grade3 = New System.Windows.Forms.Label()
         Me.Grade4 = New System.Windows.Forms.Label()
         Me.Grade5 = New System.Windows.Forms.Label()
         Me.Grade2 = New System.Windows.Forms.Label()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Pompier1 = New System.Windows.Forms.ListBox()
-        Me.Pompier2 = New System.Windows.Forms.ListBox()
-        Me.Pompier3 = New System.Windows.Forms.ListBox()
-        Me.Pompier4 = New System.Windows.Forms.ListBox()
-        Me.Pompier5 = New System.Windows.Forms.ListBox()
-        Me.Pompier6 = New System.Windows.Forms.ListBox()
+        Me.LineShape5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -54,27 +54,30 @@ Partial Class pf1_2
         Me.lblCaserne.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.lblCaserne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lblCaserne.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCaserne.Location = New System.Drawing.Point(15, 19)
+        Me.lblCaserne.Location = New System.Drawing.Point(20, 23)
+        Me.lblCaserne.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblCaserne.Name = "lblCaserne"
-        Me.lblCaserne.Size = New System.Drawing.Size(122, 23)
+        Me.lblCaserne.Size = New System.Drawing.Size(162, 28)
         Me.lblCaserne.TabIndex = 0
         Me.lblCaserne.Text = "FTP 01"
         Me.lblCaserne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(153, 270)
+        Me.Button1.Location = New System.Drawing.Point(204, 332)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(149, 23)
+        Me.Button1.Size = New System.Drawing.Size(199, 28)
         Me.Button1.TabIndex = 13
         Me.Button1.Text = "OK"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(27, 270)
+        Me.Button2.Location = New System.Drawing.Point(36, 332)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(80, 23)
+        Me.Button2.Size = New System.Drawing.Size(107, 28)
         Me.Button2.TabIndex = 14
         Me.Button2.Text = "Annuler"
         Me.Button2.UseVisualStyleBackColor = True
@@ -83,11 +86,12 @@ Partial Class pf1_2
         '
         Me.Grade1.BackColor = System.Drawing.SystemColors.Window
         Me.Grade1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade1.Location = New System.Drawing.Point(15, 15)
-        Me.Grade1.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade1.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade1.Location = New System.Drawing.Point(20, 18)
+        Me.Grade1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Grade1.MaximumSize = New System.Drawing.Size(106, 22)
+        Me.Grade1.MinimumSize = New System.Drawing.Size(106, 22)
         Me.Grade1.Name = "Grade1"
-        Me.Grade1.Size = New System.Drawing.Size(80, 18)
+        Me.Grade1.Size = New System.Drawing.Size(106, 22)
         Me.Grade1.TabIndex = 1
         Me.Grade1.Text = " "
         Me.Grade1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -107,21 +111,84 @@ Partial Class pf1_2
         Me.GroupBox1.Controls.Add(Me.Grade2)
         Me.GroupBox1.Controls.Add(Me.Grade1)
         Me.GroupBox1.Controls.Add(Me.ShapeContainer1)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 59)
+        Me.GroupBox1.Location = New System.Drawing.Point(16, 73)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(297, 195)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.GroupBox1.Size = New System.Drawing.Size(396, 240)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
+        '
+        'Pompier6
+        '
+        Me.Pompier6.FormattingEnabled = True
+        Me.Pompier6.ItemHeight = 16
+        Me.Pompier6.Location = New System.Drawing.Point(187, 203)
+        Me.Pompier6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pompier6.Name = "Pompier6"
+        Me.Pompier6.Size = New System.Drawing.Size(199, 20)
+        Me.Pompier6.TabIndex = 25
+        '
+        'Pompier5
+        '
+        Me.Pompier5.FormattingEnabled = True
+        Me.Pompier5.ItemHeight = 16
+        Me.Pompier5.Location = New System.Drawing.Point(187, 167)
+        Me.Pompier5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pompier5.Name = "Pompier5"
+        Me.Pompier5.Size = New System.Drawing.Size(199, 20)
+        Me.Pompier5.TabIndex = 24
+        '
+        'Pompier4
+        '
+        Me.Pompier4.FormattingEnabled = True
+        Me.Pompier4.ItemHeight = 16
+        Me.Pompier4.Location = New System.Drawing.Point(188, 129)
+        Me.Pompier4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pompier4.Name = "Pompier4"
+        Me.Pompier4.Size = New System.Drawing.Size(199, 20)
+        Me.Pompier4.TabIndex = 23
+        '
+        'Pompier3
+        '
+        Me.Pompier3.FormattingEnabled = True
+        Me.Pompier3.ItemHeight = 16
+        Me.Pompier3.Location = New System.Drawing.Point(188, 91)
+        Me.Pompier3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pompier3.Name = "Pompier3"
+        Me.Pompier3.Size = New System.Drawing.Size(199, 20)
+        Me.Pompier3.TabIndex = 22
+        '
+        'Pompier2
+        '
+        Me.Pompier2.FormattingEnabled = True
+        Me.Pompier2.ItemHeight = 16
+        Me.Pompier2.Location = New System.Drawing.Point(187, 55)
+        Me.Pompier2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pompier2.Name = "Pompier2"
+        Me.Pompier2.Size = New System.Drawing.Size(199, 20)
+        Me.Pompier2.TabIndex = 21
+        '
+        'Pompier1
+        '
+        Me.Pompier1.FormattingEnabled = True
+        Me.Pompier1.ItemHeight = 16
+        Me.Pompier1.Location = New System.Drawing.Point(188, 20)
+        Me.Pompier1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Pompier1.Name = "Pompier1"
+        Me.Pompier1.Size = New System.Drawing.Size(199, 20)
+        Me.Pompier1.TabIndex = 19
         '
         'Grade6
         '
         Me.Grade6.BackColor = System.Drawing.SystemColors.Window
         Me.Grade6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade6.Location = New System.Drawing.Point(15, 164)
-        Me.Grade6.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade6.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade6.Location = New System.Drawing.Point(20, 202)
+        Me.Grade6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Grade6.MaximumSize = New System.Drawing.Size(106, 22)
+        Me.Grade6.MinimumSize = New System.Drawing.Size(106, 22)
         Me.Grade6.Name = "Grade6"
-        Me.Grade6.Size = New System.Drawing.Size(80, 18)
+        Me.Grade6.Size = New System.Drawing.Size(106, 22)
         Me.Grade6.TabIndex = 12
         Me.Grade6.Text = " "
         Me.Grade6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -130,11 +197,12 @@ Partial Class pf1_2
         '
         Me.Grade3.BackColor = System.Drawing.SystemColors.Window
         Me.Grade3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade3.Location = New System.Drawing.Point(15, 74)
-        Me.Grade3.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade3.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade3.Location = New System.Drawing.Point(20, 91)
+        Me.Grade3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Grade3.MaximumSize = New System.Drawing.Size(106, 22)
+        Me.Grade3.MinimumSize = New System.Drawing.Size(106, 22)
         Me.Grade3.Name = "Grade3"
-        Me.Grade3.Size = New System.Drawing.Size(80, 18)
+        Me.Grade3.Size = New System.Drawing.Size(106, 22)
         Me.Grade3.TabIndex = 11
         Me.Grade3.Text = " "
         Me.Grade3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -143,11 +211,12 @@ Partial Class pf1_2
         '
         Me.Grade4.BackColor = System.Drawing.SystemColors.Window
         Me.Grade4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade4.Location = New System.Drawing.Point(15, 104)
-        Me.Grade4.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade4.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade4.Location = New System.Drawing.Point(20, 128)
+        Me.Grade4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Grade4.MaximumSize = New System.Drawing.Size(106, 22)
+        Me.Grade4.MinimumSize = New System.Drawing.Size(106, 22)
         Me.Grade4.Name = "Grade4"
-        Me.Grade4.Size = New System.Drawing.Size(80, 18)
+        Me.Grade4.Size = New System.Drawing.Size(106, 22)
         Me.Grade4.TabIndex = 10
         Me.Grade4.Text = " "
         Me.Grade4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -156,11 +225,12 @@ Partial Class pf1_2
         '
         Me.Grade5.BackColor = System.Drawing.SystemColors.Window
         Me.Grade5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade5.Location = New System.Drawing.Point(15, 135)
-        Me.Grade5.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade5.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade5.Location = New System.Drawing.Point(20, 166)
+        Me.Grade5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Grade5.MaximumSize = New System.Drawing.Size(106, 22)
+        Me.Grade5.MinimumSize = New System.Drawing.Size(106, 22)
         Me.Grade5.Name = "Grade5"
-        Me.Grade5.Size = New System.Drawing.Size(80, 18)
+        Me.Grade5.Size = New System.Drawing.Size(106, 22)
         Me.Grade5.TabIndex = 9
         Me.Grade5.Text = " "
         Me.Grade5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -169,64 +239,25 @@ Partial Class pf1_2
         '
         Me.Grade2.BackColor = System.Drawing.SystemColors.Window
         Me.Grade2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Grade2.Location = New System.Drawing.Point(15, 44)
-        Me.Grade2.MaximumSize = New System.Drawing.Size(80, 18)
-        Me.Grade2.MinimumSize = New System.Drawing.Size(80, 18)
+        Me.Grade2.Location = New System.Drawing.Point(20, 54)
+        Me.Grade2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Grade2.MaximumSize = New System.Drawing.Size(106, 22)
+        Me.Grade2.MinimumSize = New System.Drawing.Size(106, 22)
         Me.Grade2.Name = "Grade2"
-        Me.Grade2.Size = New System.Drawing.Size(80, 18)
+        Me.Grade2.Size = New System.Drawing.Size(106, 22)
         Me.Grade2.TabIndex = 8
         Me.Grade2.Text = " "
         Me.Grade2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ShapeContainer1
         '
-        Me.ShapeContainer1.Location = New System.Drawing.Point(3, 16)
+        Me.ShapeContainer1.Location = New System.Drawing.Point(4, 19)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape6, Me.LineShape5, Me.LineShape4, Me.LineShape3, Me.LineShape1, Me.LineShape2})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(291, 176)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(388, 217)
         Me.ShapeContainer1.TabIndex = 18
         Me.ShapeContainer1.TabStop = False
-        '
-        'LineShape2
-        '
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 92
-        Me.LineShape2.X2 = 138
-        Me.LineShape2.Y1 = 37
-        Me.LineShape2.Y2 = 37
-        '
-        'LineShape1
-        '
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 92
-        Me.LineShape1.X2 = 138
-        Me.LineShape1.Y1 = 9
-        Me.LineShape1.Y2 = 9
-        '
-        'LineShape3
-        '
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 92
-        Me.LineShape3.X2 = 138
-        Me.LineShape3.Y1 = 66
-        Me.LineShape3.Y2 = 66
-        '
-        'LineShape4
-        '
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 91
-        Me.LineShape4.X2 = 137
-        Me.LineShape4.Y1 = 96
-        Me.LineShape4.Y2 = 96
-        '
-        'LineShape5
-        '
-        Me.LineShape5.Name = "LineShape5"
-        Me.LineShape5.X1 = 91
-        Me.LineShape5.X2 = 137
-        Me.LineShape5.Y1 = 128
-        Me.LineShape5.Y2 = 128
         '
         'LineShape6
         '
@@ -236,76 +267,70 @@ Partial Class pf1_2
         Me.LineShape6.Y1 = 157
         Me.LineShape6.Y2 = 157
         '
-        'Pompier1
+        'LineShape5
         '
-        Me.Pompier1.FormattingEnabled = True
-        Me.Pompier1.Location = New System.Drawing.Point(141, 16)
-        Me.Pompier1.Name = "Pompier1"
-        Me.Pompier1.Size = New System.Drawing.Size(150, 17)
-        Me.Pompier1.TabIndex = 19
+        Me.LineShape5.Name = "LineShape5"
+        Me.LineShape5.X1 = 91
+        Me.LineShape5.X2 = 137
+        Me.LineShape5.Y1 = 128
+        Me.LineShape5.Y2 = 128
         '
-        'Pompier2
+        'LineShape4
         '
-        Me.Pompier2.FormattingEnabled = True
-        Me.Pompier2.Location = New System.Drawing.Point(140, 45)
-        Me.Pompier2.Name = "Pompier2"
-        Me.Pompier2.Size = New System.Drawing.Size(150, 17)
-        Me.Pompier2.TabIndex = 21
+        Me.LineShape4.Name = "LineShape4"
+        Me.LineShape4.X1 = 91
+        Me.LineShape4.X2 = 137
+        Me.LineShape4.Y1 = 96
+        Me.LineShape4.Y2 = 96
         '
-        'Pompier3
+        'LineShape3
         '
-        Me.Pompier3.FormattingEnabled = True
-        Me.Pompier3.Location = New System.Drawing.Point(141, 74)
-        Me.Pompier3.Name = "Pompier3"
-        Me.Pompier3.Size = New System.Drawing.Size(150, 17)
-        Me.Pompier3.TabIndex = 22
+        Me.LineShape3.Name = "LineShape3"
+        Me.LineShape3.X1 = 92
+        Me.LineShape3.X2 = 138
+        Me.LineShape3.Y1 = 66
+        Me.LineShape3.Y2 = 66
         '
-        'Pompier4
+        'LineShape1
         '
-        Me.Pompier4.FormattingEnabled = True
-        Me.Pompier4.Location = New System.Drawing.Point(141, 105)
-        Me.Pompier4.Name = "Pompier4"
-        Me.Pompier4.Size = New System.Drawing.Size(150, 17)
-        Me.Pompier4.TabIndex = 23
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 92
+        Me.LineShape1.X2 = 138
+        Me.LineShape1.Y1 = 9
+        Me.LineShape1.Y2 = 9
         '
-        'Pompier5
+        'LineShape2
         '
-        Me.Pompier5.FormattingEnabled = True
-        Me.Pompier5.Location = New System.Drawing.Point(140, 136)
-        Me.Pompier5.Name = "Pompier5"
-        Me.Pompier5.Size = New System.Drawing.Size(150, 17)
-        Me.Pompier5.TabIndex = 24
-        '
-        'Pompier6
-        '
-        Me.Pompier6.FormattingEnabled = True
-        Me.Pompier6.Location = New System.Drawing.Point(140, 165)
-        Me.Pompier6.Name = "Pompier6"
-        Me.Pompier6.Size = New System.Drawing.Size(150, 17)
-        Me.Pompier6.TabIndex = 25
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 92
+        Me.LineShape2.X2 = 138
+        Me.LineShape2.Y1 = 37
+        Me.LineShape2.Y2 = 37
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(179, 19)
+        Me.Label1.Location = New System.Drawing.Point(239, 23)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(130, 23)
+        Me.Label1.Size = New System.Drawing.Size(173, 28)
         Me.Label1.TabIndex = 16
         Me.Label1.Text = "FTP 01"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pf1_2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(314, 305)
+        Me.ClientSize = New System.Drawing.Size(419, 375)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblCaserne)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "pf1_2"
         Me.Text = "Départ : Composition"
         Me.GroupBox1.ResumeLayout(False)
