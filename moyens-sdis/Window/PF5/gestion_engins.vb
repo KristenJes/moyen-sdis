@@ -4,12 +4,11 @@ Public Class gestion_engins
     Dim unEngins As New CRUDENGINS
 
     Private Sub IHM()
-        unEngins.afficheIHMEngins(Me, lstAffichEngins)
+        unEngins.afficheIHM(Me, lstAffichEngins)
 
     End Sub
 
     Private Sub btnSupprimer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupprimer.Click
-
         unEngins.ConfirmDelete()
 
     End Sub
@@ -32,6 +31,5 @@ Public Class gestion_engins
         lstAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
-
 
 End Class

@@ -32,17 +32,16 @@ Partial Class gestion_engins
         '
         'lstAffichEngins
         '
-        Me.lstAffichEngins.CheckBoxes = True
         Me.lstAffichEngins.Location = New System.Drawing.Point(12, 12)
         Me.lstAffichEngins.Name = "lstAffichEngins"
-        Me.lstAffichEngins.Size = New System.Drawing.Size(478, 270)
+        Me.lstAffichEngins.Size = New System.Drawing.Size(504, 289)
         Me.lstAffichEngins.TabIndex = 0
         Me.lstAffichEngins.UseCompatibleStateImageBehavior = False
         Me.lstAffichEngins.View = System.Windows.Forms.View.Details
         '
         'btnAjouter
         '
-        Me.btnAjouter.Location = New System.Drawing.Point(546, 33)
+        Me.btnAjouter.Location = New System.Drawing.Point(561, 28)
         Me.btnAjouter.Name = "btnAjouter"
         Me.btnAjouter.Size = New System.Drawing.Size(75, 23)
         Me.btnAjouter.TabIndex = 1
@@ -51,7 +50,7 @@ Partial Class gestion_engins
         '
         'btnModifier
         '
-        Me.btnModifier.Location = New System.Drawing.Point(546, 82)
+        Me.btnModifier.Location = New System.Drawing.Point(561, 79)
         Me.btnModifier.Name = "btnModifier"
         Me.btnModifier.Size = New System.Drawing.Size(75, 23)
         Me.btnModifier.TabIndex = 2
@@ -60,7 +59,7 @@ Partial Class gestion_engins
         '
         'btnSupprimer
         '
-        Me.btnSupprimer.Location = New System.Drawing.Point(546, 125)
+        Me.btnSupprimer.Location = New System.Drawing.Point(561, 131)
         Me.btnSupprimer.Name = "btnSupprimer"
         Me.btnSupprimer.Size = New System.Drawing.Size(75, 23)
         Me.btnSupprimer.TabIndex = 3
@@ -70,7 +69,7 @@ Partial Class gestion_engins
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
-        Me.lblCaserne.Location = New System.Drawing.Point(505, 180)
+        Me.lblCaserne.Location = New System.Drawing.Point(543, 180)
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
         Me.lblCaserne.TabIndex = 5
@@ -78,13 +77,11 @@ Partial Class gestion_engins
         '
         'lstAffichCaserne
         '
-        Me.lstAffichCaserne.CheckBoxes = True
-        Me.lstAffichCaserne.Location = New System.Drawing.Point(508, 196)
+        Me.lstAffichCaserne.Location = New System.Drawing.Point(534, 201)
         Me.lstAffichCaserne.Name = "lstAffichCaserne"
-        Me.lstAffichCaserne.Size = New System.Drawing.Size(140, 86)
+        Me.lstAffichCaserne.Size = New System.Drawing.Size(113, 60)
         Me.lstAffichCaserne.TabIndex = 6
         Me.lstAffichCaserne.UseCompatibleStateImageBehavior = False
-        Me.lstAffichCaserne.View = System.Windows.Forms.View.SmallIcon
         '
         'gestion_engins
         '

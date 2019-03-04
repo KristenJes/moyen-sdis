@@ -1,0 +1,23 @@
+06:00 > 11:26
+11:27 > 15:12
+15:13 > 23
+23 > 05:59
+
+02:00
+
+26:00
+
+
+heure = (systemhour)
+IF (systemhour) < 6
+	heure = heure + 24
+	
+SELECT TRANCHE 
+WHERE heure BETWEEN HEURE_DEBUT AND (HEURE_DEBUT) + DIFFE
+
+
+
+11:00
+
+
+	

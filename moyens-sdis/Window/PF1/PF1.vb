@@ -28,6 +28,14 @@
                     For Each neededVehicule As TypeEngin In neededVehicles
                         For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
                             ' VOIR AVEC MAEL
+                            ' MERCI
+
+
+                            'Select TRANCHEID
+                            'from tranche
+                            'where trancheid = 1
+                            'and TO_DSINTERVAL(CONCAT('0 ', TO_CHAR(systimestamp,'hh24:mi:ss')))
+                            '    BETWEEN HOR_DEBUT AND HOR_FIN;
                         Next
                     Next
                 Else
@@ -84,5 +92,48 @@
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub lblEngins2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblEngins2.Click
+
+    End Sub
+
+    Public Sub test(ByVal orderedCasernes)
+        Try
+            For Each caserne As Caserne In orderedCasernes
+                caserne.loadPompiers()
+                caserne.loadEngins()
+
+
+                If (neededVehicles.Count <> selectedEngin.Count) Then
+                    For Each neededVehicule As TypeEngin In neededVehicles
+                        For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
+                            ' VOIR AVEC MAEL
+                            ' MERCI
+                            ' FAIT
+
+
+                            'Select TRANCHEID
+                            'from tranche
+                            'where trancheid = 1
+                            'and TO_DSINTERVAL(CONCAT('0 ', TO_CHAR(systimestamp,'hh24:mi:ss')))
+                            '    BETWEEN HOR_DEBUT AND HOR_FIN;
+
+
+
+                            'SELECT MATRICULTE
+                            'FROM PLANNING 
+                            'INNER JOIN etat ON planning.ETATID = etat.ETATID
+                            'WHERE ETATID = 1
+                            'AND GetTrancheFromHeure(systimestamp) = TrancheID
+                            'AND caserneID = caserne.ID
+                        Next
+                    Next
+                Else
+                    Exit Try
+                End If
+            Next
+        Finally
+        End Try
     End Sub
 End Class
