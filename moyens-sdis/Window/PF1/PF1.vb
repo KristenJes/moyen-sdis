@@ -10,12 +10,14 @@
 
         ContainerDepart.Controls.Clear()
 
+
         Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
         For Each type_camion As DataRow In departTypes.Rows
             neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
         Next
 
         communeSelected = New Commune(Connexion.ORA.Champ("SELECT * FROM Commune WHERE NOM_COMMUNE = '" & communeNom & "'"))
+
 
         Dim orderedCasernes As List(Of Caserne) = OrderCaserne(communeSelected)
         Try
@@ -26,17 +28,12 @@
 
                 If (neededVehicles.Count <> selectedEngin.Count) Then
                     For Each neededVehicule As TypeEngin In neededVehicles
-                        For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
-                            ' VOIR AVEC MAEL
-                            ' MERCI
+                        If (caserne.Engins.Count <> 0) Then
+                            For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
+                                Dim trancheID = Connexion.ORA.Champ("SELECT GetTrancheFromCurDate() FROM dual")(0)
 
-
-                            'Select TRANCHEID
-                            'from tranche
-                            'where trancheid = 1
-                            'and TO_DSINTERVAL(CONCAT('0 ', TO_CHAR(systimestamp,'hh24:mi:ss')))
-                            '    BETWEEN HOR_DEBUT AND HOR_FIN;
-                        Next
+                            Next
+                        End If
                     Next
                 Else
                     Exit Try
@@ -52,7 +49,7 @@
 
     Public Function OrderCaserne(ByVal commune As Commune)
         Dim orderedCasernes As New List(Of Caserne)()
-        Dim casernes As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM, CIS_LAT, CIS_LONG FROM CASERNE WHERE CIS_LAT IS NOT NULL AND CIS_LONG IS NOT NULL ORDER BY DISTANCE_LOC(" & commune.Latitude & ", " & commune.Longitude & ", CIS_LAT, CIS_LONG)")
+        Dim casernes As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM, CIS_LAT, CIS_LONG FROM CASERNE WHERE CIS_LAT IS NOT NULL AND CIS_LONG IS NOT NULL AND ROWNUM <= 15 ORDER BY DISTANCE_LOC(" & commune.Latitude & ", " & commune.Longitude & ", CIS_LAT, CIS_LONG)")
 
         For Each caserne As DataRow In casernes.Rows
             orderedCasernes.Add(New Caserne(caserne, False))
