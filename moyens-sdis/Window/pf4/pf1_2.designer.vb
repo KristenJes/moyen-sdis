@@ -317,7 +317,7 @@ Partial Class pf1_2
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(173, 28)
         Me.Label1.TabIndex = 16
-        Me.Label1.Text = "FTP 01"
+        Me.Label1.Text = "Caserne 01"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pf1_2

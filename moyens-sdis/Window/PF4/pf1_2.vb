@@ -25,6 +25,7 @@ retour:
                 Button2.Location = New Point(184, 137)
 
 
+
             Case 3
                 Grade4.Hide()
                 Grade5.Hide()
@@ -94,6 +95,14 @@ retour:
     End Sub
 
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Pompier1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lblCaserne_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblCaserne.Click
+        Dim engin As DataTable = Connexion.ORA.Table("SELECT CIS_NOM, ENGIN_ETAT, ENGIN_IMMAT, ENGIN_NOM FROM CASERNE, ENGIN WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND CIS_NOM='" & Caserne & "';")
+    End Sub
+
+    Private Sub Label1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label1.Click
 
     End Sub
 End Class

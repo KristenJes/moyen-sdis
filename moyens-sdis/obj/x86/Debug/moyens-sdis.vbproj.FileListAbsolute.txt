@@ -20,3 +20,5 @@ C:\Users\anlna\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis
 C:\Users\anlna\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
 C:\Users\anlna\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
 C:\Users\anlna\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
+C:\Users\anlna\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
+C:\Users\anlna\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
