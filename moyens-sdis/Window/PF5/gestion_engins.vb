@@ -17,19 +17,40 @@ Public Class gestion_engins
     End Sub
 
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModifier.Click
-        gest_engins_ajout.ShowDialog()
+        gesstion_modif.ShowDialog()
     End Sub
 
     Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         IHM()
-        unEngins.AfficheCaserne(lstAffichCaserne)
+        AfficheCaserne()
 
 
-        lstAffichCaserne.Items.Add("BREST")
-        lstAffichCaserne.Items.Add("OUESSANT")
-        lstAffichCaserne.Items.Add("SAINT RENAN")
+        'lstAffichCaserne.Items.Add("BREST")
+        'lstAffichCaserne.Items.Add("OUESSANT")
+        'lstAffichCaserne.Items.Add("SAINT RENAN")
 
     End Sub
+    Public Sub AfficheCaserne()
+        '_________VARIABLE_________
+        Dim info(2) As String
+        Dim type As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM FROM CASERNE")
+        Dim comboSource As New Dictionary(Of String, String)()
+        '__________________________
 
+
+        For Each nom As DataRow In type.Rows
+            info(0) = nom("CIS_ID").ToString
+            info(1) = nom("CIS_NOM").ToString
+
+            comboSource.Add(info(0), info(1))
+            CbCaserne.DataSource = New BindingSource(comboSource, Nothing)
+        Next
+        CbCaserne.DisplayMember = "Value"
+        CbCaserne.ValueMember = "Key"
+    End Sub
+
+    Private Sub lstAffichEngins_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstAffichEngins.SelectedIndexChanged
+
+    End Sub
 End Class

@@ -1,10 +1,10 @@
 ﻿
 Class CRUDENGINS
-        'LIAISON AVEC IHM
-        Public Sub afficheIHM(ByVal uneFeuille As Form, ByVal uneListView As ListView)
-            uneFeuille.Text = "ENGINS"
+    'LIAISON AVEC IHM
+    Public Sub afficheIHM(ByVal uneFeuille As Form, ByVal uneListView As ListView)
+        uneFeuille.Text = "ENGINS"
 
-            uneListView.Clear()
+        uneListView.Clear()
 
         uneListView.Columns.Add("Caserne", 80, HorizontalAlignment.Left)
         uneListView.Columns.Add("Nom engin", 70, HorizontalAlignment.Left)
@@ -69,4 +69,21 @@ Class CRUDENGINS
               MessageBoxButtons.YesNo, MessageBoxIcon.Question)
 
     End Sub
+    'Public Sub AfficheTypeEngin(ByVal uneList As ListBox)
+
+    '    Dim info(2) As String
+    '    Dim itm As ListViewItem
+
+
+
+    '    Dim type As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN ORDER BY TYPE_ENG_NOM")
+    '    For Each nom As DataRow In type.Rows
+    '        info(0) = nom("TYPE_ENG_NOM").ToString
+
+    '        itm = New ListViewItem(info)
+    '        uneListBox.Items.Add(itm)
+
+    '    Next
+
+    'End Sub
 End Class
