@@ -1,25 +1,8 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        'Connexion.ORA.Execute("INSERT INTO PREVU VALUES(1, 3)")
 
-        'Dim table As DataTable = Connexion.ORA.Table("SELECT * FROM PREVU")
-        'SocGrid.DataSource = table
-
-        'Label1.Text = ""
-        'For Each row As DataRow In table.Rows
-        '    ' Write value of first Integer.
-        '    Label1.Text += row("SIN_NATURE") + ", "
-        'Next
-
-        'Dim s As String = table.Rows(1)("SP_NOM").ToString()
-
-        'Panel1.Controls.Add(Engin_Display(New Engin(14, "VSAV01", "Assigné", New TypeEngin(15, "VSAV", 4))))
-
-        'MessageBox.Show(oui(3, 3))
-
-
-
+        Connexion.ORA.Table("Select * from caserne")
 
 
     End Sub

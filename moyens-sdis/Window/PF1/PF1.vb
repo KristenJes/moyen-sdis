@@ -31,7 +31,8 @@
                         If (caserne.Engins.Count <> 0) Then
                             For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
                                 Dim trancheID = Connexion.ORA.Champ("SELECT GetTrancheFromCurDate() FROM dual")(0)
-
+                                'SELECT * from planning
+                                'WHERE TRUNC(DATEPLAN) = TRUNC(sysdate) AND ETATID = 2 AND TRANCHEID = GetTrancheFromCurDate()
                             Next
                         End If
                     Next
