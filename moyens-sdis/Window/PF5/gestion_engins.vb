@@ -50,6 +50,10 @@ Public Class gestion_engins
         CbCaserne.ValueMember = "Key"
     End Sub
 
+    Private Sub lstAffichEngins_ItemCheck(ByVal sender As Object, ByVal e As System.Windows.Forms.ItemCheckEventArgs) Handles lstAffichEngins.ItemCheck
+
+    End Sub
+
     Private Sub lstAffichEngins_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lstAffichEngins.SelectedIndexChanged
 
     End Sub
