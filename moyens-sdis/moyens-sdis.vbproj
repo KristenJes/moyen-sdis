@@ -126,19 +126,26 @@
     <Compile Include="Window\PF4\pf1_2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\CRUDENGINS.vb" />
-    <Compile Include="Window\PF5\gestion_engins.Designer.vb">
+    <Compile Include="Window\PF6\CRUDENGINS.vb" />
+    <Compile Include="Window\PF6\gestion_engins.Designer.vb">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gestion_engins.vb">
+    <Compile Include="Window\PF6\gestion_engins.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.designer.vb">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    <Compile Include="Window\PF6\gestion_engins_ajout.designer.vb">
+      <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.vb">
+    <Compile Include="Window\PF6\gestion_engins_ajout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Window\PF6\gestion_modif.Designer.vb">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF6\gestion_modif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PF6\Index.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -153,11 +160,14 @@
     <EmbeddedResource Include="Window\PF4\pf1_2.resx">
       <DependentUpon>pf1_2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
+    <EmbeddedResource Include="Window\PF6\gestion_engins.resx">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gest_engins_ajout.resx">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    <EmbeddedResource Include="Window\PF6\gestion_engins_ajout.resx">
+      <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF6\gestion_modif.resx">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
