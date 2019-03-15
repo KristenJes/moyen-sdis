@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7B6476BC-801F-4154-B38B-34746F37D0A3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>moyens_sdis.My.MyApplication</StartupObject>
+    <StartupObject>moyens_sdis.gestion_engins</StartupObject>
     <RootNamespace>moyens_sdis</RootNamespace>
     <AssemblyName>moyens-sdis</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -133,10 +133,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Window\PF5\CRUDENGINS.vb" />
-    <Compile Include="Window\PF5\gesstion_modif.Designer.vb">
-      <DependentUpon>gesstion_modif.vb</DependentUpon>
+    <Compile Include="Window\PF5\gestion_modif.Designer.vb">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gesstion_modif.vb">
+    <Compile Include="Window\PF5\gestion_modif.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Window\PF5\gestion_engins.Designer.vb">
@@ -145,10 +145,10 @@
     <Compile Include="Window\PF5\gestion_engins.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.designer.vb">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    <Compile Include="Window\PF5\gestion_engins_ajout.designer.vb">
+      <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.vb">
+    <Compile Include="Window\PF5\gestion_engins_ajout.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -168,14 +168,14 @@
     <EmbeddedResource Include="Window\PF4\pf1_2.resx">
       <DependentUpon>pf1_2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gesstion_modif.resx">
-      <DependentUpon>gesstion_modif.vb</DependentUpon>
+    <EmbeddedResource Include="Window\PF5\gestion_modif.resx">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gest_engins_ajout.resx">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    <EmbeddedResource Include="Window\PF5\gestion_engins_ajout.resx">
+      <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

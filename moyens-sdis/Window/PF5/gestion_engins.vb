@@ -13,11 +13,11 @@ Public Class gestion_engins
 
     End Sub
     Private Sub btnAjouter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAjouter.Click
-        gest_engins_ajout.ShowDialog()
+        gestion_engins_ajout.ShowDialog()
     End Sub
 
     Private Sub btnModifier_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModifier.Click
-        gesstion_modif.ShowDialog()
+        gestion_modif.ShowDialog()
     End Sub
 
     Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

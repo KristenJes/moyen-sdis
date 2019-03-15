@@ -1,4 +1,4 @@
-﻿Public Class gesstion_modif
+﻿Public Class gestion_engins_ajout
     Dim unEngins As New CRUDENGINS
 
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
@@ -24,7 +24,8 @@
 
         '__________________________
 
-        Connexion.ORA.Execute("INSERT INTO ENGIN (ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES ('OK', '" & type_nom & "', '" & caserne_id & "', '" & type_id & "', '" & immat & "'   ")
+        'Connexion.ORA.Execute("INSERT INTO ENGIN (ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES ('OK', '" & type_nom & "', '" & caserne_id & "', '" & type_id & "', '" & immat & "'   ")
+        Connexion.ORA.Execute("UPDATE ENGIN SET ENGIN_ETAT= 'OK', ENGIN_NOM= '" & type_nom & "', CIS_ID= '" & caserne_id & "', TYPE_ENG_ID = '" & type_id & "', ENGIN_IMMAT = '" & immat & "' WHERE ENGIN_ID = ")
     End Sub
     Public Sub AfficheTypeEngin()
         '_________VARIABLE_________
@@ -63,7 +64,4 @@
         CbCaserne.ValueMember = "Key"
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged, CbCaserne.SelectedIndexChanged
-
-    End Sub
 End Class
