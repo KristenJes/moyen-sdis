@@ -30,7 +30,7 @@ Partial Class gestion_modif
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnOk = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
@@ -101,14 +101,14 @@ Partial Class gestion_modif
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Immatriculation"
         '
-        'Button1
+        'btnOk
         '
-        Me.Button1.Location = New System.Drawing.Point(54, 222)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnOk.Location = New System.Drawing.Point(54, 222)
+        Me.btnOk.Name = "btnOk"
+        Me.btnOk.Size = New System.Drawing.Size(75, 23)
+        Me.btnOk.TabIndex = 8
+        Me.btnOk.Text = "OK"
+        Me.btnOk.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -127,13 +127,13 @@ Partial Class gestion_modif
         Me.ComboBox1.Size = New System.Drawing.Size(145, 21)
         Me.ComboBox1.TabIndex = 0
         '
-        'gesstion_modif
+        'gestion_modif
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(325, 275)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -142,7 +142,7 @@ Partial Class gestion_modif
         Me.Controls.Add(Me.txtBoxImmatriculation)
         Me.Controls.Add(Me.CbType)
         Me.Controls.Add(Me.CbCaserne)
-        Me.Name = "gesstion_modif"
+        Me.Name = "gestion_modif"
         Me.Text = "gesstion_modif"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -156,7 +156,7 @@ Partial Class gestion_modif
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class
