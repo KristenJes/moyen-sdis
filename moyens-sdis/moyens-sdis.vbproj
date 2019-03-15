@@ -133,6 +133,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Window\PF5\CRUDENGINS.vb" />
+    <Compile Include="Window\PF5\gesstion_modif.Designer.vb">
+      <DependentUpon>gesstion_modif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF5\gesstion_modif.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Window\PF5\gestion_engins.Designer.vb">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Window\PF4\pf1_2.resx">
       <DependentUpon>pf1_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF5\gesstion_modif.resx">
+      <DependentUpon>gesstion_modif.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
       <DependentUpon>gestion_engins.vb</DependentUpon>

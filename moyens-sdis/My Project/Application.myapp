@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <MyApplicationData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MySubMain>true</MySubMain>
+<<<<<<< HEAD
   <MainForm>gestion_engins</MainForm>
+=======
+  <MainForm>pf1_2</MainForm>
+>>>>>>> 20395ec557354476edb9b15c27611f96d3115cab
   <SingleInstance>false</SingleInstance>
   <ShutdownMode>0</ShutdownMode>
   <EnableVisualStyles>true</EnableVisualStyles>
