@@ -120,7 +120,7 @@ Partial Class gestion_engins_ajout
         Me.CbType.Size = New System.Drawing.Size(151, 21)
         Me.CbType.TabIndex = 11
         '
-        'gest_engins_ajout
+        'gestion_engins_ajout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -135,8 +135,8 @@ Partial Class gestion_engins_ajout
         Me.Controls.Add(Me.lblType)
         Me.Controls.Add(Me.lbIdentifiant)
         Me.Controls.Add(Me.lblCaserne)
-        Me.Name = "gest_engins_ajout"
-        Me.Text = "MODIFICATION D'ENGINS"
+        Me.Name = "gestion_engins_ajout"
+        Me.Text = "AJOUT D'ENGINS"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

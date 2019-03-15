@@ -5,10 +5,6 @@
         insert()
     End Sub
 
-    Private Sub listBoxCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    End Sub
-
     Private Sub gest_engins_ajout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         AfficheTypeEngin()
         AfficheCaserne()
@@ -21,7 +17,6 @@
         Dim caserne_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
 
         Dim immat As String = txtBoxImmatriculation.Text.ToString
-
         '__________________________
 
         'Connexion.ORA.Execute("INSERT INTO ENGIN (ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES ('OK', '" & type_nom & "', '" & caserne_id & "', '" & type_id & "', '" & immat & "'   ")
