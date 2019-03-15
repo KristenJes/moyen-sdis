@@ -32,11 +32,11 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-<<<<<<< HEAD
+
             Me.MainForm = Global.moyens_sdis.gestion_engins
-=======
+
             Me.MainForm = Global.moyens_sdis.pf1_2
->>>>>>> 20395ec557354476edb9b15c27611f96d3115cab
+
         End Sub
     End Class
 End Namespace
