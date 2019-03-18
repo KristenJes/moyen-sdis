@@ -130,7 +130,6 @@
       <DependentUpon>pf1_2.vb</DependentUpon>
     </Compile>
     <Compile Include="Window\PF4\pf1_2.vb" />
-    <Compile Include="Window\PF5\CRUDENGINS.vb" />
     <Compile Include="Window\PF5\gestion_modif.Designer.vb">
       <DependentUpon>gestion_modif.vb</DependentUpon>
     </Compile>

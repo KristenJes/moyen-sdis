@@ -84,7 +84,6 @@ Partial Class gestion_engins_ajout
         Me.txtBoxImmatriculation.Name = "txtBoxImmatriculation"
         Me.txtBoxImmatriculation.Size = New System.Drawing.Size(151, 20)
         Me.txtBoxImmatriculation.TabIndex = 5
-        Me.txtBoxImmatriculation.Text = "YHG - 536 - HUK"
         '
         'btnOk
         '

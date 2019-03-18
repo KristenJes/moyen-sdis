@@ -31,7 +31,7 @@ Partial Class gestion_modif
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnOk = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnAnnuler = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
@@ -110,14 +110,14 @@ Partial Class gestion_modif
         Me.btnOk.Text = "OK"
         Me.btnOk.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnAnnuler
         '
-        Me.Button2.Location = New System.Drawing.Point(184, 222)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Annuler"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnAnnuler.Location = New System.Drawing.Point(184, 222)
+        Me.btnAnnuler.Name = "btnAnnuler"
+        Me.btnAnnuler.Size = New System.Drawing.Size(75, 23)
+        Me.btnAnnuler.TabIndex = 9
+        Me.btnAnnuler.Text = "Annuler"
+        Me.btnAnnuler.UseVisualStyleBackColor = True
         '
         'ComboBox1
         '
@@ -132,7 +132,7 @@ Partial Class gestion_modif
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(325, 275)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnAnnuler)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -143,7 +143,7 @@ Partial Class gestion_modif
         Me.Controls.Add(Me.CbType)
         Me.Controls.Add(Me.CbCaserne)
         Me.Name = "gestion_modif"
-        Me.Text = "gesstion_modif"
+        Me.Text = "MODIFICATION D'ENGIN"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -157,6 +157,6 @@ Partial Class gestion_modif
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents btnOk As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents btnAnnuler As System.Windows.Forms.Button
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

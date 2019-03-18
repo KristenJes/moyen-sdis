@@ -95,7 +95,7 @@ Partial Class gestion_engins
         Me.Controls.Add(Me.btnAjouter)
         Me.Controls.Add(Me.lstAffichEngins)
         Me.Name = "gestion_engins"
-        Me.Text = "ENGINS"
+        Me.Text = "GESTIONS DES ENGINS"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
