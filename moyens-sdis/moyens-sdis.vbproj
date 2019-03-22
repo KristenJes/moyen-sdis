@@ -133,7 +133,6 @@
     <Compile Include="Window\PF4\pf1_2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\CRUDENGINS.vb" />
     <Compile Include="Window\PF5\gestion_engins.Designer.vb">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </Compile>

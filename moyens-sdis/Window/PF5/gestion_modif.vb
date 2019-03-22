@@ -21,6 +21,7 @@
     Public Sub AfficheTypeEngin()
         '_________VARIABLE_________
         Dim info(2) As String
+        Dim id As String = lblId.Text
         Dim type As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_ID, TYPE_ENG_NOM FROM TYPE_ENGIN")
         Dim comboSource As New Dictionary(Of String, String)()
         '__________________________
@@ -34,10 +35,14 @@
         Next
         CbType.DisplayMember = "Value"
         CbType.ValueMember = "Key"
+
+        Dim selected As DataRow = Connexion.ORA.Champ("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN, ENGIN WHERE TYPE_ENGIN.TYPE_ENG_ID=ENGIN.TYPE_ENG_ID AND ENGIN_ID=" & id & "")
+        CbType.Text = selected(0).ToString
     End Sub
     Public Sub AfficheCaserne()
         '_________VARIABLE_________
         Dim info(2) As String
+        Dim id As String = lblId.Text
         Dim type As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM FROM CASERNE")
         Dim comboSource As New Dictionary(Of String, String)()
         '__________________________
@@ -52,6 +57,8 @@
         Next
         CbCaserne.DisplayMember = "Value"
         CbCaserne.ValueMember = "Key"
+        Dim selected As DataRow = Connexion.ORA.Champ("SELECT CIS_NOM FROM CASERNE, ENGIN WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND ENGIN_ID=" & id & "")
+        CbCaserne.Text = selected(0).ToString
     End Sub
     Public Sub AfficheNom()
         '_________VARIABLE_________

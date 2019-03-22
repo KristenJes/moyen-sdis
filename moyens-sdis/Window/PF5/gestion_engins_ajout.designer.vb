@@ -76,7 +76,6 @@ Partial Class gestion_engins_ajout
         Me.txtBoxNom.Name = "txtBoxNom"
         Me.txtBoxNom.Size = New System.Drawing.Size(151, 20)
         Me.txtBoxNom.TabIndex = 4
-        Me.txtBoxNom.Text = "."
         '
         'txtBoxImmatriculation
         '
