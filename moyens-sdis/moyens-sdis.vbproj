@@ -126,17 +126,17 @@
     <Compile Include="Window\PF4\pf1_2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\CRUDENGINS.vb" />
-    <Compile Include="Window\PF5\gestion_engins.Designer.vb">
+    <Compile Include="Window\PF6\CRUDENGINS.vb" />
+    <Compile Include="Window\PF6\gestion_engins.Designer.vb">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gestion_engins.vb">
+    <Compile Include="Window\PF6\gestion_engins.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.designer.vb">
+    <Compile Include="Window\PF6\gest_engins_ajout.designer.vb">
       <DependentUpon>gest_engins_ajout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.vb">
+    <Compile Include="Window\PF6\gest_engins_ajout.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -153,10 +153,10 @@
     <EmbeddedResource Include="Window\PF4\pf1_2.resx">
       <DependentUpon>pf1_2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
+    <EmbeddedResource Include="Window\PF6\gestion_engins.resx">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gest_engins_ajout.resx">
+    <EmbeddedResource Include="Window\PF6\gest_engins_ajout.resx">
       <DependentUpon>gest_engins_ajout.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
