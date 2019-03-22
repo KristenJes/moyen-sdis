@@ -1,12 +1,15 @@
 ﻿Public Class pf1_2
 
-    Shared nIntervention As Integer
-    Shared nDepart As Integer
+    Shared ncaserne As String
+    Shared nEngin As String
+    Shared nPompier As String
     Private TypeVeh As String
 
-    Public Shared Sub First_Load(ByVal Intervention, ByVal Depart)
-        nIntervention = Intervention
-        nDepart = Depart
+
+    Public Shared Sub First_Load(ByVal Caserne, ByVal Engin, ByVal Pompier)
+        ncaserne = Caserne
+        nEngin = Engin
+        nPompier = Pompier
 
 
     End Sub
@@ -18,43 +21,14 @@
 
 
 retour:
-        TypeVeh = InputBox("Type de véhicule")
-        Dim vehicule As Integer
-        Select Case TypeVeh
 
 
-            Case "VSAV"
+        
 
-                vehicule = 1
+        Dim engin As String = nEngin
 
 
-            Case "VTU"
-
-                vehicule = 2
-
-            Case "VL"
-
-                vehicule = 3
-
-            Case "CCF"
-
-                vehicule = 4
-
-            Case "FPT"
-
-                vehicule = 5
-
-            Case "VLHR"
-
-                vehicule = 6
-
-        End Select
-
-        Dim engin As DataRow = Connexion.ORA.Champ("SELECT ENGIN_NOM FROM ENGIN WHERE TYPE_ENG_ID=" & vehicule & " AND CIS_ID='1';")
-        lblCaserne.Text = engin(0).ToString
-
-        Dim caserne As DataRow = Connexion.ORA.Champ("SELECT CIS_NOM FROM CASERNE WHERE CIS_ID=1;")
-        Label1.Text = caserne(0).ToString
+        Dim caserne As String = ncaserne
 
 
 
