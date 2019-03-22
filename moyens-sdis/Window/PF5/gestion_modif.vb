@@ -1,9 +1,10 @@
 ﻿Public Class gestion_modif
-    Public Property EngId As Integer = 0
 
 #Region "Bouton"
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
         updates()
+        MsgBox("Modification efffectue")
+        Me.Close()
     End Sub
     Private Sub btnAnnuler_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnnuler.Click
         Me.Close()
@@ -14,6 +15,8 @@
     Private Sub gest_engins_ajout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         AfficheTypeEngin()
         AfficheCaserne()
+        AfficheNom()
+        AfficheImmat()
     End Sub
     Public Sub AfficheTypeEngin()
         '_________VARIABLE_________
@@ -50,6 +53,21 @@
         CbCaserne.DisplayMember = "Value"
         CbCaserne.ValueMember = "Key"
     End Sub
+    Public Sub AfficheNom()
+        '_________VARIABLE_________
+        Dim id As String = lblId.Text
+        Dim nom As DataRow = Connexion.ORA.Champ("SELECT ENGIN_NOM FROM ENGIN WHERE ENGIN_ID=" & id & ";")
+        '__________________________
+        txtBoxNom.Text = nom(0).ToString
+    End Sub
+    Public Sub AfficheImmat()
+        '_________VARIABLE_________
+        Dim id As String = lblId.Text
+        Dim immat As DataRow = Connexion.ORA.Champ("SELECT ENGIN_IMMAT FROM ENGIN WHERE ENGIN_ID=" & id & ";")
+        '__________________________
+        txtBoxImmatriculation.Text = immat(0).ToString
+    End Sub
+
 #End Region
 
     Public Sub updates()
@@ -59,11 +77,14 @@
 
         Dim caserne_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
 
-        Dim immat As String = txtBoxImmatriculation.Text.ToString
+        Dim immat As String = txtBoxNom.Text.ToString
+
+        Dim id As String = lblId.Text
         Dim cmdSql As String = ""
+
         '__________________________
 
-        cmdSql = "UPDATE ENGIN SET ENGIN_ETAT= 'OK', ENGIN_NOM= '" & type_nom & "', CIS_ID= " & caserne_id & ", TYPE_ENG_ID = " & type_id & ", ENGIN_IMMAT = '" & immat & "' WHERE ENGIN_ID =" & EngId & "; "
+        cmdSql = "UPDATE ENGIN SET ENGIN_ETAT= 'Disponible', ENGIN_NOM= '" & type_nom & "', CIS_ID= " & caserne_id & ", TYPE_ENG_ID = " & type_id & ", ENGIN_IMMAT = '" & immat & "' WHERE ENGIN_ID =" & id & "; "
         Connexion.ORA.Execute(cmdSql)
     End Sub
 End Class

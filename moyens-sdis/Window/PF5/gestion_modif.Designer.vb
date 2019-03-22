@@ -24,8 +24,8 @@ Partial Class gestion_modif
     Private Sub InitializeComponent()
         Me.CbCaserne = New System.Windows.Forms.ComboBox()
         Me.CbType = New System.Windows.Forms.ComboBox()
+        Me.txtBoxNom = New System.Windows.Forms.TextBox()
         Me.txtBoxImmatriculation = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -33,6 +33,7 @@ Partial Class gestion_modif
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnAnnuler = New System.Windows.Forms.Button()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.lblId = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'CbCaserne
@@ -51,19 +52,19 @@ Partial Class gestion_modif
         Me.CbType.Size = New System.Drawing.Size(145, 21)
         Me.CbType.TabIndex = 1
         '
+        'txtBoxNom
+        '
+        Me.txtBoxNom.Location = New System.Drawing.Point(114, 122)
+        Me.txtBoxNom.Name = "txtBoxNom"
+        Me.txtBoxNom.Size = New System.Drawing.Size(145, 20)
+        Me.txtBoxNom.TabIndex = 2
+        '
         'txtBoxImmatriculation
         '
-        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(114, 122)
+        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(114, 163)
         Me.txtBoxImmatriculation.Name = "txtBoxImmatriculation"
         Me.txtBoxImmatriculation.Size = New System.Drawing.Size(145, 20)
-        Me.txtBoxImmatriculation.TabIndex = 2
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(114, 163)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(145, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.txtBoxImmatriculation.TabIndex = 3
         '
         'Label1
         '
@@ -88,9 +89,9 @@ Partial Class gestion_modif
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(29, 122)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.Size = New System.Drawing.Size(29, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Identifiant"
+        Me.Label3.Text = "Nom"
         '
         'Label4
         '
@@ -127,19 +128,30 @@ Partial Class gestion_modif
         Me.ComboBox1.Size = New System.Drawing.Size(145, 21)
         Me.ComboBox1.TabIndex = 0
         '
+        'lblId
+        '
+        Me.lblId.AutoSize = True
+        Me.lblId.Location = New System.Drawing.Point(32, 1)
+        Me.lblId.Name = "lblId"
+        Me.lblId.Size = New System.Drawing.Size(15, 13)
+        Me.lblId.TabIndex = 10
+        Me.lblId.Text = "id"
+        Me.lblId.Visible = False
+        '
         'gestion_modif
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(325, 275)
+        Me.Controls.Add(Me.lblId)
         Me.Controls.Add(Me.btnAnnuler)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.txtBoxImmatriculation)
+        Me.Controls.Add(Me.txtBoxNom)
         Me.Controls.Add(Me.CbType)
         Me.Controls.Add(Me.CbCaserne)
         Me.Name = "gestion_modif"
@@ -150,8 +162,8 @@ Partial Class gestion_modif
     End Sub
     Friend WithEvents CbCaserne As System.Windows.Forms.ComboBox
     Friend WithEvents CbType As System.Windows.Forms.ComboBox
+    Friend WithEvents txtBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxImmatriculation As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -159,4 +171,5 @@ Partial Class gestion_modif
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnAnnuler As System.Windows.Forms.Button
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents lblId As System.Windows.Forms.Label
 End Class

@@ -140,10 +140,16 @@
     <Compile Include="Window\PF5\gestion_engins.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.designer.vb">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    <Compile Include="Window\PF5\gestion_engins_ajout.designer.vb">
+      <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gest_engins_ajout.vb">
+    <Compile Include="Window\PF5\gestion_engins_ajout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PF5\gestion_modif.Designer.vb">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF5\gestion_modif.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -166,8 +172,11 @@
     <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gest_engins_ajout.resx">
-      <DependentUpon>gest_engins_ajout.vb</DependentUpon>
+    <EmbeddedResource Include="Window\PF5\gestion_engins_ajout.resx">
+      <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF5\gestion_modif.resx">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

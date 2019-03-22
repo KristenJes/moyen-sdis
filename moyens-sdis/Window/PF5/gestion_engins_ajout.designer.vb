@@ -26,7 +26,7 @@ Partial Class gestion_engins_ajout
         Me.lbIdentifiant = New System.Windows.Forms.Label()
         Me.lblType = New System.Windows.Forms.Label()
         Me.lblImmatriculation = New System.Windows.Forms.Label()
-        Me.txtBoxIdentifiant = New System.Windows.Forms.TextBox()
+        Me.txtBoxNom = New System.Windows.Forms.TextBox()
         Me.txtBoxImmatriculation = New System.Windows.Forms.TextBox()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnAnnuler = New System.Windows.Forms.Button()
@@ -48,9 +48,9 @@ Partial Class gestion_engins_ajout
         Me.lbIdentifiant.AutoSize = True
         Me.lbIdentifiant.Location = New System.Drawing.Point(34, 120)
         Me.lbIdentifiant.Name = "lbIdentifiant"
-        Me.lbIdentifiant.Size = New System.Drawing.Size(53, 13)
+        Me.lbIdentifiant.Size = New System.Drawing.Size(29, 13)
         Me.lbIdentifiant.TabIndex = 1
-        Me.lbIdentifiant.Text = "Identifiant"
+        Me.lbIdentifiant.Text = "Nom"
         '
         'lblType
         '
@@ -70,13 +70,13 @@ Partial Class gestion_engins_ajout
         Me.lblImmatriculation.TabIndex = 3
         Me.lblImmatriculation.Text = "Immatriculation"
         '
-        'txtBoxIdentifiant
+        'txtBoxNom
         '
-        Me.txtBoxIdentifiant.Location = New System.Drawing.Point(130, 116)
-        Me.txtBoxIdentifiant.Name = "txtBoxIdentifiant"
-        Me.txtBoxIdentifiant.Size = New System.Drawing.Size(151, 20)
-        Me.txtBoxIdentifiant.TabIndex = 4
-        Me.txtBoxIdentifiant.Text = "."
+        Me.txtBoxNom.Location = New System.Drawing.Point(130, 116)
+        Me.txtBoxNom.Name = "txtBoxNom"
+        Me.txtBoxNom.Size = New System.Drawing.Size(151, 20)
+        Me.txtBoxNom.TabIndex = 4
+        Me.txtBoxNom.Text = "."
         '
         'txtBoxImmatriculation
         '
@@ -129,7 +129,7 @@ Partial Class gestion_engins_ajout
         Me.Controls.Add(Me.btnAnnuler)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.txtBoxImmatriculation)
-        Me.Controls.Add(Me.txtBoxIdentifiant)
+        Me.Controls.Add(Me.txtBoxNom)
         Me.Controls.Add(Me.lblImmatriculation)
         Me.Controls.Add(Me.lblType)
         Me.Controls.Add(Me.lbIdentifiant)
@@ -144,7 +144,7 @@ Partial Class gestion_engins_ajout
     Friend WithEvents lbIdentifiant As System.Windows.Forms.Label
     Friend WithEvents lblType As System.Windows.Forms.Label
     Friend WithEvents lblImmatriculation As System.Windows.Forms.Label
-    Friend WithEvents txtBoxIdentifiant As System.Windows.Forms.TextBox
+    Friend WithEvents txtBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxImmatriculation As System.Windows.Forms.TextBox
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnAnnuler As System.Windows.Forms.Button

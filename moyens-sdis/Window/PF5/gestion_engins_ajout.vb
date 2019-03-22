@@ -2,12 +2,13 @@
 #Region "Bouton"
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
         insert()
+        MsgBox("Ajout efffectue")
+        Me.Close()
     End Sub
     Private Sub btnAnnuler_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnnuler.Click
         Me.Close()
     End Sub
 #End Region
-
 #Region "IHM"
     Private Sub gest_engins_ajout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         AfficheTypeEngin()
@@ -58,14 +59,14 @@
     Public Sub insert()
         '_________VARIABLE_________
         Dim type_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
-        Dim type_nom As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Value
+        Dim type_nom As String = txtBoxNom.Text
 
         Dim caserne_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
 
         Dim immat As String = txtBoxImmatriculation.Text.ToString
         Dim cmdSql As String = ""
         '__________________________
-        cmdSql = "INSERT INTO ENGIN (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES (sc_.. .nextval, 'OK', '" & type_nom & "', " & caserne_id & ", " & type_id & ", '" & immat & "';"
+        cmdSql = "INSERT INTO ENGIN (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES (S_INC_ENGIN.nextval, 'OK', '" & type_nom & "', " & caserne_id & ", " & type_id & ", '" & immat & "');"
 
         Connexion.ORA.Execute(cmdSql)
     End Sub

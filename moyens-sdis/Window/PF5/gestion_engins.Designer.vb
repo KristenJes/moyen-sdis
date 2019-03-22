@@ -32,7 +32,9 @@ Partial Class gestion_engins
         '
         'lstAffichEngins
         '
+        Me.lstAffichEngins.FullRowSelect = True
         Me.lstAffichEngins.Location = New System.Drawing.Point(12, 12)
+        Me.lstAffichEngins.MultiSelect = False
         Me.lstAffichEngins.Name = "lstAffichEngins"
         Me.lstAffichEngins.Size = New System.Drawing.Size(504, 289)
         Me.lstAffichEngins.TabIndex = 0

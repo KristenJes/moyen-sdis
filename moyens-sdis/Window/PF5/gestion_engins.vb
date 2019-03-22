@@ -1,5 +1,4 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class gestion_engins
 #Region "Bouton"
     Private Sub btnSupprimer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupprimer.Click
@@ -7,6 +6,7 @@ Public Class gestion_engins
       MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If ask = 6 Then
             delete()
+            MsgBox("Suppression effectue")
         End If
     End Sub
     Private Sub btnAjouter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAjouter.Click
@@ -19,10 +19,11 @@ Public Class gestion_engins
         Dim cmdSql As String = ""
         '__________________________
 
-        If lstAffichEngins.SelectedItems.Count = 1 Then Return
-        id = lstAffichEngins.SelectedItems(0).SubItems(0).ToString
+        If lstAffichEngins.SelectedItems.Count = 0 Then Return
+        id = lstAffichEngins.SelectedItems(0).SubItems(0).Text
 
-        gestion_modif.EngId = id
+
+        gestion_modif.lblId.Text = id
         gestion_modif.ShowDialog()
 
     End Sub
@@ -89,7 +90,7 @@ Public Class gestion_engins
         '____________________________________________
 
         If lstAffichEngins.SelectedItems.Count = 0 Then Return
-        id = lstAffichEngins.SelectedItems(0).SubItems(0).ToString
+        id = lstAffichEngins.SelectedItems(0).SubItems(0).Text
 
         cmdSql = "DELETE FROM ENGIN WHERE ENGIN_ID=" & id & ";"
 
