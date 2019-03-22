@@ -1,30 +1,19 @@
 ﻿Public Class gestion_modif
-    Dim unEngins As New CRUDENGINS
+    Public Property EngId As Integer = 0
 
+#Region "Bouton"
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
-        insert()
+        updates()
     End Sub
-
-    Private Sub listBoxCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
+    Private Sub btnAnnuler_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnnuler.Click
+        Me.Close()
     End Sub
+#End Region
 
+#Region "IHM"
     Private Sub gest_engins_ajout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         AfficheTypeEngin()
         AfficheCaserne()
-    End Sub
-    Public Sub insert()
-        '_________VARIABLE_________
-        Dim type_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
-        Dim type_nom As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Value
-
-        Dim caserne_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
-
-        Dim immat As String = txtBoxImmatriculation.Text.ToString
-
-        '__________________________
-
-        Connexion.ORA.Execute("INSERT INTO ENGIN (ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES ('OK', '" & type_nom & "', '" & caserne_id & "', '" & type_id & "', '" & immat & "'   ")
     End Sub
     Public Sub AfficheTypeEngin()
         '_________VARIABLE_________
@@ -32,7 +21,6 @@
         Dim type As DataTable = Connexion.ORA.Table("SELECT TYPE_ENG_ID, TYPE_ENG_NOM FROM TYPE_ENGIN")
         Dim comboSource As New Dictionary(Of String, String)()
         '__________________________
-
 
         For Each nom As DataRow In type.Rows
             info(0) = nom("TYPE_ENG_ID").ToString
@@ -62,8 +50,20 @@
         CbCaserne.DisplayMember = "Value"
         CbCaserne.ValueMember = "Key"
     End Sub
+#End Region
 
-    Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBox1.SelectedIndexChanged, CbCaserne.SelectedIndexChanged
+    Public Sub updates()
+        '_________VARIABLE_________
+        Dim type_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
+        Dim type_nom As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Value
 
+        Dim caserne_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
+
+        Dim immat As String = txtBoxImmatriculation.Text.ToString
+        Dim cmdSql As String = ""
+        '__________________________
+
+        cmdSql = "UPDATE ENGIN SET ENGIN_ETAT= 'OK', ENGIN_NOM= '" & type_nom & "', CIS_ID= " & caserne_id & ", TYPE_ENG_ID = " & type_id & ", ENGIN_IMMAT = '" & immat & "' WHERE ENGIN_ID =" & EngId & "; "
+        Connexion.ORA.Execute(cmdSql)
     End Sub
 End Class

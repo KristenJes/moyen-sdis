@@ -124,9 +124,14 @@
       <DependentUpon>pf1_2.vb</DependentUpon>
     </Compile>
     <Compile Include="Window\PF4\pf1_2.vb" />
+<<<<<<< HEAD
     <Compile Include="Window\PF6\CRUDENGINS.vb" />
     <Compile Include="Window\PF6\gestion_engins.Designer.vb">
       <DependentUpon>gestion_engins.vb</DependentUpon>
+=======
+    <Compile Include="Window\PF5\gestion_modif.Designer.vb">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
+>>>>>>> adcd85b9047d36f0ba022a64e27f396d61171ac5
     </Compile>
     <Compile Include="Window\PF6\gestion_engins.vb">
       <SubType>Form</SubType>
