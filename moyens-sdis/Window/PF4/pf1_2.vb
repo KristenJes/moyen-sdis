@@ -1,11 +1,18 @@
 ﻿Public Class pf1_2
 
-    Dim nIntervention As Integer
-    Dim nDepart As Integer
+    Shared nIntervention As Integer
+    Shared nDepart As Integer
     Private TypeVeh As String
 
+    Public Shared Sub First_Load(ByVal Intervention, ByVal Depart)
+        nIntervention = Intervention
+        nDepart = Depart
 
-   
+
+    End Sub
+
+
+
     Private Sub pf1_2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
