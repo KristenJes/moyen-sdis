@@ -4,30 +4,47 @@
     Dim nDepart As Integer
     Private TypeVeh As String
 
+
    
-
-
-
-
-
-
-
-       
-
-
-
-
-
-
     Private Sub pf1_2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
 
 
 retour:
         TypeVeh = InputBox("Type de véhicule")
+        Dim vehicule As Integer
+        Select Case TypeVeh
 
-        Dim vehicule As DataRow = Connexion.ORA.Champ("SELECT CIS_NOM FROM CASERNE WHERE CIS_ID=1;")
-        lblCaserne.Text = vehicule(0).ToString
+
+            Case "VSAV"
+
+                vehicule = 1
+
+
+            Case "VTU"
+
+                vehicule = 2
+
+            Case "VL"
+
+                vehicule = 3
+
+            Case "CCF"
+
+                vehicule = 4
+
+            Case "FPT"
+
+                vehicule = 5
+
+            Case "VLHR"
+
+                vehicule = 6
+
+        End Select
+
+        Dim engin As DataRow = Connexion.ORA.Champ("SELECT ENGIN_NOM FROM ENGIN WHERE TYPE_ENG_ID=" & vehicule & " AND CIS_ID='1';")
+        lblCaserne.Text = engin(0).ToString
 
         Dim caserne As DataRow = Connexion.ORA.Champ("SELECT CIS_NOM FROM CASERNE WHERE CIS_ID=1;")
         Label1.Text = caserne(0).ToString
@@ -49,7 +66,7 @@ retour:
                 GroupBox1.Width = 297
                 Grade1.Text = "CA VL"
                 Grade2.Text = "COND VL"
-                Pompier1.Text = ""
+                Pompier1.Text = "SELECT SP_PRENOM || SP_NOM FROM POMPIER, DEPART, PARTICIPE WHERE PARTICIPE.DEP_ID=DEPART.DEP_ID AND POMPIER.SP_MATRICULE=DEPART.SP_MATRICULE AND DEPART.INTERV_ID=INTERVENTION.INTERV_ID AND DEP_ID="" AND INTERV_ID=""; "
                 Pompier2.Text = ""
                 Button1.Location = New Point(27, 137)
                 Button2.Location = New Point(184, 137)
