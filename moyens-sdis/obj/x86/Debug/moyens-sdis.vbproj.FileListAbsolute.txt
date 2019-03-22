@@ -61,3 +61,5 @@ C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-s
 >>>>>>> 20395ec557354476edb9b15c27611f96d3115cab
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_modif.resources
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins_ajout.resources
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb

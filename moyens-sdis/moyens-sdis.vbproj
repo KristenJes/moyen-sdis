@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7B6476BC-801F-4154-B38B-34746F37D0A3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>moyens_sdis.gestion_engins</StartupObject>
+    <StartupObject>moyens_sdis.My.MyApplication</StartupObject>
     <RootNamespace>moyens_sdis</RootNamespace>
     <AssemblyName>moyens-sdis</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -49,6 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
@@ -98,13 +99,6 @@
     <Compile Include="Classes\Utils.vb" />
     <Compile Include="Enum\Etat.vb" />
     <Compile Include="Enum\Statut.vb" />
-    <Compile Include="Form1.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -130,30 +124,28 @@
       <DependentUpon>pf1_2.vb</DependentUpon>
     </Compile>
     <Compile Include="Window\PF4\pf1_2.vb" />
-    <Compile Include="Window\PF5\CRUDENGINS.vb" />
-    <Compile Include="Window\PF5\gestion_modif.Designer.vb">
-      <DependentUpon>gestion_modif.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Window\PF5\gestion_modif.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Window\PF5\gestion_engins.Designer.vb">
+    <Compile Include="Window\PF6\CRUDENGINS.vb" />
+    <Compile Include="Window\PF6\gestion_engins.Designer.vb">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gestion_engins.vb">
+    <Compile Include="Window\PF6\gestion_engins.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF5\gestion_engins_ajout.designer.vb">
+    <Compile Include="Window\PF6\gestion_engins_ajout.designer.vb">
       <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF5\gestion_engins_ajout.vb">
+    <Compile Include="Window\PF6\gestion_engins_ajout.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Window\PF6\gestion_modif.Designer.vb">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Window\PF6\gestion_modif.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Window\PF6\Index.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -166,14 +158,14 @@
     <EmbeddedResource Include="Window\PF4\pf1_2.resx">
       <DependentUpon>pf1_2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gestion_modif.resx">
-      <DependentUpon>gestion_modif.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gestion_engins.resx">
+    <EmbeddedResource Include="Window\PF6\gestion_engins.resx">
       <DependentUpon>gestion_engins.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF5\gestion_engins_ajout.resx">
+    <EmbeddedResource Include="Window\PF6\gestion_engins_ajout.resx">
       <DependentUpon>gestion_engins_ajout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Window\PF6\gestion_modif.resx">
+      <DependentUpon>gestion_modif.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
