@@ -5,6 +5,9 @@
     Private _commentaire As String
     Private _sinistre As Sinistre
 
+    Public Sub New(ByVal id)
+        _id = id
+    End Sub
 
     Public Sub New(ByVal id, ByVal cur_date, ByVal commentaire, ByVal sinistre)
         _id = id

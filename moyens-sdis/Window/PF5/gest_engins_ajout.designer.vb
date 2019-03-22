@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class gestion_engins_ajout
+Partial Class gest_engins_ajout
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -28,10 +28,10 @@ Partial Class gestion_engins_ajout
         Me.lblImmatriculation = New System.Windows.Forms.Label()
         Me.txtBoxIdentifiant = New System.Windows.Forms.TextBox()
         Me.txtBoxImmatriculation = New System.Windows.Forms.TextBox()
+        Me.listBoxCaserne = New System.Windows.Forms.ListBox()
+        Me.ListBoxType = New System.Windows.Forms.ListBox()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnAnnuler = New System.Windows.Forms.Button()
-        Me.CbCaserne = New System.Windows.Forms.ComboBox()
-        Me.CbType = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'lblCaserne
@@ -74,16 +74,33 @@ Partial Class gestion_engins_ajout
         '
         Me.txtBoxIdentifiant.Location = New System.Drawing.Point(130, 116)
         Me.txtBoxIdentifiant.Name = "txtBoxIdentifiant"
-        Me.txtBoxIdentifiant.Size = New System.Drawing.Size(151, 20)
+        Me.txtBoxIdentifiant.Size = New System.Drawing.Size(119, 20)
         Me.txtBoxIdentifiant.TabIndex = 4
-        Me.txtBoxIdentifiant.Text = "."
+        Me.txtBoxIdentifiant.Text = "01"
         '
         'txtBoxImmatriculation
         '
         Me.txtBoxImmatriculation.Location = New System.Drawing.Point(130, 151)
         Me.txtBoxImmatriculation.Name = "txtBoxImmatriculation"
-        Me.txtBoxImmatriculation.Size = New System.Drawing.Size(151, 20)
+        Me.txtBoxImmatriculation.Size = New System.Drawing.Size(120, 20)
         Me.txtBoxImmatriculation.TabIndex = 5
+        Me.txtBoxImmatriculation.Text = "YHG - 536 - HUK"
+        '
+        'listBoxCaserne
+        '
+        Me.listBoxCaserne.FormattingEnabled = True
+        Me.listBoxCaserne.Location = New System.Drawing.Point(132, 30)
+        Me.listBoxCaserne.Name = "listBoxCaserne"
+        Me.listBoxCaserne.Size = New System.Drawing.Size(120, 30)
+        Me.listBoxCaserne.TabIndex = 6
+        '
+        'ListBoxType
+        '
+        Me.ListBoxType.FormattingEnabled = True
+        Me.ListBoxType.Location = New System.Drawing.Point(132, 72)
+        Me.ListBoxType.Name = "ListBoxType"
+        Me.ListBoxType.Size = New System.Drawing.Size(120, 30)
+        Me.ListBoxType.TabIndex = 7
         '
         'btnOk
         '
@@ -103,39 +120,23 @@ Partial Class gestion_engins_ajout
         Me.btnAnnuler.Text = "Annuler"
         Me.btnAnnuler.UseVisualStyleBackColor = True
         '
-        'CbCaserne
-        '
-        Me.CbCaserne.FormattingEnabled = True
-        Me.CbCaserne.Location = New System.Drawing.Point(130, 40)
-        Me.CbCaserne.Name = "CbCaserne"
-        Me.CbCaserne.Size = New System.Drawing.Size(151, 21)
-        Me.CbCaserne.TabIndex = 10
-        '
-        'CbType
-        '
-        Me.CbType.FormattingEnabled = True
-        Me.CbType.Location = New System.Drawing.Point(130, 80)
-        Me.CbType.Name = "CbType"
-        Me.CbType.Size = New System.Drawing.Size(151, 21)
-        Me.CbType.TabIndex = 11
-        '
-        'gestion_engins_ajout
+        'gest_engins_ajout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(322, 261)
-        Me.Controls.Add(Me.CbType)
-        Me.Controls.Add(Me.CbCaserne)
         Me.Controls.Add(Me.btnAnnuler)
         Me.Controls.Add(Me.btnOk)
+        Me.Controls.Add(Me.ListBoxType)
+        Me.Controls.Add(Me.listBoxCaserne)
         Me.Controls.Add(Me.txtBoxImmatriculation)
         Me.Controls.Add(Me.txtBoxIdentifiant)
         Me.Controls.Add(Me.lblImmatriculation)
         Me.Controls.Add(Me.lblType)
         Me.Controls.Add(Me.lbIdentifiant)
         Me.Controls.Add(Me.lblCaserne)
-        Me.Name = "gestion_engins_ajout"
-        Me.Text = "AJOUT D'ENGINS"
+        Me.Name = "gest_engins_ajout"
+        Me.Text = "MODIFICATION D'ENGINS"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -146,8 +147,8 @@ Partial Class gestion_engins_ajout
     Friend WithEvents lblImmatriculation As System.Windows.Forms.Label
     Friend WithEvents txtBoxIdentifiant As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxImmatriculation As System.Windows.Forms.TextBox
+    Friend WithEvents listBoxCaserne As System.Windows.Forms.ListBox
+    Friend WithEvents ListBoxType As System.Windows.Forms.ListBox
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnAnnuler As System.Windows.Forms.Button
-    Friend WithEvents CbCaserne As System.Windows.Forms.ComboBox
-    Friend WithEvents CbType As System.Windows.Forms.ComboBox
 End Class

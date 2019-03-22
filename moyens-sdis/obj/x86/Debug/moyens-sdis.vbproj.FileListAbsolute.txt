@@ -28,53 +28,31 @@ C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-new\moyens-sdis\b
 C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
 C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
 C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-<<<<<<< HEAD
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-=======
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\PPE3\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
->>>>>>> 20395ec557354476edb9b15c27611f96d3115cab
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_modif.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\sdis29\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins_ajout.resources
-<<<<<<< HEAD
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
+C:\Users\17kjestin\source\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
+C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
+C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-=======
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_modif.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins_ajout.resources
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
->>>>>>> adcd85b9047d36f0ba022a64e27f396d61171ac5

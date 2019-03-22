@@ -92,7 +92,7 @@
 
     Public Function loadPompiers()
         Dim pompiers As New List(Of Pompier)
-        Dim pompiersStr As DataTable = Connexion.ORA.Table("SELECT * FROM Pompier WHERE CIS_ID = " & ID)
+        Dim pompiersStr As DataTable = Connexion.ORA.Table("SELECT * FROM Pompier, planning WHERE CIS_ID = " & ID & " AND Pompier.SP_MATRICULE = planning.SP_MATRICULE AND TRUNC(DATEPLAN) = TRUNC(sysdate) AND ETATID = 2 AND TRANCHEID = GetTrancheFromCurDate()")
         For Each pompierStr As DataRow In pompiersStr.Rows
             Dim pompier As Pompier = New Pompier(pompierStr)
             pompiers.Add(pompier)
@@ -102,25 +102,26 @@
     End Function
 
     Public Function loadEngins()
-        Dim engins As New List(Of Engin)
+        Dim newEngins As New List(Of Engin)
         Dim enginsStr As DataTable = Connexion.ORA.Table("SELECT ENGIN_ID, ENGIN_NOM, ENGIN_ETAT, TYPE_ENG_ID FROM Engin WHERE CIS_ID = " & ID)
         For Each enginStr As DataRow In enginsStr.Rows
             Dim engin As Engin = New Engin(enginStr)
-            engins.Add(engin)
+            newEngins.Add(engin)
         Next
 
-        Return engins
+        Engins = newEngins
+        Return newEngins
     End Function
 
     Public Function getEnginsFromType(ByVal type As TypeEngin)
         If (Engins.Count = 0) Then
+
             Return Nothing
         End If
 
         Dim enginsWithType As New List(Of Engin)
-
         For Each engin As Engin In Engins
-            If (engin.Type.Equals(type)) Then
+            If (engin.Type.nom.Equals(type.nom)) Then
                 enginsWithType.Add(engin)
             End If
         Next
@@ -130,14 +131,14 @@
 
     Public Function GetPompierEnService()
         Dim PompiersEnService As New List(Of Pompier)
-        Dim Qry As String = "SELECT POMPIER.*" &
-                            "FROM POMPIER, CASERNE, PLANNING, ETAT, TRANCHE" &
-                            "WHERE POMPIER.SP_MATRICULE = PLANNING.SP_MATRICULE" &
-                            "AND POMPIER.CIS_ID = CASERNE.CIS_ID" &
-                            "AND PLANNING.ETATID = ETAT.ETATID" &
-                            "AND PLANNING.TRANCHEID = TRANCHE.TRANCHEID" &
-                            "AND TRANCHE.TRANCHEID = GETTRANCHEFROMCURDATE" &
-                            "AND ETAT.ETATLIB = 'En Service'" &
+        Dim Qry As String = "SELECT POMPIER.* " &
+                            "FROM POMPIER, CASERNE, PLANNING, ETAT, TRANCHE " &
+                            "WHERE POMPIER.SP_MATRICULE = PLANNING.SP_MATRICULE " &
+                            "AND POMPIER.CIS_ID = CASERNE.CIS_ID " &
+                            "AND PLANNING.ETATID = ETAT.ETATID " &
+                            "AND PLANNING.TRANCHEID = TRANCHE.TRANCHEID " &
+                            "AND TRANCHE.TRANCHEID = GETTRANCHEFROMCURDATE " &
+                            "AND ETAT.ETATLIB = 'En Service' " &
                             "AND CASERNE.CIS_ID = " & ID
         Dim Matricules As DataTable = Connexion.ORA.Table(Qry)
 
