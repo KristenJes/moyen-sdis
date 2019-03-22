@@ -1,15 +1,15 @@
 ﻿Public Class PF1
 
     Dim intervention As Intervention
-    Dim sinistre As New Sinistre(1, "Malaise")
+    Dim sinistre As New Sinistre(3, "Malaise")
     Dim caserneSelected As Caserne
     Dim neededVehicles As New List(Of TypeEngin)
-    Dim selectedEngin As New List(Of Engin)
+    Dim selectedEngin As New Dictionary(Of Engin, Caserne)
     Dim caserneNom As String = "BREST"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        intervention = New Intervention(2)
+        intervention = New Intervention(4)
 
 
         Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
@@ -28,14 +28,16 @@
                     For Each neededVehicule As TypeEngin In neededVehicles
                         If (caserne.Engins.Count <> 0) Then
                             For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
-
-                                selectedEngin.Add(typeEng)
-
                                 If (neededVehicles.Count = selectedEngin.Count) Then
                                     GoTo end_of_for
                                 End If
-                                For counter = 0 To typeEng.Type.nbPlace
-                                Next
+                                If (InSelected(typeEng.Type)) Then
+                                    GoTo next_of_for
+                                End If
+
+                                selectedEngin.Add(typeEng, caserne)
+
+next_of_for:
                             Next
                         End If
                     Next
@@ -48,7 +50,7 @@
 
 end_of_for:
 
-        For Each engin In selectedEngin
+        For Each engin In selectedEngin.Keys
             Panel1.Controls.Add(Engin_Display(engin))
         Next
     End Sub
@@ -66,11 +68,32 @@ end_of_for:
 
     Public Sub SendEnginsInDepart()
         Dim departID = Connexion.ORA.Champ("SELECT MAX(DEP_ID) FROM DEPART")(0) + 1
-        For Each engin In selectedEngin
-            Connexion.ORA.Execute("INSERT INTO depart (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES (" & departID & ", sysdate, null, 0, null, " & intervention.ID & ", " & engin.ID & ")")
+        For Each engin In selectedEngin.Keys
+            Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
+
+            Dim pompiers As New List(Of Pompier)
+            pompiers = selectedEngin(engin).GetPompierEnService()
+            For counter = 0 To engin.Type.nbPlace
+                Dim pompier As Pompier
+                pompier = pompiers(counter)
+                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
+            Next
+
             departID += 1
         Next
     End Sub
+
+    Public Function InSelected(ByVal type As TypeEngin)
+        Dim inList As Boolean = False
+        For Each engin As Engin In selectedEngin.Keys
+            If (engin.Type.Equals(type)) Then
+                inList = True
+                GoTo end_of_f
+            End If
+        Next
+end_of_f:
+        Return inList
+    End Function
 
     Public Function Engin_Display(ByVal camion)
         Dim group As New GroupBox
@@ -102,7 +125,6 @@ end_of_for:
     End Function
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
-        MessageBox.Show(selectedEngin.Count)
         SendEnginsInDepart()
     End Sub
 End Class
