@@ -71,3 +71,6 @@ C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins_ajout.resources
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_modif.resources
 C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
+P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb

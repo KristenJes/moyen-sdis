@@ -4,13 +4,15 @@ Public Class gestion_engins
     Private Sub btnSupprimer_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSupprimer.Click
         Dim ask As MsgBoxResult = MessageBox.Show("Êtes-vous sur de vouloir supprimer cet engins ?", "Confirmation de suppression", _
       MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
+        ' Sii le resultat de la querston est Oui alors on supprime la donnee sinon on ne fait rien
         If ask = 6 Then
             delete()
             MsgBox("Suppression effectue")
+            'A tester
             Me.lstAffichEngins.Refresh()
         End If
     End Sub
+    'Affiche la fenetre d'ajout "gestion_engins_ajout"
     Private Sub btnAjouter_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAjouter.Click
         gestion_engins_ajout.ShowDialog()
     End Sub
@@ -21,15 +23,22 @@ Public Class gestion_engins
         '__________________________
 
         If lstAffichEngins.SelectedItems.Count = 0 Then Return
+        'On recupere le texte de la premiere collone de la llgien surlligne
         id = lstAffichEngins.SelectedItems(0).SubItems(0).Text
-
+        'Ajoute l'id  au controle lblId de la page "gestion_modif"
         gestion_modif.lblId.Text = id
+        'Affiche la fenetre d'ajout "gestion_modif"
         gestion_modif.ShowDialog()
 
     End Sub
 #End Region
+
 #Region "IHM"
-    'LIAISON AVEC IHM
+    'Chargement de la page avec les IHM
+    Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        afficheIHM()
+        AfficheCaserne()
+    End Sub
     Public Sub afficheIHM()
 
         lstAffichEngins.Clear()
@@ -54,13 +63,13 @@ Public Class gestion_engins
             lstAffichEngins.Items.Add(itm)
         Next
     End Sub
+    'Affichage des informations sur les casernes
     Public Sub AfficheCaserne()
         '__________________VARIABLE__________________
         Dim info(2) As String
         Dim type As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM FROM CASERNE")
         Dim comboSource As New Dictionary(Of String, String)()
         '____________________________________________
-
 
         For Each nom As DataRow In type.Rows
             info(0) = nom("CIS_ID").ToString
@@ -74,13 +83,9 @@ Public Class gestion_engins
         CbCaserne.DisplayMember = "Value"
         CbCaserne.ValueMember = "Key"
     End Sub
-    'Chargement de la page avec les IHM
-    Private Sub gestion_engins_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        afficheIHM()
-        AfficheCaserne()
-    End Sub
-#End Region
 
+#End Region
+    'Supprime la ligne en fonction de l'id
     Public Sub delete()
         '__________________VARIABLE__________________
         Dim id As Integer = 0
@@ -95,11 +100,11 @@ Public Class gestion_engins
         Connexion.ORA.Execute(cmdSql)
 
     End Sub
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.lstAffichEngins.Refresh()
-    End Sub
+    'Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+    '    Me.lstAffichEngins.Refresh()
+    'End Sub
 
-    Private Sub CbCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CbCaserne.SelectedIndexChanged
-        Me.lstAffichEngins.Clear()
-    End Sub
+    'Private Sub CbCaserne_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CbCaserne.SelectedIndexChanged
+    '    Me.lstAffichEngins.Clear()
+    'End Sub
 End Class

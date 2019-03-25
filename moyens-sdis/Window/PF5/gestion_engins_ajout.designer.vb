@@ -37,7 +37,7 @@ Partial Class gestion_engins_ajout
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
-        Me.lblCaserne.Location = New System.Drawing.Point(35, 40)
+        Me.lblCaserne.Location = New System.Drawing.Point(22, 29)
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
         Me.lblCaserne.TabIndex = 0
@@ -46,7 +46,7 @@ Partial Class gestion_engins_ajout
         'lbIdentifiant
         '
         Me.lbIdentifiant.AutoSize = True
-        Me.lbIdentifiant.Location = New System.Drawing.Point(34, 120)
+        Me.lbIdentifiant.Location = New System.Drawing.Point(22, 116)
         Me.lbIdentifiant.Name = "lbIdentifiant"
         Me.lbIdentifiant.Size = New System.Drawing.Size(29, 13)
         Me.lbIdentifiant.TabIndex = 1
@@ -55,7 +55,7 @@ Partial Class gestion_engins_ajout
         'lblType
         '
         Me.lblType.AutoSize = True
-        Me.lblType.Location = New System.Drawing.Point(37, 80)
+        Me.lblType.Location = New System.Drawing.Point(22, 70)
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(31, 13)
         Me.lblType.TabIndex = 2
@@ -64,7 +64,7 @@ Partial Class gestion_engins_ajout
         'lblImmatriculation
         '
         Me.lblImmatriculation.AutoSize = True
-        Me.lblImmatriculation.Location = New System.Drawing.Point(35, 157)
+        Me.lblImmatriculation.Location = New System.Drawing.Point(22, 150)
         Me.lblImmatriculation.Name = "lblImmatriculation"
         Me.lblImmatriculation.Size = New System.Drawing.Size(77, 13)
         Me.lblImmatriculation.TabIndex = 3
@@ -72,14 +72,14 @@ Partial Class gestion_engins_ajout
         '
         'txtBoxNom
         '
-        Me.txtBoxNom.Location = New System.Drawing.Point(130, 116)
+        Me.txtBoxNom.Location = New System.Drawing.Point(117, 109)
         Me.txtBoxNom.Name = "txtBoxNom"
         Me.txtBoxNom.Size = New System.Drawing.Size(151, 20)
         Me.txtBoxNom.TabIndex = 4
         '
         'txtBoxImmatriculation
         '
-        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(130, 151)
+        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(117, 150)
         Me.txtBoxImmatriculation.Name = "txtBoxImmatriculation"
         Me.txtBoxImmatriculation.Size = New System.Drawing.Size(151, 20)
         Me.txtBoxImmatriculation.TabIndex = 5
@@ -105,7 +105,7 @@ Partial Class gestion_engins_ajout
         'CbCaserne
         '
         Me.CbCaserne.FormattingEnabled = True
-        Me.CbCaserne.Location = New System.Drawing.Point(130, 40)
+        Me.CbCaserne.Location = New System.Drawing.Point(117, 29)
         Me.CbCaserne.Name = "CbCaserne"
         Me.CbCaserne.Size = New System.Drawing.Size(151, 21)
         Me.CbCaserne.TabIndex = 10
@@ -113,7 +113,7 @@ Partial Class gestion_engins_ajout
         'CbType
         '
         Me.CbType.FormattingEnabled = True
-        Me.CbType.Location = New System.Drawing.Point(130, 80)
+        Me.CbType.Location = New System.Drawing.Point(117, 70)
         Me.CbType.Name = "CbType"
         Me.CbType.Size = New System.Drawing.Size(151, 21)
         Me.CbType.TabIndex = 11
@@ -122,7 +122,7 @@ Partial Class gestion_engins_ajout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(322, 261)
+        Me.ClientSize = New System.Drawing.Size(322, 255)
         Me.Controls.Add(Me.CbType)
         Me.Controls.Add(Me.CbCaserne)
         Me.Controls.Add(Me.btnAnnuler)

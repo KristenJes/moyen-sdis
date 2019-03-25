@@ -1,10 +1,12 @@
 ﻿Public Class gestion_engins_ajout
 #Region "Bouton"
+    'Execute le sub Insert + Affiche une notification + ferme la fenetre
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
         insert()
         MsgBox("Ajout efffectue")
         Me.Close()
     End Sub
+    'Ferme la fenetre
     Private Sub btnAnnuler_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnnuler.Click
         Me.Close()
     End Sub
@@ -14,7 +16,7 @@
         AfficheTypeEngin()
         AfficheCaserne()
     End Sub
-
+    'Affichage des informations sur les types d'engins
     Public Sub AfficheTypeEngin()
         '_________VARIABLE_________
         Dim info(2) As String
@@ -34,6 +36,7 @@
         CbType.DisplayMember = "Value"
         CbType.ValueMember = "Key"
     End Sub
+    'Affichage des informations sur les casernes
     Public Sub AfficheCaserne()
         '_________VARIABLE_________
         Dim info(2) As String
@@ -55,7 +58,7 @@
         CbCaserne.ValueMember = "Key"
     End Sub
 #End Region
-
+    'Recupere les informations dans les variables puis les ajoute a la requete
     Public Sub insert()
         '_________VARIABLE_________
         Dim type_id As String = DirectCast(CbType.SelectedItem, KeyValuePair(Of String, String)).Key
@@ -66,7 +69,7 @@
         Dim immat As String = txtBoxImmatriculation.Text.ToString
         Dim cmdSql As String = ""
         '__________________________
-        cmdSql = "INSERT INTO ENGIN (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES (S_INC_ENGIN.nextval, 'DIsponible', '" & type_nom & "', " & caserne_id & ", " & type_id & ", '" & immat & "');"
+        cmdSql = "INSERT INTO ENGIN (ENGIN_ID, ENGIN_ETAT, ENGIN_NOM, CIS_ID, TYPE_ENG_ID, ENGIN_IMMAT) VALUES (S_INC_ENGIN.nextval, 'Disponible', '" & type_nom & "', " & caserne_id & ", " & type_id & ", '" & immat & "');"
 
         Connexion.ORA.Execute(cmdSql)
     End Sub

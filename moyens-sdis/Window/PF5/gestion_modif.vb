@@ -1,11 +1,13 @@
 ﻿Public Class gestion_modif
 
 #Region "Bouton"
+    'Execute le sub Update + Affiche une notification + ferme la fenetre
     Private Sub btnOk_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnOk.Click
         updates()
         MsgBox("Modification efffectue")
         Me.Close()
     End Sub
+    'Ferme la fenetre
     Private Sub btnAnnuler_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAnnuler.Click
         Me.Close()
     End Sub
@@ -18,6 +20,7 @@
         AfficheNom()
         AfficheImmat()
     End Sub
+    'Affichage des informations sur les types d'engins
     Public Sub AfficheTypeEngin()
         '_________VARIABLE_________
         Dim info(2) As String
@@ -39,6 +42,7 @@
         Dim selected As DataRow = Connexion.ORA.Champ("SELECT TYPE_ENG_NOM FROM TYPE_ENGIN, ENGIN WHERE TYPE_ENGIN.TYPE_ENG_ID=ENGIN.TYPE_ENG_ID AND ENGIN_ID=" & id & "")
         CbType.Text = selected(0).ToString
     End Sub
+    'Affichage des informations sur les casernes
     Public Sub AfficheCaserne()
         '_________VARIABLE_________
         Dim info(2) As String
@@ -60,6 +64,7 @@
         Dim selected As DataRow = Connexion.ORA.Champ("SELECT CIS_NOM FROM CASERNE, ENGIN WHERE CASERNE.CIS_ID=ENGIN.CIS_ID AND ENGIN_ID=" & id & "")
         CbCaserne.Text = selected(0).ToString
     End Sub
+    'Affichage le nom de l'engin a modifider par son id
     Public Sub AfficheNom()
         '_________VARIABLE_________
         Dim id As String = lblId.Text
@@ -67,6 +72,7 @@
         '__________________________
         txtBoxNom.Text = nom(0).ToString
     End Sub
+    'Affichage l'immatriculation de l'engin a modifider par son id
     Public Sub AfficheImmat()
         '_________VARIABLE_________
         Dim id As String = lblId.Text
@@ -88,7 +94,6 @@
 
         Dim id As String = lblId.Text
         Dim cmdSql As String = ""
-
         '__________________________
 
         cmdSql = "UPDATE ENGIN SET ENGIN_ETAT= 'Disponible', ENGIN_NOM= '" & type_nom & "', CIS_ID= " & caserne_id & ", TYPE_ENG_ID = " & type_id & ", ENGIN_IMMAT = '" & immat & "' WHERE ENGIN_ID =" & id & "; "

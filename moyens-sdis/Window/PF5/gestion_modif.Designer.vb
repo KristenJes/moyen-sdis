@@ -133,9 +133,8 @@ Partial Class gestion_modif
         Me.lblId.AutoSize = True
         Me.lblId.Location = New System.Drawing.Point(32, 1)
         Me.lblId.Name = "lblId"
-        Me.lblId.Size = New System.Drawing.Size(15, 13)
+        Me.lblId.Size = New System.Drawing.Size(0, 13)
         Me.lblId.TabIndex = 10
-        Me.lblId.Text = "id"
         Me.lblId.Visible = False
         '
         'gestion_modif
