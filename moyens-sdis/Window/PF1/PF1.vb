@@ -114,6 +114,7 @@ end_of_f:
         button.Text = "Consulter"
         button.Dock = DockStyle.Right
         button.Height = 15
+        AddHandler button.Click, AddressOf OnConsulterClick
 
         group.Controls.Add(typeEnginText)
         group.Controls.Add(text2)
@@ -124,7 +125,13 @@ end_of_f:
         Return group
     End Function
 
+    Private Sub OnConsulterClick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        pf1_2.Show()
+        pf1_2.First_Load(intervention.ID, depar)
+    End Sub
+
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
         SendEnginsInDepart()
     End Sub
+
 End Class
