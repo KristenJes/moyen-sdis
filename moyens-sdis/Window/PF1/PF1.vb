@@ -128,7 +128,7 @@ end_of_f:
 
     Private Sub OnConsulterClick(ByVal sender As System.Object, ByVal e As System.EventArgs)
         pf1_2.Show()
-        pf1_2.First_Load(intervention.ID, depar)
+        pf1_2.First_Load(intervention.ID, Depar)
     End Sub
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
