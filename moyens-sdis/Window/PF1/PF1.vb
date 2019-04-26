@@ -5,6 +5,7 @@
     Dim caserneSelected As Caserne
     Dim neededVehicles As New List(Of TypeEngin)
     Dim selectedEngin As New Dictionary(Of Engin, Caserne)
+    Dim selectedPompiers As New List(Of Pompier)
     Dim caserneNom As String = "BREST"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -77,7 +78,8 @@ end_of_for:
             For counter = 0 To engin.Type.nbPlace
                 Dim pompier As Pompier
                 pompier = pompiers(counter)
-                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
+                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');"
+                selectedPompiers.Add(pompier)
             Next
 
             departID += 1
@@ -128,7 +130,8 @@ end_of_f:
 
     Private Sub OnConsulterClick(ByVal sender As System.Object, ByVal e As System.EventArgs)
         pf1_2.Show()
-        pf1_2.First_Load(intervention.ID, Depar)
+
+        pf1_2.First_Load(caserneSelected, selectedEngins(0), selectedPompiers)
     End Sub
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
