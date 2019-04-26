@@ -21,11 +21,12 @@
 
 
 retour:
+        TypeVeh = "VL"
 
 
-        
 
         Dim engin As String = nEngin
+        MsgBox(nEngin)
 
 
         Dim caserne As String = ncaserne

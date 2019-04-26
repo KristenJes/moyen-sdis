@@ -4,7 +4,8 @@
     Dim communeSelected As Commune
     Dim neededVehicles As New List(Of TypeEngin)
     Dim selectedEngin As New List(Of Engin)
-    Dim communeNom As String = "BREST"
+    Dim caserneNom As String = "BREST"
+    Dim caserneSelected As Caserne
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -15,7 +16,7 @@
             neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
         Next
 
-        communeSelected = New Commune(Connexion.ORA.Champ("SELECT * FROM Commune WHERE NOM_COMMUNE = '" & communeNom & "'"))
+        caserneSelected = New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne WHERE CIS_NOM = '" & caserneNom & "'"), False)
 
         Dim orderedCasernes As List(Of Caserne) = OrderCaserne(communeSelected)
         Try
