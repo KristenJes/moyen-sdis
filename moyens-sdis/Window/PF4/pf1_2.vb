@@ -5,18 +5,16 @@
     Private TypeVeh As String
 
 
-    Shared ncaserne As String
-    Shared nEngin As String
-    Shared nPompier As String
+    Shared ncaserne As Caserne
+    Shared nEngin As Engin
+    Shared nPompier As List(Of Pompier)
 
 
 
-    Public Shared Sub First_Load(ByVal Caserne, ByVal Engin, ByVal Pompier)
+    Public Shared Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal Pompiers As List(Of Pompier))
         ncaserne = Caserne
-        nEngin = Engin
-        nPompier = Pompier
-
-
+        nEngin = engin
+        nPompier = Pompiers
     End Sub
 
 
