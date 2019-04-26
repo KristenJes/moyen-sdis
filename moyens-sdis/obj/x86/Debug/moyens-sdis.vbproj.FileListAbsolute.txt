@@ -51,3 +51,6 @@ C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\m
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
+C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
