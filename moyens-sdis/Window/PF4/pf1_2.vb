@@ -10,7 +10,6 @@
     Shared nPompier As List(Of Pompier)
 
 
-
     Public Shared Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal Pompiers As List(Of Pompier))
         ncaserne = Caserne
         nEngin = engin
