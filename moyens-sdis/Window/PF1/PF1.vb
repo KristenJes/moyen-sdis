@@ -10,7 +10,7 @@
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        intervention = New Intervention(4)
+        intervention = New Intervention(1)
 
 
 
@@ -136,8 +136,8 @@ end_of_f:
             End If
         Next
 
-        pf1_2.Show()
-        pf1_2.First_Load(selectedEngins(engin), engin, pompiers)
+        pf2.Show()
+        pf2.First_Load(selectedEngins(engin), engin, pompiers)
     End Sub
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click

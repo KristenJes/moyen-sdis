@@ -127,10 +127,10 @@
     <Compile Include="Window\PF1\PF1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Window\PF4\pf1_2.designer.vb">
-      <DependentUpon>pf1_2.vb</DependentUpon>
+    <Compile Include="Window\PF2\pf2.designer.vb">
+      <DependentUpon>pf2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Window\PF4\pf1_2.vb">
+    <Compile Include="Window\PF2\pf2.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="Window\PF1\PF1.resx">
       <DependentUpon>PF1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Window\PF4\pf1_2.resx">
-      <DependentUpon>pf1_2.vb</DependentUpon>
+    <EmbeddedResource Include="Window\PF2\pf2.resx">
+      <DependentUpon>pf2.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
