@@ -4,13 +4,14 @@
     Dim sinistre As New Sinistre(3, "Malaise")
     Dim caserneSelected As Caserne
     Dim neededVehicles As New List(Of TypeEngin)
-    Dim selectedEngins As New Dictionary(Of Engin, Caserne)
-    Dim selectedPompiers As New Dictionary(Of Engin, Pompier)
+    Dim selectedEngin As New Dictionary(Of Engin, Caserne)
+    Dim selectedPompiers As New List(Of Pompier)
     Dim caserneNom As String = "BREST"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         intervention = New Intervention(4)
+
 
 
         Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
@@ -25,18 +26,18 @@
                 caserne.loadPompiers()
                 caserne.loadEngins()
 
-                If (neededVehicles.Count <> selectedEngins.Count) Then
+                If (neededVehicles.Count <> selectedEngin.Count) Then
                     For Each neededVehicule As TypeEngin In neededVehicles
                         If (caserne.Engins.Count <> 0) Then
                             For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
-                                If (neededVehicles.Count = selectedEngins.Count) Then
+                                If (neededVehicles.Count = selectedEngin.Count) Then
                                     GoTo end_of_for
                                 End If
                                 If (InSelected(typeEng.Type)) Then
                                     GoTo next_of_for
                                 End If
 
-                                selectedEngins.Add(typeEng, caserne)
+                                selectedEngin.Add(typeEng, caserne)
 
 next_of_for:
                             Next
@@ -51,7 +52,6 @@ next_of_for:
 
 end_of_for:
 
-        For Each engin In selectedEngins.Keys
         For Each engin In selectedEngin.Keys
             Panel1.Controls.Add(Engin_Display(engin))
         Next
@@ -70,11 +70,6 @@ end_of_for:
 
     Public Sub SendEnginsInDepart()
         Dim departID = Connexion.ORA.Champ("SELECT MAX(DEP_ID) FROM DEPART")(0) + 1
-        For Each engin In selectedEngins.Keys
-            Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
-
-            Dim pompiers As New List(Of Pompier)
-            pompiers = selectedEngins(engin).GetPompierEnService()
         For Each engin In selectedEngin.Keys
             Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
 
@@ -83,8 +78,8 @@ end_of_for:
             For counter = 0 To engin.Type.nbPlace
                 Dim pompier As Pompier
                 pompier = pompiers(counter)
-                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
-                selectedPompiers.Add(engin, pompier)
+                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');"
+                selectedPompiers.Add(pompier)
             Next
 
             departID += 1
@@ -93,13 +88,17 @@ end_of_for:
 
     Public Function InSelected(ByVal type As TypeEngin)
         Dim inList As Boolean = False
+        For Each engin As Engin In selectedEngin.Keys
             If (engin.Type.Equals(type)) Then
+                inList = True
+                GoTo end_of_f
+            End If
         Next
 end_of_f:
         Return inList
     End Function
 
-    Public Function Engin_Display(ByVal camion As Engin)
+    Public Function Engin_Display(ByVal camion)
         Dim group As New GroupBox
         Dim typeEnginText As New Label
         Dim text2 As New Label
@@ -118,7 +117,7 @@ end_of_f:
         button.Text = "Consulter"
         button.Dock = DockStyle.Right
         button.Height = 15
-        AddHandler button.Click, Sub(sender, e) OnConsulterClick(camion)
+        AddHandler button.Click, AddressOf OnConsulterClick
 
         group.Controls.Add(typeEnginText)
         group.Controls.Add(text2)
@@ -129,17 +128,10 @@ end_of_f:
         Return group
     End Function
 
-    Private Sub OnConsulterClick(ByVal engin As Engin)
-        Dim pompiers As New List(Of Pompier)
-        For Each keyValue As KeyValuePair(Of Engin, Pompier) In selectedPompiers
-            If (keyValue.Key.Equals(engin)) Then
-                pompiers.Add(keyValue.Value)
-            End If
-
-        Next
-
+    Private Sub OnConsulterClick(ByVal sender As System.Object, ByVal e As System.EventArgs)
         pf1_2.Show()
-        pf1_2.First_Load(selectedEngins(engin), engin, pompiers)
+
+        pf1_2.First_Load(caserneSelected, selectedEngins(0), selectedPompiers)
     End Sub
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click

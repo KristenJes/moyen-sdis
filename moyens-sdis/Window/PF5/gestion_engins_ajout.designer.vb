@@ -23,39 +23,30 @@ Partial Class gestion_engins_ajout
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.lblCaserne = New System.Windows.Forms.Label()
-        Me.lbIdentifiant = New System.Windows.Forms.Label()
         Me.lblType = New System.Windows.Forms.Label()
         Me.lblImmatriculation = New System.Windows.Forms.Label()
-        Me.txtBoxNom = New System.Windows.Forms.TextBox()
         Me.txtBoxImmatriculation = New System.Windows.Forms.TextBox()
         Me.btnOk = New System.Windows.Forms.Button()
         Me.btnAnnuler = New System.Windows.Forms.Button()
         Me.CbCaserne = New System.Windows.Forms.ComboBox()
         Me.CbType = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtBoxNom = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
-        Me.lblCaserne.Location = New System.Drawing.Point(22, 29)
+        Me.lblCaserne.Location = New System.Drawing.Point(35, 40)
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
         Me.lblCaserne.TabIndex = 0
         Me.lblCaserne.Text = "Caserne"
         '
-        'lbIdentifiant
-        '
-        Me.lbIdentifiant.AutoSize = True
-        Me.lbIdentifiant.Location = New System.Drawing.Point(22, 116)
-        Me.lbIdentifiant.Name = "lbIdentifiant"
-        Me.lbIdentifiant.Size = New System.Drawing.Size(29, 13)
-        Me.lbIdentifiant.TabIndex = 1
-        Me.lbIdentifiant.Text = "Nom"
-        '
         'lblType
         '
         Me.lblType.AutoSize = True
-        Me.lblType.Location = New System.Drawing.Point(22, 70)
+        Me.lblType.Location = New System.Drawing.Point(37, 80)
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(31, 13)
         Me.lblType.TabIndex = 2
@@ -64,22 +55,15 @@ Partial Class gestion_engins_ajout
         'lblImmatriculation
         '
         Me.lblImmatriculation.AutoSize = True
-        Me.lblImmatriculation.Location = New System.Drawing.Point(22, 150)
+        Me.lblImmatriculation.Location = New System.Drawing.Point(35, 157)
         Me.lblImmatriculation.Name = "lblImmatriculation"
         Me.lblImmatriculation.Size = New System.Drawing.Size(77, 13)
         Me.lblImmatriculation.TabIndex = 3
         Me.lblImmatriculation.Text = "Immatriculation"
         '
-        'txtBoxNom
-        '
-        Me.txtBoxNom.Location = New System.Drawing.Point(117, 109)
-        Me.txtBoxNom.Name = "txtBoxNom"
-        Me.txtBoxNom.Size = New System.Drawing.Size(151, 20)
-        Me.txtBoxNom.TabIndex = 4
-        '
         'txtBoxImmatriculation
         '
-        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(117, 150)
+        Me.txtBoxImmatriculation.Location = New System.Drawing.Point(130, 151)
         Me.txtBoxImmatriculation.Name = "txtBoxImmatriculation"
         Me.txtBoxImmatriculation.Size = New System.Drawing.Size(151, 20)
         Me.txtBoxImmatriculation.TabIndex = 5
@@ -105,7 +89,7 @@ Partial Class gestion_engins_ajout
         'CbCaserne
         '
         Me.CbCaserne.FormattingEnabled = True
-        Me.CbCaserne.Location = New System.Drawing.Point(117, 29)
+        Me.CbCaserne.Location = New System.Drawing.Point(130, 40)
         Me.CbCaserne.Name = "CbCaserne"
         Me.CbCaserne.Size = New System.Drawing.Size(151, 21)
         Me.CbCaserne.TabIndex = 10
@@ -113,25 +97,41 @@ Partial Class gestion_engins_ajout
         'CbType
         '
         Me.CbType.FormattingEnabled = True
-        Me.CbType.Location = New System.Drawing.Point(117, 70)
+        Me.CbType.Location = New System.Drawing.Point(130, 80)
         Me.CbType.Name = "CbType"
         Me.CbType.Size = New System.Drawing.Size(151, 21)
         Me.CbType.TabIndex = 11
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(38, 117)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(29, 13)
+        Me.Label1.TabIndex = 12
+        Me.Label1.Text = "Nom"
+        '
+        'txtBoxNom
+        '
+        Me.txtBoxNom.Location = New System.Drawing.Point(130, 117)
+        Me.txtBoxNom.Name = "txtBoxNom"
+        Me.txtBoxNom.Size = New System.Drawing.Size(151, 20)
+        Me.txtBoxNom.TabIndex = 13
         '
         'gestion_engins_ajout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(322, 255)
+        Me.ClientSize = New System.Drawing.Size(322, 261)
+        Me.Controls.Add(Me.txtBoxNom)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CbType)
         Me.Controls.Add(Me.CbCaserne)
         Me.Controls.Add(Me.btnAnnuler)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.txtBoxImmatriculation)
-        Me.Controls.Add(Me.txtBoxNom)
         Me.Controls.Add(Me.lblImmatriculation)
         Me.Controls.Add(Me.lblType)
-        Me.Controls.Add(Me.lbIdentifiant)
         Me.Controls.Add(Me.lblCaserne)
         Me.Name = "gestion_engins_ajout"
         Me.Text = "AJOUT D'ENGINS"
@@ -140,13 +140,13 @@ Partial Class gestion_engins_ajout
 
     End Sub
     Friend WithEvents lblCaserne As System.Windows.Forms.Label
-    Friend WithEvents lbIdentifiant As System.Windows.Forms.Label
     Friend WithEvents lblType As System.Windows.Forms.Label
     Friend WithEvents lblImmatriculation As System.Windows.Forms.Label
-    Friend WithEvents txtBoxNom As System.Windows.Forms.TextBox
     Friend WithEvents txtBoxImmatriculation As System.Windows.Forms.TextBox
     Friend WithEvents btnOk As System.Windows.Forms.Button
     Friend WithEvents btnAnnuler As System.Windows.Forms.Button
     Friend WithEvents CbCaserne As System.Windows.Forms.ComboBox
     Friend WithEvents CbType As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtBoxNom As System.Windows.Forms.TextBox
 End Class
