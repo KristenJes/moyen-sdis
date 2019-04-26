@@ -47,42 +47,7 @@ C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\m
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
-C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
-C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.gest_engins_ajout.resources
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
 C:\Users\17kjestin\Documents\Visual Studio 2010\Projects\moyen-sdis\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\bin\Debug\moyens-sdis.exe
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\bin\Debug\moyens-sdis.pdb
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\bin\Debug\moyens-sdis.xml
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.pf1_2.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_engins_ajout.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens_sdis.gestion_modif.resources
-C:\Users\17mleyonco\Documents\Visual Studio 2010\Projects\moyen\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-P:\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
-=======
->>>>>>> parent of eb23483...  commit push
-=======
->>>>>>> parent of eb23483...  commit push
-=======
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\E4\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\E4\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
-C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\E4\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
->>>>>>> parent of 2f53a59... Ouvrir Pf2
