@@ -4,6 +4,8 @@
 
         Connexion.ORA.Table("Select * from caserne")
 
+        pf1_2.Show()
+
 
     End Sub
 

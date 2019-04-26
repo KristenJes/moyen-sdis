@@ -1,14 +1,16 @@
 ﻿Public Class PF1
 
-    Dim sinistre As New Sinistre(1, "Malaise")
-    Dim communeSelected As Commune
+    Dim intervention As Intervention
+    Dim sinistre As New Sinistre(3, "Malaise")
+    Dim caserneSelected As Caserne
     Dim neededVehicles As New List(Of TypeEngin)
-    Dim selectedEngin As New List(Of Engin)
-    Dim communeNom As String = "BREST"
+    Dim selectedEngin As New Dictionary(Of Engin, Caserne)
+    Dim caserneNom As String = "BREST"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        ContainerDepart.Controls.Clear()
+        intervention = New Intervention(4)
+
 
 
         Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
@@ -16,23 +18,27 @@
             neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
         Next
 
-        communeSelected = New Commune(Connexion.ORA.Champ("SELECT * FROM Commune WHERE NOM_COMMUNE = '" & communeNom & "'"))
-
-
-        Dim orderedCasernes As List(Of Caserne) = OrderCaserne(communeSelected)
+        caserneSelected = New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne WHERE CIS_NOM = '" & caserneNom & "'"), False)
+        Dim orderedCasernes As List(Of Caserne) = OrderCaserne(caserneSelected)
         Try
             For Each caserne As Caserne In orderedCasernes
                 caserne.loadPompiers()
                 caserne.loadEngins()
 
-
                 If (neededVehicles.Count <> selectedEngin.Count) Then
                     For Each neededVehicule As TypeEngin In neededVehicles
                         If (caserne.Engins.Count <> 0) Then
                             For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
-                                Dim trancheID = Connexion.ORA.Champ("SELECT GetTrancheFromCurDate() FROM dual")(0)
-                                'SELECT * from planning
-                                'WHERE TRUNC(DATEPLAN) = TRUNC(sysdate) AND ETATID = 2 AND TRANCHEID = GetTrancheFromCurDate()
+                                If (neededVehicles.Count = selectedEngin.Count) Then
+                                    GoTo end_of_for
+                                End If
+                                If (InSelected(typeEng.Type)) Then
+                                    GoTo next_of_for
+                                End If
+
+                                selectedEngin.Add(typeEng, caserne)
+
+next_of_for:
                             Next
                         End If
                     Next
@@ -43,20 +49,51 @@
         Finally
         End Try
 
-        For Each type_camion As DataRow In departTypes.Rows
-            Panel1.Controls.Add(Engin_Display(type_camion))
+end_of_for:
+
+        For Each engin In selectedEngin.Keys
+            Panel1.Controls.Add(Engin_Display(engin))
         Next
     End Sub
 
-    Public Function OrderCaserne(ByVal commune As Commune)
+    Public Function OrderCaserne(ByVal caserne As Caserne)
         Dim orderedCasernes As New List(Of Caserne)()
-        Dim casernes As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM, CIS_LAT, CIS_LONG FROM CASERNE WHERE CIS_LAT IS NOT NULL AND CIS_LONG IS NOT NULL AND ROWNUM <= 15 ORDER BY DISTANCE_LOC(" & commune.Latitude & ", " & commune.Longitude & ", CIS_LAT, CIS_LONG)")
+        Dim casernes As DataTable = Connexion.ORA.Table("SELECT CIS_ID, CIS_NOM, CIS_LAT, CIS_LONG FROM CASERNE WHERE CIS_LAT IS NOT NULL AND CIS_LONG IS NOT NULL AND ROWNUM <= 15 ORDER BY DISTANCE_LOC(" & caserne.Latitude & ", " & caserne.Longitude & ", CIS_LAT, CIS_LONG)")
 
-        For Each caserne As DataRow In casernes.Rows
-            orderedCasernes.Add(New Caserne(caserne, False))
+        For Each cas As DataRow In casernes.Rows
+            orderedCasernes.Add(New Caserne(cas, False))
         Next
 
         Return orderedCasernes
+    End Function
+
+    Public Sub SendEnginsInDepart()
+        Dim departID = Connexion.ORA.Champ("SELECT MAX(DEP_ID) FROM DEPART")(0) + 1
+        For Each engin In selectedEngin.Keys
+            Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
+
+            Dim pompiers As New List(Of Pompier)
+            pompiers = selectedEngin(engin).GetPompierEnService()
+            For counter = 0 To engin.Type.nbPlace
+                Dim pompier As Pompier
+                pompier = pompiers(counter)
+                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
+            Next
+
+            departID += 1
+        Next
+    End Sub
+
+    Public Function InSelected(ByVal type As TypeEngin)
+        Dim inList As Boolean = False
+        For Each engin As Engin In selectedEngin.Keys
+            If (engin.Type.Equals(type)) Then
+                inList = True
+                GoTo end_of_f
+            End If
+        Next
+end_of_f:
+        Return inList
     End Function
 
     Public Function Engin_Display(ByVal camion)
@@ -65,12 +102,12 @@
         Dim text2 As New Label
         Dim button As New Button
 
-        typeEnginText.Text = "test"
+        typeEnginText.Text = camion.Type.nom
         typeEnginText.Dock = DockStyle.Left
         typeEnginText.Width = 125
         typeEnginText.AutoSize = False
 
-        text2.Text = camion("TYPE_ENG_NOM")
+        text2.Text = camion.Nom
         text2.Dock = DockStyle.Left
         text2.Width = 125
         text2.AutoSize = False
@@ -78,60 +115,24 @@
         button.Text = "Consulter"
         button.Dock = DockStyle.Right
         button.Height = 15
+        AddHandler button.Click, AddressOf OnConsulterClick
 
         group.Controls.Add(typeEnginText)
         group.Controls.Add(text2)
         group.Controls.Add(button)
         group.Dock = DockStyle.Top
-        group.Height = 50
+        group.Height = 60
 
         Return group
     End Function
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
+    Private Sub OnConsulterClick(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        pf1_2.Show()
+        pf1_2.First_Load(intervention.ID, depar)
     End Sub
 
-    Private Sub lblEngins2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblEngins2.Click
-
+    Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
+        SendEnginsInDepart()
     End Sub
 
-    Public Sub test(ByVal orderedCasernes)
-        Try
-            For Each caserne As Caserne In orderedCasernes
-                caserne.loadPompiers()
-                caserne.loadEngins()
-
-
-                If (neededVehicles.Count <> selectedEngin.Count) Then
-                    For Each neededVehicule As TypeEngin In neededVehicles
-                        For Each typeEng As Engin In caserne.getEnginsFromType(neededVehicule)
-                            ' VOIR AVEC MAEL
-                            ' MERCI
-                            ' FAIT
-
-
-                            'Select TRANCHEID
-                            'from tranche
-                            'where trancheid = 1
-                            'and TO_DSINTERVAL(CONCAT('0 ', TO_CHAR(systimestamp,'hh24:mi:ss')))
-                            '    BETWEEN HOR_DEBUT AND HOR_FIN;
-
-
-
-                            'SELECT MATRICULTE
-                            'FROM PLANNING 
-                            'INNER JOIN etat ON planning.ETATID = etat.ETATID
-                            'WHERE ETATID = 1
-                            'AND GetTrancheFromHeure(systimestamp) = TrancheID
-                            'AND caserneID = caserne.ID
-                        Next
-                    Next
-                Else
-                    Exit Try
-                End If
-            Next
-        Finally
-        End Try
-    End Sub
 End Class

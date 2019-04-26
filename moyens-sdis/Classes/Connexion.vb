@@ -21,16 +21,22 @@
         _connString = "DSN=" + _dsn + ";Uid=" + _uid + ";Pwd=" + _password + ";"
         myConnection.ConnectionString = _connString
 
-        Try
-            myConnection.Open()
-        Catch ex As Exception
-            MessageBox.Show("Erreur de connexion a la base")
-        End Try
+        OpenConnection()
 
     End Sub
 
 
+    Public Sub OpenConnection()
+        Try
+            myConnection.Close()
+            myConnection.Open()
+        Catch ex As Exception
+            MessageBox.Show("Erreur de connexion a la base")
+        End Try
+    End Sub
+
     Public Sub Execute(ByVal query As String)
+
         Dim MyCmd As Odbc.OdbcCommand
 
         MyCmd = New Odbc.OdbcCommand(query, myConnection)
