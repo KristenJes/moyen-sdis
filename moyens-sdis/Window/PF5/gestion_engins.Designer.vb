@@ -28,6 +28,7 @@ Partial Class gestion_engins
         Me.btnSupprimer = New System.Windows.Forms.Button()
         Me.lblCaserne = New System.Windows.Forms.Label()
         Me.CbCaserne = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lstAffichEngins
@@ -43,7 +44,7 @@ Partial Class gestion_engins
         '
         'btnAjouter
         '
-        Me.btnAjouter.Location = New System.Drawing.Point(561, 28)
+        Me.btnAjouter.Location = New System.Drawing.Point(561, 15)
         Me.btnAjouter.Name = "btnAjouter"
         Me.btnAjouter.Size = New System.Drawing.Size(75, 23)
         Me.btnAjouter.TabIndex = 1
@@ -52,7 +53,7 @@ Partial Class gestion_engins
         '
         'btnModifier
         '
-        Me.btnModifier.Location = New System.Drawing.Point(561, 79)
+        Me.btnModifier.Location = New System.Drawing.Point(561, 52)
         Me.btnModifier.Name = "btnModifier"
         Me.btnModifier.Size = New System.Drawing.Size(75, 23)
         Me.btnModifier.TabIndex = 2
@@ -61,7 +62,7 @@ Partial Class gestion_engins
         '
         'btnSupprimer
         '
-        Me.btnSupprimer.Location = New System.Drawing.Point(561, 131)
+        Me.btnSupprimer.Location = New System.Drawing.Point(561, 89)
         Me.btnSupprimer.Name = "btnSupprimer"
         Me.btnSupprimer.Size = New System.Drawing.Size(75, 23)
         Me.btnSupprimer.TabIndex = 3
@@ -71,7 +72,7 @@ Partial Class gestion_engins
         'lblCaserne
         '
         Me.lblCaserne.AutoSize = True
-        Me.lblCaserne.Location = New System.Drawing.Point(536, 180)
+        Me.lblCaserne.Location = New System.Drawing.Point(536, 192)
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(46, 13)
         Me.lblCaserne.TabIndex = 5
@@ -85,11 +86,21 @@ Partial Class gestion_engins
         Me.CbCaserne.Size = New System.Drawing.Size(121, 21)
         Me.CbCaserne.TabIndex = 6
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(561, 129)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 7
+        Me.Button1.Text = "Rafraichir"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'gestion_engins
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(676, 335)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.CbCaserne)
         Me.Controls.Add(Me.lblCaserne)
         Me.Controls.Add(Me.btnSupprimer)
@@ -108,4 +119,5 @@ Partial Class gestion_engins
     Friend WithEvents btnSupprimer As System.Windows.Forms.Button
     Friend WithEvents lblCaserne As System.Windows.Forms.Label
     Friend WithEvents CbCaserne As System.Windows.Forms.ComboBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
