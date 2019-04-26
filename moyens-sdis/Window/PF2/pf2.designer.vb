@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class pf1_2
+Partial Class pf2
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -320,7 +320,7 @@ Partial Class pf1_2
         Me.Label1.Text = "Caserne"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'pf1_2
+        'pf2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -330,7 +330,7 @@ Partial Class pf1_2
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblCaserne)
-        Me.Name = "pf1_2"
+        Me.Name = "pf2"
         Me.Text = "Départ : Composition"
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
