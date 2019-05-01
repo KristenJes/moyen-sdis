@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub gest_engins_ajout_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        .listBoxCaserne.Items.Add("BREST")
+        listBoxCaserne.Items.Add("BREST")
         listBoxCaserne.Items.Add("OUESSANT")
         listBoxCaserne.Items.Add("SAINT RENAN")
 
