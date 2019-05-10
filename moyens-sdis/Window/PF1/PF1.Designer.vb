@@ -22,6 +22,7 @@ Partial Class PF1
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PF1))
         Me.btnValider = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
@@ -55,6 +56,7 @@ Partial Class PF1
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnValider)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PF1"
         Me.Text = "l"
         Me.ResumeLayout(False)

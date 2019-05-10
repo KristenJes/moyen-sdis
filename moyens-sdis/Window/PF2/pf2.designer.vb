@@ -22,6 +22,7 @@ Partial Class pf2
     'Ne la modifiez pas à l'aide de l'éditeur de code.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(pf2))
         Me.lblCaserne = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -58,7 +59,6 @@ Partial Class pf2
         Me.lblCaserne.Name = "lblCaserne"
         Me.lblCaserne.Size = New System.Drawing.Size(80, 23)
         Me.lblCaserne.TabIndex = 0
-        Me.lblCaserne.Text = "FTP 01"
         Me.lblCaserne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button1
@@ -101,7 +101,6 @@ Partial Class pf2
         Me.Pompier1.Name = "Pompier1"
         Me.Pompier1.Size = New System.Drawing.Size(149, 18)
         Me.Pompier1.TabIndex = 7
-        Me.Pompier1.Text = "BUFFFERTRILLE MICHEL"
         Me.Pompier1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GroupBox1
@@ -134,7 +133,6 @@ Partial Class pf2
         Me.Pompier6.Name = "Pompier6"
         Me.Pompier6.Size = New System.Drawing.Size(149, 18)
         Me.Pompier6.TabIndex = 17
-        Me.Pompier6.Text = "BUFFFERTRILLE MICHEL"
         Me.Pompier6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Pompier5
@@ -146,7 +144,6 @@ Partial Class pf2
         Me.Pompier5.Name = "Pompier5"
         Me.Pompier5.Size = New System.Drawing.Size(149, 18)
         Me.Pompier5.TabIndex = 16
-        Me.Pompier5.Text = "BUFFFERTRILLE MICHEL"
         Me.Pompier5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Pompier4
@@ -158,7 +155,6 @@ Partial Class pf2
         Me.Pompier4.Name = "Pompier4"
         Me.Pompier4.Size = New System.Drawing.Size(149, 18)
         Me.Pompier4.TabIndex = 15
-        Me.Pompier4.Text = "BUFFFERTRILLE MICHEL"
         Me.Pompier4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Pompier3
@@ -170,7 +166,6 @@ Partial Class pf2
         Me.Pompier3.Name = "Pompier3"
         Me.Pompier3.Size = New System.Drawing.Size(149, 18)
         Me.Pompier3.TabIndex = 14
-        Me.Pompier3.Text = "BUFFFERTRILLE MICHEL"
         Me.Pompier3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Pompier2
@@ -182,7 +177,6 @@ Partial Class pf2
         Me.Pompier2.Name = "Pompier2"
         Me.Pompier2.Size = New System.Drawing.Size(149, 18)
         Me.Pompier2.TabIndex = 13
-        Me.Pompier2.Text = "BUFFFERTRILLE MICHEL"
         Me.Pompier2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Grade6
@@ -317,19 +311,19 @@ Partial Class pf2
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(149, 23)
         Me.Label1.TabIndex = 16
-        Me.Label1.Text = "Caserne"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pf2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(314, 305)
+        Me.ClientSize = New System.Drawing.Size(322, 305)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.lblCaserne)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "pf2"
         Me.Text = "Départ : Composition"
         Me.GroupBox1.ResumeLayout(False)

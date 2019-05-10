@@ -10,8 +10,9 @@
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        intervention = New Intervention(3)
 
+        intervention = New Intervention(3)
+        Me.Text = "Liste de départ de l'intervention " & intervention.ID
 
 
         Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
@@ -80,6 +81,7 @@ end_of_for:
 
             Dim pompiers As New List(Of Pompier)
             pompiers = selectedEngins(engin).GetPompierEnService()
+
             For counter = 0 To engin.Type.nbPlace
                 Dim pompier As Pompier
 

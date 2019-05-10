@@ -23,13 +23,15 @@
 
     Private Sub Demarrage()
 
+        Debug.WriteLine(nPompier)
+
 
 retour:
 
         TypeVeh = nEngin.Type.nom
         Label1.Text = ncaserne.Nom
         lblCaserne.Text = nEngin.Nom
-
+        Me.Text = "Composition du " & lblCaserne.Text & ": Départ"
 
         
                 Select Case TypeVeh
@@ -58,7 +60,7 @@ retour:
 
                         Grade1.Text = "CA VL"
                         Grade2.Text = "COND VL"
-                        Pompier1.Text = "SELECT SP_PRENOM || SP_NOM FROM POMPIER, DEPART, PARTICIPE WHERE PARTICIPE.DEP_ID=DEPART.DEP_ID AND POMPIER.SP_MATRICULE=DEPART.SP_MATRICULE AND DEPART.INTERV_ID=INTERVENTION.INTERV_ID AND DEP_ID="" AND INTERV_ID=""; "
+                Pompier1.Text = ""
                         Pompier2.Text = ""
                         Button1.Location = New Point(27, 137)
                         Button2.Location = New Point(184, 137)
@@ -173,6 +175,20 @@ retour:
     End Sub
 
 
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Close()
+
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Close()
+    End Sub
+
+    
+
+    Private Sub pf2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
 
 
