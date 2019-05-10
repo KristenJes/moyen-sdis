@@ -10,24 +10,25 @@
     Shared nPompier As List(Of Pompier)
 
 
-    Public Shared Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal Pompiers As List(Of Pompier))
+    Public Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal pompiers As List(Of Pompier))
         ncaserne = Caserne
         nEngin = engin
         nPompier = Pompiers
+
+        Demarrage()
     End Sub
 
 
 
 
-    Private Sub pf1_2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+    Private Sub Demarrage()
 
 
 retour:
 
-        TypeVeh = InputBox("combien de pompier")
-        Label1.Text = "Nom de caserne"
-        lblCaserne.Text = "Nom du véhicule"
+        TypeVeh = nEngin.Type.nom
+        Label1.Text = ncaserne.Nom
+        lblCaserne.Text = nEngin.Nom
 
 
         
