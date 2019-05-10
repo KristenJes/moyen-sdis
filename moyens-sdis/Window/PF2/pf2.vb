@@ -10,14 +10,15 @@
     Dim nPompier As List(Of Pompier)
 
 
-    Public Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal Pompiers As List(Of Pompier))
+    Public Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal pompiers As List(Of Pompier))
         ncaserne = Caserne
         nEngin = engin
-        nPompier = Pompiers
+        nPompier = pompiers
 
         Demarrage()
-    End Sub
 
+
+    End Sub
 
 
 
@@ -27,9 +28,9 @@
 
 retour:
 
-        TypeVeh = InputBox("combien de pompier")
+        TypeVeh = nEngin.Type.nom
         Label1.Text = ncaserne.Nom
-        lblCaserne.Text = "Nom du véhicule"
+        lblCaserne.Text = nEngin.Nom
 
 
 
@@ -50,7 +51,8 @@ retour:
 
                 Grade1.Text = "CA VLHR"
                 Grade2.Text = "COND VLHR"
-                Pompier1.Text = ""
+                Pompier1.Text = nPompier.Last.ToString
+
                 Pompier2.Text = ""
 
                 Button1.Location = New Point(27, 137)
@@ -59,7 +61,7 @@ retour:
 
                 Grade1.Text = "CA VL"
                 Grade2.Text = "COND VL"
-                Pompier1.Text = "SELECT SP_PRENOM || SP_NOM FROM POMPIER, DEPART, PARTICIPE WHERE PARTICIPE.DEP_ID=DEPART.DEP_ID AND POMPIER.SP_MATRICULE=DEPART.SP_MATRICULE AND DEPART.INTERV_ID=INTERVENTION.INTERV_ID AND DEP_ID="" AND INTERV_ID=""; "
+                Pompier1.Text = ""
                 Pompier2.Text = ""
                 Button1.Location = New Point(27, 137)
                 Button2.Location = New Point(184, 137)

@@ -6,20 +6,23 @@
     Dim neededVehicles As New List(Of TypeEngin)
     Dim selectedEngins As New Dictionary(Of Engin, Caserne)
     Dim selectedPompiers As New Dictionary(Of Engin, Pompier)
-    Dim caserneNom As String = "BREST"
+    Dim caserneNom As String = "LANDERNEAU"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        intervention = New Intervention(1)
+        intervention = New Intervention(3)
 
 
 
         Dim departTypes As DataTable = Connexion.ORA.Table("SELECT te.TYPE_ENG_ID, te.TYPE_ENG_NOM FROM PREVU, TYPE_ENGIN te WHERE(PREVU.TYPE_ENG_ID = te.TYPE_ENG_ID) AND SIN_ID = " & sinistre.ID)
+
+
         For Each type_camion As DataRow In departTypes.Rows
             neededVehicles.Add(New TypeEngin(type_camion("TYPE_ENG_ID")))
         Next
 
         caserneSelected = New Caserne(Connexion.ORA.Champ("SELECT * FROM Caserne WHERE CIS_NOM = '" & caserneNom & "'"), False)
+
         Dim orderedCasernes As List(Of Caserne) = OrderCaserne(caserneSelected)
         Try
             For Each caserne As Caserne In orderedCasernes
@@ -52,9 +55,11 @@ next_of_for:
 
 end_of_for:
 
+
         For Each engin In selectedEngins.Keys
             Panel1.Controls.Add(Engin_Display(engin))
         Next
+
     End Sub
 
     Public Function OrderCaserne(ByVal caserne As Caserne)
@@ -77,6 +82,7 @@ end_of_for:
             pompiers = selectedEngins(engin).GetPompierEnService()
             For counter = 0 To engin.Type.nbPlace
                 Dim pompier As Pompier
+
                 pompier = pompiers(counter)
                 Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
                 selectedPompiers.Add(engin, pompier)
@@ -144,4 +150,7 @@ end_of_f:
         SendEnginsInDepart()
     End Sub
 
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
 End Class
