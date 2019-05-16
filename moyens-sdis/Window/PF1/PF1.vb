@@ -61,6 +61,8 @@ end_of_for:
             Panel1.Controls.Add(Engin_Display(engin))
         Next
 
+        SendEnginsInDepart()
+
     End Sub
 
     Public Function OrderCaserne(ByVal caserne As Caserne)
