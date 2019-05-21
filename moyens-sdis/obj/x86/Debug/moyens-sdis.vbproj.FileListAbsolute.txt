@@ -63,3 +63,15 @@ C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sd
 C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
 C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf2.resources
 C:\Users\17ajacob\Documents\Visual Studio 2010\Projects\Nouveau dossier\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.exe
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.xml
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.pdb
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.exe
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.pdb
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\bin\Debug\moyens-sdis.xml
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbprojResolveAssemblyReference.cache
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Form1.resources
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.Resources.resources
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.PF1.resources
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens_sdis.pf2.resources
+C:\Users\17ajacob\Documents\GitHub\moyen-sdis\moyens-sdis\obj\x86\Debug\moyens-sdis.vbproj.GenerateResource.Cache

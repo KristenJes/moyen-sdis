@@ -77,23 +77,23 @@ end_of_for:
     End Function
 
     Public Sub SendEnginsInDepart()
-        Dim departID = Connexion.ORA.Champ("SELECT MAX(DEP_ID) FROM DEPART")(0) + 1
-        For Each engin In selectedEngins.Keys
-            Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
+        'Dim departID = Connexion.ORA.Champ("SELECT MAX(DEP_ID) FROM DEPART")(0) + 1
+        'For Each engin In selectedEngins.Keys
+        '    Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
 
-            Dim pompiers As New List(Of Pompier)
-            pompiers = selectedEngins(engin).GetPompierEnService()
+        '    Dim pompiers As New List(Of Pompier)
+        '    pompiers = selectedEngins(engin).GetPompierEnService()
 
-            For counter = 0 To engin.Type.nbPlace
-                Dim pompier As Pompier
+        '    For counter = 0 To engin.Type.nbPlace
+        '        Dim pompier As Pompier
 
-                pompier = pompiers(counter)
-                Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
-                selectedPompiers.Add(engin, pompier)
-            Next
+        '        pompier = pompiers(counter)
+        '        Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE) VALUES (" & departID & ", '" & pompier.Matricule & "');")
+        '        selectedPompiers.Add(engin, pompier)
+        '    Next
 
-            departID += 1
-        Next
+        '    departID += 1
+        'Next
     End Sub
 
     Public Function InSelected(ByVal type As TypeEngin)
