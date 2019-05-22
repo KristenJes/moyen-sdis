@@ -90,11 +90,8 @@ end_of_for:
                     Dim pompier As Pompier
 
                     pompier = pompiers(counter)
-<<<<<<< HEAD
-                    Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE, FONCTION_OCCUPEE) VALUES (" & departID & ", '" & pompier.Matricule & ", " & Int((19 - 1 + 1) * Rnd() + 1) & "');")
-=======
-                    Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE, FONCTION_OCCUPEE) VALUES (" & departID & ", '" & pompier.Matricule & ", " & Int((18 - 2 + 1) * Rnd() + 2) & "');")
->>>>>>> 9eca4d1e02f8f71bb6999eb6847d930104f3a3b4
+                    Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE, FONCTION_OCCUPEE) VALUES (" & departID & ", '" & pompier.Matricule & "', " & Int((18 - 2 + 1) * Rnd() + 2) & ");")
+
                     selectedPompiers.Add(engin, pompier)
                 End If
             Next
