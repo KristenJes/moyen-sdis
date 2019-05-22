@@ -132,13 +132,9 @@
     Public Function GetPompierEnService()
         Dim PompiersEnService As New List(Of Pompier)
         Dim Qry As String = "SELECT POMPIER.* " &
-                            "FROM POMPIER, CASERNE, PLANNING, ETAT, TRANCHE " &
+                            "FROM POMPIER, CASERNE, PLANNING " &
                             "WHERE POMPIER.SP_MATRICULE = PLANNING.SP_MATRICULE " &
                             "AND POMPIER.CIS_ID = CASERNE.CIS_ID " &
-                            "AND PLANNING.ETATID = ETAT.ETATID " &
-                            "AND PLANNING.TRANCHEID = TRANCHE.TRANCHEID " &
-                            "AND TRANCHE.TRANCHEID = GETTRANCHEFROMCURDATE " &
-                            "AND ETAT.ETATLIB = 'En Service' " &
                             "AND CASERNE.CIS_ID = " & ID
         Dim Matricules As DataTable = Connexion.ORA.Table(Qry)
 
