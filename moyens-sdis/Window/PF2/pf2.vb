@@ -24,7 +24,7 @@
         nPompier = pompiers
         nDepart = depart
         OracleUtils = New Connexion("cnx_ORAD22", "SDIS29", "Iroise29")
-
+        Debug.WriteLine(nDepart)
         Demarrage()
     End Sub
 
@@ -144,15 +144,15 @@ retour:
                 Dim fonctionCA As Integer = 4
 
                 Dim equVSAV As DataTable
-                equQuery = "SELECT SP_NOM, SP_PRENOM FROM POMPIER, PARTICIPE WHERE POMPIER.SP_MATRICULE=PARTICIPE.SP_MATRICULE AND FONCTION_OCCUPEE=" & fonctionEQU & " AND DEP_ID=(SELECT DEP_ID FROM DEPART WHERE INTERV_ID=3 AND ENGIN_ID=3)"
+                equQuery = "SELECT SP_NOM, SP_PRENOM FROM POMPIER, PARTICIPE WHERE POMPIER.SP_MATRICULE=PARTICIPE.SP_MATRICULE AND DEP_ID=" & nDepart & ""
                 equVSAV = OracleUtils.Table(equQuery)
 
                 Dim caVSAV As DataTable
-                caQuery = "SELECT SP_NOM, SP_PRENOM FROM POMPIER, PARTICIPE WHERE POMPIER.SP_MATRICULE=PARTICIPE.SP_MATRICULE AND FONCTION_OCCUPEE=" & fonctionCA & " AND DEP_ID=(SELECT DEP_ID FROM DEPART WHERE INTERV_ID=3 AND ENGIN_ID=3)"
+                caQuery = "SELECT SP_NOM, SP_PRENOM FROM POMPIER, PARTICIPE WHERE POMPIER.SP_MATRICULE=PARTICIPE.SP_MATRICULE AND DEP_ID=" & nDepart & ""
                 caVSAV = OracleUtils.Table(caQuery)
 
                 Dim condVSAV As DataTable
-                condQuery = "SELECT SP_NOM, SP_PRENOM FROM POMPIER, PARTICIPE WHERE POMPIER.SP_MATRICULE=PARTICIPE.SP_MATRICULE AND FONCTION_OCCUPEE=" & fonctionCOND & " AND DEP_ID=(SELECT DEP_ID FROM DEPART WHERE INTERV_ID=3 AND ENGIN_ID=3)"
+                condQuery = "SELECT SP_NOM, SP_PRENOM FROM POMPIER, PARTICIPE WHERE POMPIER.SP_MATRICULE=PARTICIPE.SP_MATRICULE AND DEP_ID=" & nDepart & ""
                 condVSAV = OracleUtils.Table(condQuery)
 
                 Grade4.Hide()
@@ -166,8 +166,8 @@ retour:
                 Grade1.Text = "CA VSAV"
                 Grade2.Text = "COND VSAV"
                 Grade3.Text = "EQU VSAV"
-                Pompier1.Text = condVSAV.Rows(0)("SP_NOM") & " " & condVSAV.Rows(0)("SP_PRENOM")
-                Pompier2.Text = caVSAV.Rows(0)("SP_NOM") & " " & caVSAV.Rows(0)("SP_PRENOM")
+                Pompier1.Text = condVSAV.Rows(2)("SP_NOM") & " " & condVSAV.Rows(2)("SP_PRENOM")
+                Pompier2.Text = caVSAV.Rows(1)("SP_NOM") & " " & caVSAV.Rows(1)("SP_PRENOM")
                 Pompier3.Text = equVSAV.Rows(0)("SP_NOM") & " " & equVSAV.Rows(0)("SP_PRENOM")
 
 
