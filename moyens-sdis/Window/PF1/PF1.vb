@@ -57,12 +57,11 @@ next_of_for:
 
 end_of_for:
 
+        SendEnginsInDepart()
 
         For Each engin In selectedEngins.Keys
             Panel1.Controls.Add(Engin_Display(engin, departs(engin)))
         Next
-
-        SendEnginsInDepart()
 
     End Sub
 
@@ -81,6 +80,7 @@ end_of_for:
         Dim departID = Connexion.ORA.Champ("SELECT MAX(DEP_ID) FROM DEPART")(0) + 1
         For Each engin In selectedEngins.Keys
             Connexion.ORA.Execute("INSERT INTO DEPART (DEP_ID, DEP_DTE_DEPART, DEP_DTE_RETOUR, DEP_DTE_KILOMETRAGE, DEP_COMMENTAIRE, INTERV_ID, ENGIN_ID) VALUES ('" & departID & "', sysdate, null, 0, null, '" & intervention.ID & "', '" & engin.ID & "');")
+            departs.Add(engin, departID)
 
             Dim pompiers As New List(Of Pompier)
             pompiers = selectedEngins(engin).GetPompierEnService()
@@ -91,7 +91,6 @@ end_of_for:
 
                     pompier = pompiers(counter)
                     Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE, FONCTION_OCCUPEE) VALUES (" & departID & ", '" & pompier.Matricule & "', " & Int((18 - 2 + 1) * Rnd() + 2) & ");")
-                    departs.Add(engin, departID)
                     'selectedPompiers.Add(engin, pompier)
                 End If
             Next
@@ -156,9 +155,5 @@ end_of_f:
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
         SendEnginsInDepart()
-    End Sub
-
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-
     End Sub
 End Class
