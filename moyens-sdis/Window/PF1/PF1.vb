@@ -6,8 +6,8 @@
     Dim neededVehicles As New List(Of TypeEngin)
     Dim selectedEngins As New Dictionary(Of Engin, Caserne)
     Dim selectedPompiers As New Dictionary(Of Engin, Pompier)
-    Dim departs As New List(Of Integer)
-    Dim caserneNom As String = "LANDERNEAU"
+    Dim departs As New Dictionary(Of Engin, Integer)
+    Dim caserneNom As String = "BREST"
 
     Private Sub PF1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -59,7 +59,7 @@ end_of_for:
 
 
         For Each engin In selectedEngins.Keys
-            Panel1.Controls.Add(Engin_Display(engin))
+            Panel1.Controls.Add(Engin_Display(engin, departs(engin)))
         Next
 
         SendEnginsInDepart()
@@ -91,7 +91,7 @@ end_of_for:
 
                     pompier = pompiers(counter)
                     Connexion.ORA.Execute("INSERT INTO participe (DEP_ID, SP_MATRICULE, FONCTION_OCCUPEE) VALUES (" & departID & ", '" & pompier.Matricule & "', " & Int((18 - 2 + 1) * Rnd() + 2) & ");")
-
+                    departs.Add(engin, departID)
                     'selectedPompiers.Add(engin, pompier)
                 End If
             Next
@@ -112,7 +112,7 @@ end_of_f:
         Return inList
     End Function
 
-    Public Function Engin_Display(ByVal camion As Engin)
+    Public Function Engin_Display(ByVal camion As Engin, ByVal depart As Integer)
         Dim group As New GroupBox
         Dim typeEnginText As New Label
         Dim text2 As New Label
@@ -131,7 +131,7 @@ end_of_f:
         button.Text = "Consulter"
         button.Dock = DockStyle.Right
         button.Height = 15
-        AddHandler button.Click, Sub(sender, e) OnConsulterClick(camion)
+        AddHandler button.Click, Sub(sender, e) OnConsulterClick(camion, depart)
 
         group.Controls.Add(typeEnginText)
         group.Controls.Add(text2)
@@ -142,7 +142,7 @@ end_of_f:
         Return group
     End Function
 
-    Private Sub OnConsulterClick(ByVal engin As Engin)
+    Private Sub OnConsulterClick(ByVal engin As Engin, ByVal depart As Integer)
         Dim pompiers As New List(Of Pompier)
         For Each keyVal As KeyValuePair(Of Engin, Pompier) In selectedPompiers
             If (keyVal.Key.Equals(engin)) Then
@@ -151,7 +151,7 @@ end_of_f:
         Next
 
         pf2.Show()
-        pf2.First_Load(selectedEngins(engin), engin, pompiers)
+        pf2.First_Load(selectedEngins(engin), engin, pompiers, depart)
     End Sub
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
