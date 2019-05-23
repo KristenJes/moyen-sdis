@@ -18,10 +18,11 @@
     Shared nPompier As List(Of Pompier)
 
 
-    Public Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal pompiers As List(Of Pompier))
+    Public Sub First_Load(ByVal Caserne As Caserne, ByVal engin As Engin, ByVal pompiers As List(Of Pompier), ByVal depart As Integer)
         ncaserne = Caserne
         nEngin = engin
         nPompier = pompiers
+        nDepart = depart
         OracleUtils = New Connexion("cnx_ORAD22", "SDIS29", "Iroise29")
 
         Demarrage()

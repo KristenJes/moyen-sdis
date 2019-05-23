@@ -131,7 +131,7 @@
 
     Public Function GetPompierEnService()
         Dim PompiersEnService As New List(Of Pompier)
-        Dim Qry As String = "SELECT POMPIER.* " &
+        Dim Qry As String = "SELECT DISTINCT POMPIER.* " &
                             "FROM POMPIER, CASERNE, PLANNING " &
                             "WHERE POMPIER.SP_MATRICULE = PLANNING.SP_MATRICULE " &
                             "AND POMPIER.CIS_ID = CASERNE.CIS_ID " &
