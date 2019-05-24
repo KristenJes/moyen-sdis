@@ -149,11 +149,12 @@ end_of_f:
             End If
         Next
 
+        pf2.Close()
         pf2.Show()
         pf2.First_Load(selectedEngins(engin), engin, pompiers, depart)
     End Sub
 
     Private Sub btnValider_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnValider.Click
-        SendEnginsInDepart()
+        'SendEnginsInDepart()
     End Sub
 End Class
